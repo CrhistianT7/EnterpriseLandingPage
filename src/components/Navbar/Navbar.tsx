@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 import useIntlMessages from "../../hooks/useIntlMessages";
 import { breakpoints } from "../../shared/breakpoints";
 import Button from "../../ui/Button/Button";
 import NavLink from "../../ui/NavLink/NavLink";
+import logo from "../../assets/images/logo/only-text.svg"
 
 const StyledNavbar = styled.nav`
   width: 100%;
@@ -74,7 +76,9 @@ export const Navbar: React.FC = (): React.ReactElement => {
     <StyledNavbar>
       <NavbarWrapper>
         <LogoWrapper>
-          <a href="/">Logo</a>
+          <a href="/">
+            <img src={logo} alt="Binland logo"/>
+          </a>
         </LogoWrapper>
         <NavLinksWrapper className="links">
           <StyledUnorderedList>
@@ -85,16 +89,13 @@ export const Navbar: React.FC = (): React.ReactElement => {
           <Button type="primary">
             {intl("home.navbar.button.contact.us")}
           </Button>
-          <Button type="secondary">
-            {intl("home.navbar.button.contact.us")}
-          </Button>
         </NavLinksWrapper>
 
         <HamburgerIcon>
-          <button onClick={toggleNavbar}>{isOpen?"X":"-"}</button>
+          <button onClick={toggleNavbar}>{isOpen?"X":<GiHamburgerMenu/>}</button>
         </HamburgerIcon>
       </NavbarWrapper>
-      {isOpen && <>component just changed with other wrapping properties here comes the other menu</>}
+      {isOpen && <div>component just changed with other wrapping properties here comes the other menu</div>}
     </StyledNavbar>
   );
 };

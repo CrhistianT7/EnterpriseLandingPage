@@ -1,8 +1,6 @@
-import { css } from "styled-components";
-// import { colors } from "./colors";
-// import { fonts } from "./typography";
+import { createGlobalStyle } from "styled-components";
 
-export const reset = css`
+export const GlobalStyle = createGlobalStyle`
   /* CSS Reset by Andy Bell (https://piccalil.li/blog/a-modern-css-reset/) */
 
   /* Box sizing rules */
@@ -24,6 +22,8 @@ export const reset = css`
   dl,
   dd {
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
 
   /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -79,8 +79,4 @@ export const reset = css`
       scroll-behavior: auto !important;
     }
   }
-`;
-
-export const global = css`
-  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap");
 `;
