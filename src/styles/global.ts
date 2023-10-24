@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
   blockquote,
   dl,
   dd {
+    padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;

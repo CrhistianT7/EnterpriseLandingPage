@@ -23,6 +23,7 @@ const NavbarWrapper = styled.div`
   width: 100%;
   max-width: 1024px;
   margin: auto;
+  padding: 0 16px;
 
   /* @media only screen and (min-width: ${breakpoints.xs}) {
     max-width: 700px;
@@ -60,7 +61,7 @@ export const Navbar: React.FC = (): React.ReactElement => {
   const navbarItems = [
     {
       name: "Portafolio",
-      href: "/portafolio",
+      href: "#portafolio",
     },
     {
       name: "Tutoriales",
@@ -80,7 +81,7 @@ export const Navbar: React.FC = (): React.ReactElement => {
             <img src={logo} alt="Binland logo"/>
           </a>
         </LogoWrapper>
-        <NavLinksWrapper className="links">
+        <NavLinksWrapper>
           <StyledUnorderedList>
             {navbarItems.map((navItem) => (
               <NavLink item={navItem} />
