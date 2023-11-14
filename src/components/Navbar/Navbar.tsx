@@ -82,7 +82,15 @@ export const Navbar: React.FC = (): React.ReactElement => {
       href: "#portafolio",
     },
     {
-      name: "Tutoriales",
+      name: "Learn with us",
+      href: "/",
+    },
+    {
+      name: "Services",
+      href: "/",
+    },
+    {
+      name: "About us",
       href: "/",
     },
   ];
@@ -109,6 +117,9 @@ export const Navbar: React.FC = (): React.ReactElement => {
             {intl("home.navbar.button.contact.us")}
           </Button>
         </NavLinksWrapper>
+        <div>
+          ingles, español, portugues
+        </div>
 
         <HamburgerIcon>
           <button onClick={toggleNavbar}>
