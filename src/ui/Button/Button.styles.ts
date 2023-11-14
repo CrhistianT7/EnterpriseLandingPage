@@ -63,6 +63,7 @@ export const StyledButton = styled.button<IStyledButton>`
   padding: 12px 16px;
   border: none;
   border-radius: 8px;
+  line-height: 100%;
   cursor: pointer;
   height: fit-content;
   width: ${({ isfullwidth }) => (isfullwidth ? "100%" : "fit-content")};

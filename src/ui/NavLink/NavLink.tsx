@@ -19,6 +19,8 @@ const StyledListItem = styled.li`
 const StyledAnchor = styled.a`
   color: ${colors.primary.body};
   text-decoration: none;
+  font-size: 16px;
+  padding: 12px 16px;
 `;
 
 const NavLink: React.FC<NavLinkProps> = ({ item }): React.ReactElement => {
