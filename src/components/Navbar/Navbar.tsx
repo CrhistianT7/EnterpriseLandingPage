@@ -6,7 +6,7 @@ import useIntlMessages from "../../hooks/useIntlMessages";
 import { breakpoints } from "../../shared/breakpoints";
 import Button from "../../ui/Button/Button";
 import NavLink from "../../ui/NavLink/NavLink";
-import logo from "../../assets/images/logo/only-text.svg"
+import logo from "../../assets/images/logo/only-text.svg";
 
 const StyledNavbar = styled.nav`
   width: 100%;
@@ -34,14 +34,33 @@ const LogoWrapper = styled.div``;
 
 const NavLinksWrapper = styled.div`
   display: none;
+  gap: 1rem;
+  align-items: center;
 
   @media only screen and (min-width: ${breakpoints.sm}) {
     display: flex;
   }
 `;
 
+const NavLinksWrapperMobile = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (min-width: ${breakpoints.sm}) {
+    display: none;
+  }
+`;
+
 const StyledUnorderedList = styled.ul`
   display: flex;
+  gap: 1rem;
+`;
+
+const StyledUnorderedListMobile = styled.ul`
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
 `;
 
 const HamburgerIcon = styled.div`
@@ -50,11 +69,10 @@ const HamburgerIcon = styled.div`
   @media only screen and (min-width: ${breakpoints.sm}) {
     display: none;
   }
-`
+`;
 
 export const Navbar: React.FC = (): React.ReactElement => {
-
-  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const intl = useIntlMessages();
 
@@ -70,15 +88,15 @@ export const Navbar: React.FC = (): React.ReactElement => {
   ];
 
   const toggleNavbar = () => {
-    setIsOpen(prev => !prev)
-  }
+    setIsOpen((prev) => !prev);
+  };
 
   return (
     <StyledNavbar>
       <NavbarWrapper>
         <LogoWrapper>
           <a href="/">
-            <img src={logo} alt="Binland logo"/>
+            <img src={logo} alt="Binland logo" />
           </a>
         </LogoWrapper>
         <NavLinksWrapper>
@@ -93,10 +111,23 @@ export const Navbar: React.FC = (): React.ReactElement => {
         </NavLinksWrapper>
 
         <HamburgerIcon>
-          <button onClick={toggleNavbar}>{isOpen?"X":<GiHamburgerMenu/>}</button>
+          <button onClick={toggleNavbar}>
+            {isOpen ? "X" : <GiHamburgerMenu />}
+          </button>
         </HamburgerIcon>
       </NavbarWrapper>
-      {isOpen && <div>component just changed with other wrapping properties here comes the other menu</div>}
+      {isOpen && (
+        <NavLinksWrapperMobile>
+          <StyledUnorderedListMobile>
+            {navbarItems.map((navItem) => (
+              <NavLink item={navItem} />
+            ))}
+          </StyledUnorderedListMobile>
+          <Button type="primary">
+            {intl("home.navbar.button.contact.us")}
+          </Button>
+        </NavLinksWrapperMobile>
+      )}
     </StyledNavbar>
   );
 };

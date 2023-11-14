@@ -20,7 +20,7 @@ const sizeStyles = (size: string) => {
   }
 };
 
-export const StyledSection = styled.div<IStyledSection>`
+export const StyledSection = styled.section<IStyledSection>`
   display: flex;
   align-items: center;
   justify-content: center;

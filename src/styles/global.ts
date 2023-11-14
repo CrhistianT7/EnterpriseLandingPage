@@ -31,6 +31,11 @@ export const GlobalStyle = createGlobalStyle`
   ul[role="list"],
   ol[role="list"] {
     list-style: none;
+    padding: 0;
+  }
+
+  ul {
+    padding: 0;
   }
 
   /* Set core root defaults */
