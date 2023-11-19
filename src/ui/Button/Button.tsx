@@ -1,4 +1,3 @@
-import React from "react";
 import { StyledButton } from "./Button.styles";
 
 interface IButton {

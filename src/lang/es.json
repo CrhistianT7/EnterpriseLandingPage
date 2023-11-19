@@ -1,4 +1,7 @@
 {
   "home.navbar.link.about.us": "Acerca de nosotros",
-  "home.navbar.button.contact.us": "Contactanos"
+  "home.navbar.button.contact.us": "Contáctanos",
+
+  "home.hero.slogan": "Algo bueno",
+  "home.hero.subslogan": "Algo bueno"
 }

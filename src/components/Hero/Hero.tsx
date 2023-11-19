@@ -1,17 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-//import useIntlMessages from "../../hooks/useIntlMessages";
+import useIntlMessages from "../../hooks/useIntlMessages";
 
 const StyledHero = styled.section`
   height: 100vh;
-`
+`;
 
 const Hero: React.FC = (): React.ReactElement => {
-  // const intl = useIntlMessages();
+  const intl = useIntlMessages();
+
   return (
     <StyledHero id="hero">
       <div>
-        solagan grande
+        {intl("home.hero.slogan")}
         <p>texto pequeño</p>
       </div>
       <div>
