@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import en from "../../lang/en.json";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";

@@ -1,4 +1,10 @@
 {
   "home.navbar.link.about.us": "About us",
-  "home.navbar.button.contact.us": "Contact us"
+  "home.navbar.button.contact.us": "Contact us",
+
+  "home.hero.slogan": "Something good",
+  "home.hero.subslogan": "Something good",
+
+  "home.services.title": "Services",
+  "home.services.subtitle": "We provide you with blablabla"
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -6,11 +6,10 @@ import useIntlMessages from "../../hooks/useIntlMessages";
 import { breakpoints } from "../../shared/breakpoints";
 import Button from "../../ui/Button/Button";
 import NavLink from "../../ui/NavLink/NavLink";
-import logo from "../../assets/images/logo/only-text.svg";
 
 const StyledNavbar = styled.nav`
   width: 100%;
-  position: fixed;
+  //position: fixed;
   padding-top: 32px;
   font-size: 16px;
   font-weight: 800;
@@ -29,8 +28,6 @@ const NavbarWrapper = styled.div`
     max-width: 700px;
   } */
 `;
-
-const LogoWrapper = styled.div``;
 
 const NavLinksWrapper = styled.div`
   display: none;
@@ -102,25 +99,16 @@ export const Navbar: React.FC = (): React.ReactElement => {
   return (
     <StyledNavbar>
       <NavbarWrapper>
-        <LogoWrapper>
-          <a href="/">
-            <img src={logo} alt="Binland logo" />
-          </a>
-        </LogoWrapper>
         <NavLinksWrapper>
           <StyledUnorderedList>
             {navbarItems.map((navItem) => (
-              <NavLink item={navItem} />
+              <NavLink key={navItem.name} item={navItem} />
             ))}
           </StyledUnorderedList>
           <Button type="primary">
             {intl("home.navbar.button.contact.us")}
           </Button>
         </NavLinksWrapper>
-        <div>
-          ingles, español, portugues
-        </div>
-
         <HamburgerIcon>
           <button onClick={toggleNavbar}>
             {isOpen ? "X" : <GiHamburgerMenu />}

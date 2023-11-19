@@ -38,7 +38,9 @@
     "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^22.1.0",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-checker": "^0.6.2",
+    "vite-tsconfig-paths": "^4.2.1"
   },
   "jest": {
     "testEnvironment": "jsdom"
