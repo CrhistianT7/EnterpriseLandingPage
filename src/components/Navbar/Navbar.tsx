@@ -9,11 +9,10 @@ import NavLink from "../../ui/NavLink/NavLink";
 
 const StyledNavbar = styled.nav`
   width: 100%;
-  //position: fixed;
-  padding-top: 32px;
+  //padding-top: 32px;
   font-size: 16px;
   font-weight: 800;
-  z-index: 10;
+  //z-index: 10;
 `;
 
 const NavbarWrapper = styled.div`

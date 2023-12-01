@@ -36,6 +36,7 @@ export const GlobalStyle = createGlobalStyle`
 
   ul {
     padding: 0;
+    margin: 0;
   }
 
   /* Set core root defaults */
