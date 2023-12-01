@@ -18,7 +18,7 @@ const ContactUs = () => {
         <label htmlFor="company">Company</label>
         <input id="company" type="text"/>
         <label htmlFor="company">Phone number</label>
-        <input id="company" type="text"/>
+        <input id="phonenumber" type="text"/>
         <label htmlFor="description">Description</label>
         <textarea id="description" ></textarea>
         <input type="submit" value="Send"/>
