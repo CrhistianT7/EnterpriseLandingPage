@@ -4,13 +4,20 @@ import Select from "ui/Select/Select";
 import { IoLanguage } from "react-icons/io5";
 
 const LanguageSwitcher: React.FC = () => {
-  const { handleLanguage } = useLanguageContext();
+  const { language, handleLanguage } = useLanguageContext();
 
   const handleLanguageSwith = (language: string) => {
     handleLanguage(language);
   };
 
-  return <Select options={languageOptions} icon={<IoLanguage />} onChange={handleLanguageSwith}/>;
+  return (
+    <Select
+      options={languageOptions}
+      selectedId={language.locale}
+      icon={<IoLanguage />}
+      onChange={handleLanguageSwith}
+    />
+  );
 };
 
 export default LanguageSwitcher;

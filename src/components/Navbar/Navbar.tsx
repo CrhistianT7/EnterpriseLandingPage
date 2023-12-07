@@ -6,14 +6,11 @@ import useIntlMessages from "../../hooks/useIntlMessages";
 import { breakpoints } from "../../shared/breakpoints";
 import Button from "../../ui/Button/Button";
 import NavLink from "../../ui/NavLink/NavLink";
-import LanguageSwitcher from "components/LanguageSwitcher/LanguageSwitcher";
+import LanguageSwitcher from "../../components/LanguageSwitcher/LanguageSwitcher";
 
 const StyledNavbar = styled.nav`
-  // width: 100%;
-  //padding-top: 32px;
   font-size: 16px;
   font-weight: 500;
-  //z-index: 10;
 `;
 
 const NavbarWrapper = styled.div`

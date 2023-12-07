@@ -1,9 +1,7 @@
-import { useState } from "react";
-import { ILanguagaConfiguration } from "context/Language/langConfig";
-import { useLanguageContext } from "context/Language/useLanguageContext";
+import { useEffect, useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
-import useOutsideClick from "hooks/useClickOutside";
+import useOutsideClick from "../../hooks/useClickOutside"
 import {
   StyledSelect,
   StyledSelectedValue,
@@ -11,18 +9,18 @@ import {
   StyledSelectOptions,
 } from "./Select.styles";
 
-// interface RequiredProperties {
-//   id: string;
-//   name: string;
-//   value: string;
-// }
+interface RequiredProperties {
+  id: string;
+  name: string;
+  value: string;
+}
 
 interface ISelect {
-  options: ILanguagaConfiguration[];
+  options: Array<RequiredProperties>;
   size?: "sm" | "md" | "lg";
   icon?: React.ReactNode;
   placeholder?: string;
-  selected?: string;
+  selectedId?: string;
   onChange: (value: string) => void;
 }
 
@@ -30,38 +28,55 @@ const Select: React.FC<ISelect> = ({
   options,
   icon,
   placeholder = "Select one option",
-  selected = '',
+  selectedId = "",
   onChange,
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const { language } = useLanguageContext();
+  const [selectedOption, setSelectedOption] = useState<RequiredProperties>(
+    {} as RequiredProperties
+  );
+
   const refOptions = useOutsideClick(() => setIsOpen(false));
-  const currentLanguage = options.filter((lan) => lan.id == language.locale)[0];
 
   const showOptions = (): void => {
     setIsOpen((prev) => !prev);
   };
+
+  const handleOnChange = (value: string) => {
+    onChange(value);
+    setSelectedOption(options.filter((language) => language.value == value)[0]);
+  };
+
+  useEffect(() => {
+    if (selectedId) {
+      setSelectedOption(
+        options.filter((language) => language.id == selectedId)[0]
+      );
+    }
+  }, [selectedId, options]);
 
   return (
     <StyledSelect ref={refOptions} onClick={showOptions}>
       <StyledSelectedValue>
         {icon}
         <div className="selected-value">
-          {selected ? placeholder : currentLanguage.name}
+          {Object.keys(selectedOption).length
+            ? selectedOption.name
+            : placeholder}
           {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </div>
       </StyledSelectedValue>
       {isOpen && (
         <StyledSelectOptions>
           <ul>
-            {options.map((lan) => {
+            {options.map((language) => {
               return (
                 <StyledSelectOption
-                  key={lan.id}
-                  onClick={() => onChange(lan.value)}
-                  selected={language.locale === lan.id}
+                  key={language.id}
+                  onClick={() => handleOnChange(language.value)}
+                  selected={selectedOption.id === language.id}
                 >
-                  {lan.name}
+                  {language.name}
                 </StyledSelectOption>
               );
             })}

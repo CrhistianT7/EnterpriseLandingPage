@@ -23,6 +23,7 @@ const Home = () => {
           - aumento de equipo 
           - transformación digital
           - ecommerce
+          - section de los desarrolladores, porque somos la unica prueba viviente por ahora
         </div>
       </section>
       <section>
