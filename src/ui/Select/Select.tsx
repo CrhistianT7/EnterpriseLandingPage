@@ -37,7 +37,6 @@ const Select: React.FC<ISelect> = ({
   );
 
   const refOptions = useOutsideClick(() => setIsOpen(false));
-  const currentLanguage = options.filter((lan) => lan.id == language.locale)[0];
 
   const showOptions = (): void => {
     setIsOpen((prev) => !prev);
