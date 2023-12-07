@@ -3,14 +3,16 @@ import { StyledContainer } from "./Container.styles";
 
 interface IContainer {
   size: "sm" | "md" | "lg" | "xl";
+  className?: string,
   children: React.ReactNode;
 }
 
 const Container: React.FC<IContainer> = ({
   size,
   children,
-}): React.ReactElement => {
-  return <StyledContainer size={size}>{children}</StyledContainer>;
+  className
+}) => {
+  return <StyledContainer size={size} className={className}>{children}</StyledContainer>;
 };
 
 export default Container;

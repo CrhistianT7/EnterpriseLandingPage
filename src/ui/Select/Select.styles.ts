@@ -9,6 +9,7 @@ export const StyledSelect = styled.div`
   flex-direction: column;
   position: relative;
   cursor: pointer;
+  background: #fff;
 
   border: 1px solid #d20427;
   border-radius: 6px;
@@ -16,7 +17,6 @@ export const StyledSelect = styled.div`
   line-height: 100%;
   color: #d20427;
   min-width: 150px;
-  height: 100%;
 `;
 
 export const StyledSelectedValue = styled.div`
@@ -37,6 +37,7 @@ export const StyledSelectOptions = styled.div`
     left: 0;
     width: 150px;
 
+    background: #fff;
     border: 1px solid #d20427;
     border-radius: 6px;
     padding: 6px 6px;

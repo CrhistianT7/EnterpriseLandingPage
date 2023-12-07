@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ILanguageOptions } from "context/Language/langConfig";
+import { ILanguagaConfiguration } from "context/Language/langConfig";
 import { useLanguageContext } from "context/Language/useLanguageContext";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
@@ -11,21 +11,32 @@ import {
   StyledSelectOptions,
 } from "./Select.styles";
 
+// interface RequiredProperties {
+//   id: string;
+//   name: string;
+//   value: string;
+// }
+
 interface ISelect {
-  options: ILanguageOptions;
+  options: ILanguagaConfiguration[];
   size?: "sm" | "md" | "lg";
   icon?: React.ReactNode;
+  placeholder?: string;
+  selected?: string;
   onChange: (value: string) => void;
 }
 
 const Select: React.FC<ISelect> = ({
   options,
   icon,
+  placeholder = "Select one option",
+  selected = '',
   onChange,
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { language } = useLanguageContext();
   const refOptions = useOutsideClick(() => setIsOpen(false));
+  const currentLanguage = options.filter((lan) => lan.id == language.locale)[0];
 
   const showOptions = (): void => {
     setIsOpen((prev) => !prev);
@@ -36,21 +47,21 @@ const Select: React.FC<ISelect> = ({
       <StyledSelectedValue>
         {icon}
         <div className="selected-value">
-          {options[language.locale].name}
+          {selected ? placeholder : currentLanguage.name}
           {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </div>
       </StyledSelectedValue>
       {isOpen && (
         <StyledSelectOptions>
           <ul>
-            {Object.keys(options).map((lan) => {
+            {options.map((lan) => {
               return (
                 <StyledSelectOption
-                  key={lan}
-                  onClick={() => onChange(options[lan].value)}
-                  selected={language.locale === lan}
+                  key={lan.id}
+                  onClick={() => onChange(lan.value)}
+                  selected={language.locale === lan.id}
                 >
-                  {options[lan].name}
+                  {lan.name}
                 </StyledSelectOption>
               );
             })}

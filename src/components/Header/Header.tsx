@@ -1,4 +1,3 @@
-import LanguageSwitcher from "components/LanguageSwitcher/LanguageSwitcher";
 import styled from "styled-components";
 import Container from "ui/Container/Container";
 import logo from "../../assets/images/logo/only-text.svg";
@@ -11,32 +10,28 @@ const StyledHeader = styled.header`
   top: 0; // 32px
   z-index: 10;
   width: 100%;
-  background: #FFDEE4;
-
-  .asd {
-    display: flex;
-  }
+  background: #ffdee4;
+  padding: 16px 0;
 `;
+
+const LogoWrapper = styled.div``;
 
 const HeaderWrapper = styled(Container)`
   flex-direction: row;
-`
-
-const LogoWrapper = styled.div``;
+  width: 100%;
+  justify-content: space-between;
+`;
 
 const Header = () => {
   return (
     <StyledHeader>
-      <HeaderWrapper size="lg">
+      <HeaderWrapper className="asd" size="lg">
         <LogoWrapper>
           <a href="/">
             <img src={logo} alt="Binland logo" />
           </a>
         </LogoWrapper>
-        <div className="asd">
-          <Navbar />
-          <LanguageSwitcher />
-        </div>
+        <Navbar />
       </HeaderWrapper>
     </StyledHeader>
   );

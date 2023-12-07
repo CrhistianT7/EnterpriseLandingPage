@@ -20,6 +20,9 @@ const Home = () => {
           Realidad Virtual - App development - SEO - Marketing Digital -
           Branding - Diseñador - Migraciones a la nube - Cloud computing en
           general - Diseño UX/UI * Description abajo con nab algo
+          - aumento de equipo 
+          - transformación digital
+          - ecommerce
         </div>
       </section>
       <section>
