@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Container from "ui/Container/Container";
-import logo from "../../assets/images/logo/only-logo.svg";
+import logo from "../../assets/images/logo/only-text.svg";
 import Navbar from "../Navbar/Navbar";
 
 const StyledHeader = styled.header`
