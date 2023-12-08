@@ -25,7 +25,7 @@ const HeaderWrapper = styled(Container)`
 const Header = () => {
   return (
     <StyledHeader>
-      <HeaderWrapper size="lg">
+      <HeaderWrapper className="asd" size="lg">
         <LogoWrapper>
           <a href="/">
             <img src={logo} alt="Binland logo" />
