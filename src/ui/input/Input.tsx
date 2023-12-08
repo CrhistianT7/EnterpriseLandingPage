@@ -3,9 +3,9 @@ import { InputWrapper, StyledInput, StyledLabel } from "./Input.styles";
 
 interface IStyledInput {
   id: string
-  type: "text" | "number" | "email"
-  name: string
-  value: string
+  type?: "text" | "number" | "email" | "password" 
+  name?: string
+  value: React.HTMLInputTypeAttribute
   onChange?: React.ChangeEventHandler<HTMLInputElement>
   placeholder?: string
   label?: string
@@ -14,10 +14,10 @@ interface IStyledInput {
 
 const Input: React.FC<IStyledInput> = ({
   id,
-  type,
+  type="text",
   name,
-  value,
   onChange,
+  value,
   placeholder,
   label,
   required = false,

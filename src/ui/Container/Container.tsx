@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledContainer } from "./Container.styles";
+import { StyledContainer } from "./container.styles";
 
 interface IContainer {
   size: "sm" | "md" | "lg" | "xl";

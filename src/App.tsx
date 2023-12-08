@@ -5,6 +5,7 @@ import ContactUs from "./components/ContactUs/ContactUs";
 import Hero from "./components/Hero/Hero";
 import { GlobalStyle } from "./styles/global";
 import { useLanguageContext } from "context/Language/useLanguageContext";
+import Input from "ui/input/Input";
 
 const App = () => {
   const { language } = useLanguageContext();
@@ -37,6 +38,7 @@ const App = () => {
           <div>
             -hours of operation -general info: email, phone number, ubicación
           </div>
+          <Input id="one" value="something"/>
           <div>nombre de compañia mas logo - redes sociales</div>
         </footer>
       </IntlProvider>
