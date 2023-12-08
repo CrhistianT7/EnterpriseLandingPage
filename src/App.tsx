@@ -1,8 +1,6 @@
 import Home from "pages/Home/Home";
 
 import { IntlProvider } from "react-intl";
-import ContactUs from "./components/ContactUs/ContactUs";
-import Hero from "./components/Hero/Hero";
 import { GlobalStyle } from "./styles/global";
 import { useLanguageContext } from "context/Language/useLanguageContext";
 import Input from "ui/input/Input";

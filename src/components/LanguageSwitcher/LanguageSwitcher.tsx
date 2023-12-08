@@ -1,33 +1,22 @@
-import { GrLanguage } from "react-icons/gr";
 import { useLanguageContext } from "context/Language/useLanguageContext";
 import { languageOptions } from "context/Language/langConfig";
-import { StyledLanguageSwitcher } from "./LanguageSwitcher.styles";
+import Select from "ui/Select/Select";
+import { IoLanguage } from "react-icons/io5";
 
 const LanguageSwitcher: React.FC = () => {
   const { language, handleLanguage } = useLanguageContext();
 
-  const onHandleChange = (event: React.ChangeEvent<HTMLSelectElement>) =>
-    handleLanguage(event.target.value);
+  const handleLanguageSwith = (language: string) => {
+    handleLanguage(language);
+  };
 
   return (
-    <StyledLanguageSwitcher>
-      <label htmlFor="language">
-        <GrLanguage />
-      </label>
-      <select onChange={onHandleChange}>
-        {Object.keys(languageOptions).map((lan) => {
-          return (
-            <option
-              key={lan}
-              value={languageOptions[lan].value}
-              selected={language.locale == lan}
-            >
-              {languageOptions[lan].name}
-            </option>
-          );
-        })}
-      </select>
-    </StyledLanguageSwitcher>
+    <Select
+      options={languageOptions}
+      selectedId={language.locale}
+      icon={<IoLanguage />}
+      onChange={handleLanguageSwith}
+    />
   );
 };
 

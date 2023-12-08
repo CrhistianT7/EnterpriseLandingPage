@@ -4,6 +4,8 @@ import useIntlMessages from "../../hooks/useIntlMessages";
 
 const StyledHero = styled.section`
   height: 100vh;
+  display: flex;
+  align-items: center;
 `;
 
 const Hero: React.FC = (): React.ReactElement => {
