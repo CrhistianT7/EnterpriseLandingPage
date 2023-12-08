@@ -33,6 +33,7 @@ export const StyledContainer = styled.div<IStyledContainer>`
   justify-content: center;
   padding: 0 1rem;
   margin: auto;
+  flex-direction: column;
   
   ${(props) => sizeStyles(props.size)}
 `;

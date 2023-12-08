@@ -1,29 +1,34 @@
-import { ENGLISH, ESPANOL, FRANCAIS, PORTUGUES } from "./constants";
+import { ENGLISH, ESPANOL } from "./constants";
 
-interface ILanguagaConfiguration {
+export interface ILanguagaConfiguration {
+  id: string;
   value: string;
   name: string;
 }
 
-interface ILanguageOptions {
+export interface ILanguageOptions {
   [index: string]: ILanguagaConfiguration;
 }
 
-export const languageOptions: ILanguageOptions = {
-  en: {
+export const languageOptions: ILanguagaConfiguration[] = [
+  {
+    id: "en",
     value: ENGLISH,
     name: "English",
   },
-  es: {
+  {
+    id: "es",
     value: ESPANOL,
     name: "Español",
   },
-  pt: {
-    value: PORTUGUES,
-    name: "Português",
-  },
-  fr: {
-    value: FRANCAIS,
-    name: "Français",
-  },
-};
+  // {
+  //   id: "pt",
+  //   value: PORTUGUES,
+  //   name: "Português",
+  // },
+  // {
+  //   id: "fr",
+  //   value: FRANCAIS,
+  //   name: "Français",
+  // },
+];

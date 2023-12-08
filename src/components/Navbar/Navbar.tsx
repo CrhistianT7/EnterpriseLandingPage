@@ -6,14 +6,11 @@ import useIntlMessages from "../../hooks/useIntlMessages";
 import { breakpoints } from "../../shared/breakpoints";
 import Button from "../../ui/Button/Button";
 import NavLink from "../../ui/NavLink/NavLink";
+import LanguageSwitcher from "../../components/LanguageSwitcher/LanguageSwitcher";
 
 const StyledNavbar = styled.nav`
-  width: 100%;
-  //position: fixed;
-  padding-top: 32px;
   font-size: 16px;
-  font-weight: 800;
-  z-index: 10;
+  font-weight: 500;
 `;
 
 const NavbarWrapper = styled.div`
@@ -31,10 +28,10 @@ const NavbarWrapper = styled.div`
 
 const NavLinksWrapper = styled.div`
   display: none;
-  gap: 1rem;
+  gap: .25rem;
   align-items: center;
 
-  @media only screen and (min-width: ${breakpoints.sm}) {
+  @media only screen and (min-width: ${breakpoints.lg}) {
     display: flex;
   }
 `;
@@ -44,7 +41,7 @@ const NavLinksWrapperMobile = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media only screen and (min-width: ${breakpoints.sm}) {
+  @media only screen and (min-width: ${breakpoints.lg}) {
     display: none;
   }
 `;
@@ -63,7 +60,7 @@ const StyledUnorderedListMobile = styled.ul`
 const HamburgerIcon = styled.div`
   display: flex;
 
-  @media only screen and (min-width: ${breakpoints.sm}) {
+  @media only screen and (min-width: ${breakpoints.lg}) {
     display: none;
   }
 `;
@@ -108,6 +105,7 @@ export const Navbar: React.FC = (): React.ReactElement => {
           <Button type="primary">
             {intl("home.navbar.button.contact.us")}
           </Button>
+          <LanguageSwitcher />
         </NavLinksWrapper>
         <HamburgerIcon>
           <button onClick={toggleNavbar}>
