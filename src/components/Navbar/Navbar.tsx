@@ -85,7 +85,7 @@ export const Navbar: React.FC = (): React.ReactElement => {
     },
     {
       name: "About us",
-      href: "/",
+      href: "/about-us",
     },
   ];
 

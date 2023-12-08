@@ -1,19 +1,26 @@
-import Home from "pages/Home/Home";
+import { IntlProvider } from 'react-intl'
+import { GlobalStyle } from './styles/global'
+import { useLanguageContext } from 'context/Language/useLanguageContext'
+import { Routes, Route } from 'react-router-dom'
 
-import { IntlProvider } from "react-intl";
-import { GlobalStyle } from "./styles/global";
-import { useLanguageContext } from "context/Language/useLanguageContext";
+import Home from 'pages/Home/Home'
+import AboutUs from 'pages/AboutUs/AboutUs'
+import PageNotFound from 'pages/PageNotFound/PageNotFound'
 
 const App = () => {
-  const { language } = useLanguageContext();
+  const { language } = useLanguageContext()
   return (
     <>
       <GlobalStyle />
       <IntlProvider locale={language.locale} messages={language.messages}>
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about-us" element={<AboutUs />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
       </IntlProvider>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
