@@ -1,7 +1,4 @@
-import React from "react";
-import styled from "styled-components";
-
-import { colors } from "../../styles/colors";
+import { StyledAnchor, StyledListItem } from "./NavLink.styles";
 
 interface INavLink {
   name: string;
@@ -11,17 +8,6 @@ interface INavLink {
 interface NavLinkProps {
   item: INavLink;
 }
-
-const StyledListItem = styled.li`
-  list-style-type: none;
-`;
-
-const StyledAnchor = styled.a`
-  color: ${colors.primary.body};
-  text-decoration: none;
-  font-size: 16px;
-  padding: 8px 8px;
-`;
 
 const NavLink: React.FC<NavLinkProps> = ({ item }): React.ReactElement => {
   return (
