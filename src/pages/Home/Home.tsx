@@ -1,12 +1,12 @@
 import ContactUs from "components/ContactUs/ContactUs";
-import Header from "components/Header/Header";
+import Navbar from "components/Navbar/Navbar";
 import Hero from "components/Hero/Hero";
 import Container from "ui/Container/Container";
 
 const Home = () => {
   return (
     <Container size="lg">
-      <Header />
+      <Navbar />
       <Hero />
       <section id="portafolio" style={{ height: "100vh" }}>
         <h3>Portafolio</h3>
