@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createContext } from "react";
 import { useEffect } from "react";
-import { useLocalStorage } from "hooks/useLocalStorage";
+import  useLocalStorage  from "hooks/useLocalStorage";
 import en from "lang/en.json";
 import es from "lang/es.json";
 import fr from 'lang/fr.json'
