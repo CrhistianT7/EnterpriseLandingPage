@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { createContext } from "react";
+import { useEffect } from "react";
+import  useLocalStorage  from "hooks/useLocalStorage";
 import en from "lang/en.json";
 import es from "lang/es.json";
 import fr from 'lang/fr.json'
@@ -25,10 +27,12 @@ const LanguageContext = createContext<LangaugeContextProps>(
 );
 
 const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [language, setLanguage] = useState<LanguageDefinition>({
+  const [storedLanguage, setStoredLanguage] = useLocalStorage<LanguageDefinition>("selectedLanguage", {
     locale: "en",
     messages: en,
   });
+
+  const [language, setLanguage] = useState<LanguageDefinition>(storedLanguage);
 
   const handleLanguage = (value: string) => {
     switch (value) {
@@ -60,6 +64,10 @@ const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
         break;
     }
   };
+
+    useEffect(() => {
+    setStoredLanguage(language);
+  }, [language, setStoredLanguage]);
 
   return (
     <LanguageContext.Provider value={{ language, handleLanguage }}>
