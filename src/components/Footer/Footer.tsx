@@ -1,45 +1,76 @@
-import styled from 'styled-components'
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
+import { FaLinkedinIn } from 'react-icons/fa'
 
-import Container from 'ui/Container/Container'
-
-
-const StyledFooter = styled.footer`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  background: #D24545;
-`
-
-const FooterInformation = styled.div`
-  display: flex;
-`
-
-const FooterLegal = styled.div`
-  display: flex;
-`
+import logo from '../../assets/images/logo/full-logo.svg'
+import { Link } from 'react-router-dom'
+import useIntlMessages from 'hooks/useIntlMessages'
+import {
+  FooterInformation,
+  FooterInformationWrapper,
+  FooterLegal,
+  FooterLogoWrapper,
+  FooterSocialMedia,
+  FooterWrapper,
+  StyledFooter,
+} from './Footer.styles'
 
 const Footer: React.FC = () => {
+  const intl = useIntlMessages()
   return (
     <StyledFooter>
-      <Container size="lg">
+      <FooterWrapper size="lg">
         <FooterInformation>
-          <div>
-            Logo
-            <span>frase</span>
-          </div>
-          <div>
-            -hours of operation -general info: email, phone number, ubicación
-          </div>
-          <div>
-            Siguenos 
-            <div>
-              <FaInstagram/>
+          <FooterLogoWrapper>
+            <a href="/">
+              <img className="footer-logo" src={logo} alt="Binland logo" />
+            </a>
+            <p>{intl('footer.all.rights.reserved')}. &copy; Binland 2024</p>
+          </FooterLogoWrapper>
+          <FooterInformationWrapper>
+            <h4>{intl('footer.contact.us')}</h4>
+            <ul className="information-list">
+              <span>binland@gmail.com</span>
+              <span>+51 950070020</span>
+              <span>Arequipa - Lima</span>
+            </ul>
+          </FooterInformationWrapper>
+          <FooterSocialMedia>
+            <h4>{intl('footer.follow.us')}</h4>
+            <div className="social-media">
+              <Link
+                to="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram size={25} color="#d20427" />
+              </Link>
+              <Link
+                to="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub size={25} color="#d20427" />
+              </Link>
+              <Link
+                to="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn size={25} color="#d20427" />
+              </Link>
             </div>
-          </div>
+          </FooterSocialMedia>
         </FooterInformation>
-        <FooterLegal>politicas de privacidad, terminos de servicio</FooterLegal>
-      </Container>
+        <FooterLegal>
+          <Link to={'/privacy-policy'} className="legal-item">
+            {intl('footer.privacy.policy')}
+          </Link>
+          <Link to={'/terms-of-service'} className="legal-item">
+            {intl('footer.terms.of.service')}
+          </Link>
+        </FooterLegal>
+      </FooterWrapper>
     </StyledFooter>
   )
 }
