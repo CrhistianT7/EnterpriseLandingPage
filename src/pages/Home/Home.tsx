@@ -1,14 +1,14 @@
 import ContactUs from 'components/ContactUs/ContactUs'
 import Footer from 'components/Footer/Footer'
-import Header from 'components/Header/Header'
 import Hero from 'components/Hero/Hero'
+import Navbar from 'components/Navbar/Navbar'
 import Container from 'ui/Container/Container'
 
 const Home = () => {
   return (
     <div>
       <Container size="lg">
-        <Header />
+        <Navbar />
       </Container>
       <Container size="lg">
         <Hero />

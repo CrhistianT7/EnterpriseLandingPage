@@ -1,31 +1,31 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 interface IStyledContainer {
-  size: "sm" | "md" | "lg" | "xl";
+  size: 'sm' | 'md' | 'lg' | 'xl'
 }
 
 const sizeStyles = (size: string) => {
   switch (size) {
-    case "sm":
+    case 'sm':
       return `
         max-width: 640px;
-      `;
-    case "md":
+      `
+    case 'md':
       return `
           max-width: 768px;
-        `;
-    case "lg":
+        `
+    case 'lg':
       return `
         max-width: 1024px;
-      `;
-    case "xl":
+      `
+    case 'xl':
       return `
         max-width: 1280px;
-      `;
+      `
     default:
-      break;
+      break
   }
-};
+}
 
 export const StyledContainer = styled.div<IStyledContainer>`
   display: flex;
@@ -34,6 +34,6 @@ export const StyledContainer = styled.div<IStyledContainer>`
   padding: 0 1rem;
   margin: auto;
   flex-direction: column;
-  
+
   ${(props) => sizeStyles(props.size)}
-`;
+`
