@@ -1,4 +1,3 @@
-import ContactUs from 'components/ContactUs/ContactUs'
 import Footer from 'components/Footer/Footer'
 import Hero from 'components/Hero/Hero'
 import Navbar from 'components/Navbar/Navbar'
@@ -36,9 +35,6 @@ const Home = () => {
           - servicio de restaurantes para pedir comida, gratis pocos servicios y y mas caracteristicas de paga
           - seguro/suscription para resolver problemas de nuestros servicios
           </div>
-        </section>
-        <section>
-          <ContactUs />
         </section>
       </Container>
       <Footer />

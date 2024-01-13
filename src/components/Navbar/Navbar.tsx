@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { CgClose } from 'react-icons/cg'
-
+import { useNavigate } from 'react-router-dom'
 import logo from '../../assets/images/logo/only-text.svg'
 import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher'
 import useIntlMessages from 'hooks/useIntlMessages'
@@ -18,7 +18,14 @@ import Button from 'ui/Button/Button'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const intl = useIntlMessages()
+
+  const navigate = useNavigate()
+
+  const navigateContactUs = () => {
+    navigate('contact-us')
+  }
+
+  const intl = useIntlMessages();
 
   const navbarItems = [
     {
@@ -63,7 +70,7 @@ const Navbar: React.FC = () => {
               <NavLink key={navItem.name} item={navItem} />
             ))}
           </DesktopUnorderedList>
-          <Button type="primary">
+          <Button type="primary" onClick={navigateContactUs}>
             {intl('home.navbar.button.contact.us')}
           </Button>
           <LanguageSwitcher />
@@ -77,7 +84,7 @@ const Navbar: React.FC = () => {
               <NavLink key={navItem.name} item={navItem} />
             ))}
           </ul>
-          <Button type="primary">
+          <Button type="primary" onClick={navigateContactUs}>
             {intl('home.navbar.button.contact.us')}
           </Button>
         </MobileNavigation>
