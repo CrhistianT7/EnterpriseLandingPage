@@ -62,3 +62,6 @@ export const MobileNavigation = styled.nav`
     display: none;
   }
 `
+export const HeaderEmptyBackground = styled.div`
+  height: 72px;
+`

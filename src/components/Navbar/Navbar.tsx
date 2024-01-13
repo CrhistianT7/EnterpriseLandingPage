@@ -9,6 +9,7 @@ import {
   DesktopNavigation,
   DesktopUnorderedList,
   HamburgerIcon,
+  HeaderEmptyBackground,
   HeaderWrapper,
   MobileNavigation,
   StyledHeader,
@@ -52,7 +53,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div style={{ height: '72px' }}></div>
+      <HeaderEmptyBackground />
       <StyledHeader>
         <HeaderWrapper size="lg">
           <a href="/">
