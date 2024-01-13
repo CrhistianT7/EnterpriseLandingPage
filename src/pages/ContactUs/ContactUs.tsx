@@ -1,7 +1,8 @@
-import Button from 'ui/Button/Button'
 import { BsSend } from 'react-icons/bs'
-import Input from 'ui/input/Input'
+
 import useIntlMessages from 'hooks/useIntlMessages'
+import Button from 'ui/Button/Button'
+import Input from 'ui/input/Input'
 import {
   ContactUsHero,
   HeroWrapper,
@@ -57,7 +58,6 @@ const ContactUs = () => {
             <label htmlFor="opcion4">Emerging Technology Consulting</label>
             <br />
             <Button type="primary" rightIcon={<BsSend />}>
-              {' '}
               Send
             </Button>
           </form>
@@ -86,49 +86,3 @@ const ContactUs = () => {
 }
 
 export default ContactUs
-
-// const FAQWrapper = styled(Container)`
-//   width: 100%;
-//   padding: 10px;
-// `
-
-//   const questions = [
-//     {
-//       question: 'What areas does our consultancy cover?',
-//       answer:
-//         'We specialize in business strategy, IT, HR management, and sustainable development.',
-//     },
-//     {
-//       question: 'Why choose our consultancy services?',
-//       answer:
-//         'We optimize operations, drive growth, and provide tailored solutions for your business challenges.',
-//     },
-//     {
-//       question: 'How do we work with clients?',
-//       answer:
-//         'We collaborate closely, understand goals, conduct analyses, and deliver practical recommendations.',
-//     },
-//     {
-//       question: 'What expertise does our consultant team have?',
-//       answer:
-//         'Our professionals bring extensive experience across industries for a comprehensive and tailored approach.',
-//     },
-//     {
-//       question: 'How do we ensure client information confidentiality?',
-//       answer:
-//         'We are committed to strict security measures and uphold the highest ethical standards to protect privacy.',
-//     },
-//   ]
-
-//       <FAQWrapper size="lg">
-//         {questions.map((ele) => {
-//           return (
-//             <div>
-//               <strong>
-//                 {ele.question} <IoChevronDown />
-//               </strong>
-//               <p>{ele.answer}</p>
-//             </div>
-//           )
-//         })}
-//       </FAQWrapper>
