@@ -1,5 +1,4 @@
 import Button from 'ui/Button/Button'
-import Header from 'components/Header/Header'
 import { BsSend } from 'react-icons/bs'
 import Input from 'ui/input/Input'
 import useIntlMessages from 'hooks/useIntlMessages'
@@ -20,7 +19,6 @@ const ContactUs = () => {
 
   return (
     <div>
-      <Header />
       <ContactUsHero>
         <HeroWrapper size="lg">
           <HeroContentWrapper>

@@ -1,39 +1,45 @@
-import Header from "components/Header/Header";
-import Hero from "components/Hero/Hero";
-import Container from "ui/Container/Container";
+import Footer from 'components/Footer/Footer'
+import Hero from 'components/Hero/Hero'
+import Navbar from 'components/Navbar/Navbar'
+import Container from 'ui/Container/Container'
 
 const Home = () => {
   return (
-    <Container size="lg">
-      <Header />
-      <Hero />
-      <section id="portafolio" style={{ height: "100vh" }}>
-        <h3>Portafolio</h3>
-        Portafolio / clients / parterns
-      </section>
-      <section>
-        <h3>Services</h3>
-        <div>
-          - Capataciónes de phising, navegación sobre internet - Web development
-          - E-commerce - Realidad aumentada - //lentes de facebook - Ikea //
-          Realidad Virtual - App development - SEO - Marketing Digital -
+    <div>
+      <Container size="lg">
+        <Navbar />
+      </Container>
+      <Container size="lg">
+        <Hero />
+        <section id="portafolio" style={{ height: '100vh' }}>
+          <h3>Portafolio</h3>
+          Portafolio / clients / parterns
+        </section>
+        <section>
+          <h3>Services</h3>
+          <div>
+            - Capataciónes de phising, navegación sobre internet - Web
+            development - E-commerce - Realidad aumentada - //lentes de facebook
+            - Ikea // Realidad Virtual - App development - SEO - Marketing
+            Digital - Branding - Diseñador - Migraciones a la nube - Cloud
+            computing en general - Diseño UX/UI * Description abajo con nab algo
+            - aumento de equipo - transformación digital - ecommerce - section
+            de los desarrolladores, porque somos la unica prueba viviente por
+            ahora-
           Branding - Diseñador - Migraciones a la nube - Cloud computing en
           general - Diseño UX/UI * Description abajo con nab algo
           - aumento de equipo 
-          - transformación digital
+          - transformación digital - digitalizacion, Marketing digital
           - ecommerce
           - section de los desarrolladores, porque somos la unica prueba viviente por ahora
-        </div>
-      </section>
-      <footer>
-        <h3>Footer</h3>
-        <div>
-          -hours of operation -general info: email, phone number, ubicación
-        </div>
-        <div>nombre de compañia mas logo - redes sociales</div>
-      </footer>
-    </Container>
-  );
-};
+          - servicio de restaurantes para pedir comida, gratis pocos servicios y y mas caracteristicas de paga
+          - seguro/suscription para resolver problemas de nuestros servicios
+          </div>
+        </section>
+      </Container>
+      <Footer />
+    </div>
+  )
+}
 
-export default Home;
+export default Home

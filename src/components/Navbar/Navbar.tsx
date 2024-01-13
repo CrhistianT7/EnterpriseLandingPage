@@ -1,74 +1,24 @@
-import { useState } from "react";
-import styled from "styled-components";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { useState } from 'react'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { CgClose } from 'react-icons/cg'
+import { useNavigate } from 'react-router-dom'
+import logo from '../../assets/images/logo/only-text.svg'
+import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher'
+import useIntlMessages from 'hooks/useIntlMessages'
+import {
+  DesktopNavigation,
+  DesktopUnorderedList,
+  HamburgerIcon,
+  HeaderWrapper,
+  MobileNavigation,
+  StyledHeader,
+} from './Navbar.styles'
+import NavLink from 'ui/NavLink/NavLink'
+import Button from 'ui/Button/Button'
 
-import useIntlMessages from "../../hooks/useIntlMessages";
-import { breakpoints } from "../../shared/breakpoints";
-// import Button from "../../ui/Button/Button";
-import NavLink from "../../ui/NavLink/NavLink";
-import LanguageSwitcher from "../../components/LanguageSwitcher/LanguageSwitcher";
-import { useNavigate } from "react-router-dom";
-import Button from "ui/Button/Button";
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
-const StyledNavbar = styled.nav`
-  font-size: 16px;
-  font-weight: 500;
-`;
-
-const NavbarWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1024px;
-  margin: auto;
-  padding: 0 16px;
-
-  /* @media only screen and (min-width: ${breakpoints.xs}) {
-    max-width: 700px;
-  } */
-`;
-
-const NavLinksWrapper = styled.div`
-  display: none;
-  gap: .25rem;
-  align-items: center;
-
-  @media only screen and (min-width: ${breakpoints.lg}) {
-    display: flex;
-  }
-`;
-
-const NavLinksWrapperMobile = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media only screen and (min-width: ${breakpoints.lg}) {
-    display: none;
-  }
-`;
-
-const StyledUnorderedList = styled.ul`
-  display: flex;
-  gap: 1rem;
-`;
-
-const StyledUnorderedListMobile = styled.ul`
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-`;
-
-const HamburgerIcon = styled.div`
-  display: flex;
-
-  @media only screen and (min-width: ${breakpoints.lg}) {
-    display: none;
-  }
-`;
-
-export const Navbar: React.FC = (): React.ReactElement => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   const navigate = useNavigate()
 
   const navigateContactUs = () => {
@@ -79,61 +29,68 @@ export const Navbar: React.FC = (): React.ReactElement => {
 
   const navbarItems = [
     {
-      name: "Portafolio",
-      href: "#portafolio",
+      name: intl('home.navbar.link.portafolio'),
+      href: 'portafolio',
     },
     {
-      name: "Learn with us",
-      href: "/",
+      name: intl('home.navbar.link.learn.with.us'),
+      href: 'learn-with-us',
     },
     {
-      name: "Services",
-      href: "/",
+      name: intl('home.navbar.link.services'),
+      href: 'services',
     },
     {
-      name: "About us",
-      href: "/about-us",
+      name: intl('home.navbar.link.about.us'),
+      href: 'about-us',
     },
-  ];
+  ]
 
-  const toggleNavbar = () => {
-    setIsOpen((prev) => !prev);
-  };
+  const handleIsOpen = () => {
+    setIsOpen((prev) => !prev)
+  }
 
   return (
-    <StyledNavbar>
-      <NavbarWrapper>
-        <NavLinksWrapper>
-          <StyledUnorderedList>
+    <StyledHeader>
+      <HeaderWrapper size="lg">
+        <a href="/">
+          <img src={logo} alt="Binland logo" />
+        </a>
+        <HamburgerIcon>
+          <LanguageSwitcher />
+          {isOpen ? (
+            <CgClose onClick={handleIsOpen} />
+          ) : (
+            <GiHamburgerMenu onClick={handleIsOpen} />
+          )}
+        </HamburgerIcon>
+        <DesktopNavigation>
+          <DesktopUnorderedList>
             {navbarItems.map((navItem) => (
               <NavLink key={navItem.name} item={navItem} />
             ))}
-          </StyledUnorderedList>
+          </DesktopUnorderedList>
           <Button type="primary" onClick={navigateContactUs}>
-            {intl("home.navbar.button.contact.us")}
+            {intl('home.navbar.button.contact.us')}
           </Button>
           <LanguageSwitcher />
-        </NavLinksWrapper>
-        <HamburgerIcon>
-          <button onClick={toggleNavbar}>
-            {isOpen ? "X" : <GiHamburgerMenu />}
-          </button>
-        </HamburgerIcon>
-      </NavbarWrapper>
-      {isOpen && (
-        <NavLinksWrapperMobile>
-          <StyledUnorderedListMobile>
-            {navbarItems.map((navItem) => (
-              <NavLink item={navItem} />
-            ))}
-          </StyledUnorderedListMobile>
-          <Button type="primary" onClick={navigateContactUs}>
-            {intl("home.navbar.button.contact.us")}
-          </Button>
-        </NavLinksWrapperMobile>
-      )}
-    </StyledNavbar>
-  );
-};
+        </DesktopNavigation>
+      </HeaderWrapper>
 
-export default Navbar;
+      {isOpen && (
+        <MobileNavigation>
+          <ul>
+            {navbarItems.map((navItem) => (
+              <NavLink key={navItem.name} item={navItem} />
+            ))}
+          </ul>
+          <Button type="primary" onClick={navigateContactUs}>
+            {intl('home.navbar.button.contact.us')}
+          </Button>
+        </MobileNavigation>
+      )}
+    </StyledHeader>
+  )
+}
+
+export default Navbar

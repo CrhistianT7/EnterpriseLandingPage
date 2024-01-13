@@ -1,10 +1,18 @@
 {
-  "home.navbar.link.about.us": "Acerca de nosotros",
+  "home.navbar.link.about.us": "Nosotros",
+  "home.navbar.link.portafolio": "Portafolio",
+  "home.navbar.link.learn.with.us": "Aprende con nosotros",
+  "home.navbar.link.services": "Servicios",
   "home.navbar.button.contact.us": "Contáctanos",
-
   "home.hero.slogan": "Algo bueno",
   "home.hero.subslogan": "Algo bueno",
 
   "contact.us.hero.title": "Contáctanos",
-  "contact.us.hero.description": "Estamos aquí por tí. Comuníquese usando el siguiente formulario"
+  "contact.us.hero.description": "Estamos aquí por tí. Comuníquese usando el siguiente formulario",
+  
+  "footer.all.rights.reserved": "Todos los derechos reservados",
+  "footer.contact.us": "Contáctanos",
+  "footer.follow.us": "Siguenos",
+  "footer.privacy.policy": "Política de privacidad",
+  "footer.terms.of.service": "Términos de servicio"
 }

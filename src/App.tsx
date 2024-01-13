@@ -7,6 +7,8 @@ import Home from 'pages/Home/Home'
 import AboutUs from 'pages/AboutUs/AboutUs'
 import PageNotFound from 'pages/PageNotFound/PageNotFound'
 import ContactUs from 'pages/ContactUs/ContactUs'
+import PrivacyPolicy from 'pages/PrivacyPolicy/PrivacyPolicy'
+import TermsOfService from 'pages/TermsOfService/TermsOfService'
 
 const App = () => {
   const { language } = useLanguageContext()
@@ -16,7 +18,9 @@ const App = () => {
       <IntlProvider locale={language.locale} messages={language.messages}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="about-us" element={<AboutUs />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path='contact-us' element={<ContactUs/>}/>
         </Routes>
