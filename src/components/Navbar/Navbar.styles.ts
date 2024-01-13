@@ -7,6 +7,8 @@ export const StyledHeader = styled.header`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 72px;
+  max-height: 72px;
   background: #ffdee4;
 
   position: fixed;

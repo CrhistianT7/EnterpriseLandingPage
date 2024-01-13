@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
     navigate('contact-us')
   }
 
-  const intl = useIntlMessages();
+  const intl = useIntlMessages()
 
   const navbarItems = [
     {
@@ -51,45 +51,48 @@ const Navbar: React.FC = () => {
   }
 
   return (
-    <StyledHeader>
-      <HeaderWrapper size="lg">
-        <a href="/">
-          <img src={logo} alt="Binland logo" />
-        </a>
-        <HamburgerIcon>
-          <LanguageSwitcher />
-          {isOpen ? (
-            <CgClose onClick={handleIsOpen} />
-          ) : (
-            <GiHamburgerMenu onClick={handleIsOpen} />
-          )}
-        </HamburgerIcon>
-        <DesktopNavigation>
-          <DesktopUnorderedList>
-            {navbarItems.map((navItem) => (
-              <NavLink key={navItem.name} item={navItem} />
-            ))}
-          </DesktopUnorderedList>
-          <Button type="primary" onClick={navigateContactUs}>
-            {intl('home.navbar.button.contact.us')}
-          </Button>
-          <LanguageSwitcher />
-        </DesktopNavigation>
-      </HeaderWrapper>
+    <>
+      <div style={{ height: '72px' }}></div>
+      <StyledHeader>
+        <HeaderWrapper size="lg">
+          <a href="/">
+            <img src={logo} alt="Binland logo" />
+          </a>
+          <HamburgerIcon>
+            <LanguageSwitcher />
+            {isOpen ? (
+              <CgClose onClick={handleIsOpen} />
+            ) : (
+              <GiHamburgerMenu onClick={handleIsOpen} />
+            )}
+          </HamburgerIcon>
+          <DesktopNavigation>
+            <DesktopUnorderedList>
+              {navbarItems.map((navItem) => (
+                <NavLink key={navItem.name} item={navItem} />
+              ))}
+            </DesktopUnorderedList>
+            <Button type="primary" onClick={navigateContactUs}>
+              {intl('home.navbar.button.contact.us')}
+            </Button>
+            <LanguageSwitcher />
+          </DesktopNavigation>
+        </HeaderWrapper>
 
-      {isOpen && (
-        <MobileNavigation>
-          <ul>
-            {navbarItems.map((navItem) => (
-              <NavLink key={navItem.name} item={navItem} />
-            ))}
-          </ul>
-          <Button type="primary" onClick={navigateContactUs}>
-            {intl('home.navbar.button.contact.us')}
-          </Button>
-        </MobileNavigation>
-      )}
-    </StyledHeader>
+        {isOpen && (
+          <MobileNavigation>
+            <ul>
+              {navbarItems.map((navItem) => (
+                <NavLink key={navItem.name} item={navItem} />
+              ))}
+            </ul>
+            <Button type="primary" onClick={navigateContactUs}>
+              {intl('home.navbar.button.contact.us')}
+            </Button>
+          </MobileNavigation>
+        )}
+      </StyledHeader>
+    </>
   )
 }
 

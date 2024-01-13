@@ -13,7 +13,7 @@ export const ContactUsHero = styled.div`
   height: 300px;
   display: flex;
   align-items: center;
-  margin-top: 70px;
+  
   @media only screen and (max-width: ${breakpoints.sm}) {
     height: 350px;
   }

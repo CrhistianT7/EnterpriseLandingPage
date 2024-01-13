@@ -6,8 +6,8 @@ const Layout: React.FC = () => {
   return (
     <>
       <Navbar />
-      <Outlet/>
-      <Footer/>
+      <Outlet />
+      <Footer />
     </>
   )
 }
