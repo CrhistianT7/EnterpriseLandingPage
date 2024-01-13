@@ -21,9 +21,11 @@ const Home = () => {
           Branding - Diseñador - Migraciones a la nube - Cloud computing en
           general - Diseño UX/UI * Description abajo con nab algo
           - aumento de equipo 
-          - transformación digital
+          - transformación digital - digitalizacion, Marketing digital
           - ecommerce
           - section de los desarrolladores, porque somos la unica prueba viviente por ahora
+          - servicio de restaurantes para pedir comida, gratis pocos servicios y y mas caracteristicas de paga
+          - seguro/suscription para resolver problemas de nuestros servicios
         </div>
       </section>
       <section>
