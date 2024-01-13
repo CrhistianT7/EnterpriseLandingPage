@@ -7,6 +7,7 @@ interface IButton {
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   isFullWidth?: boolean;
+  onClick?: () => void
 }
 
 const Button: React.FC<IButton> = ({
