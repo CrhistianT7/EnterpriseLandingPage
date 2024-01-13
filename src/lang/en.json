@@ -6,5 +6,8 @@
   "home.hero.subslogan": "Something good",
 
   "home.services.title": "Services",
-  "home.services.subtitle": "We provide you with blablabla"
+  "home.services.subtitle": "We provide you with blablabla",
+
+  "contact.us.hero.title": "Contact Us",
+  "contact.us.hero.description": "Were here for you. Reach out using the form belowa"
 }

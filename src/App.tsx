@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from 'pages/Home/Home'
 import AboutUs from 'pages/AboutUs/AboutUs'
 import PageNotFound from 'pages/PageNotFound/PageNotFound'
+import ContactUs from 'pages/ContactUs/ContactUs'
 
 const App = () => {
   const { language } = useLanguageContext()
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="*" element={<PageNotFound />} />
+          <Route path='contact-us' element={<ContactUs/>}/>
         </Routes>
       </IntlProvider>
     </>

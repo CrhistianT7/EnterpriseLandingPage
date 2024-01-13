@@ -3,5 +3,8 @@
   "home.navbar.button.contact.us": "Contáctanos",
 
   "home.hero.slogan": "Algo bueno",
-  "home.hero.subslogan": "Algo bueno"
+  "home.hero.subslogan": "Algo bueno",
+
+  "contact.us.hero.title": "Contáctanos",
+  "contact.us.hero.description": "Estamos aquí por tí. Comuníquese usando el siguiente formulario"
 }

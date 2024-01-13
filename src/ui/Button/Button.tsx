@@ -6,6 +6,7 @@ interface IButton {
   children: React.ReactNode;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
+  onClick?: (() => void)| undefined
   isFullWidth?: boolean;
 }
 

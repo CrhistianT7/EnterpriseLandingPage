@@ -1,4 +1,3 @@
-import ContactUs from "components/ContactUs/ContactUs";
 import Header from "components/Header/Header";
 import Hero from "components/Hero/Hero";
 import Container from "ui/Container/Container";
@@ -25,9 +24,6 @@ const Home = () => {
           - ecommerce
           - section de los desarrolladores, porque somos la unica prueba viviente por ahora
         </div>
-      </section>
-      <section>
-        <ContactUs />
       </section>
       <footer>
         <h3>Footer</h3>

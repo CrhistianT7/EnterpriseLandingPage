@@ -4,9 +4,11 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import useIntlMessages from "../../hooks/useIntlMessages";
 import { breakpoints } from "../../shared/breakpoints";
-import Button from "../../ui/Button/Button";
+// import Button from "../../ui/Button/Button";
 import NavLink from "../../ui/NavLink/NavLink";
 import LanguageSwitcher from "../../components/LanguageSwitcher/LanguageSwitcher";
+import { useNavigate } from "react-router-dom";
+import Button from "ui/Button/Button";
 
 const StyledNavbar = styled.nav`
   font-size: 16px;
@@ -67,6 +69,11 @@ const HamburgerIcon = styled.div`
 
 export const Navbar: React.FC = (): React.ReactElement => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const navigate = useNavigate()
+
+  const navigateContactUs = () => {
+    navigate('contact-us')
+  }
 
   const intl = useIntlMessages();
 
@@ -102,7 +109,7 @@ export const Navbar: React.FC = (): React.ReactElement => {
               <NavLink key={navItem.name} item={navItem} />
             ))}
           </StyledUnorderedList>
-          <Button type="primary">
+          <Button type="primary" onClick={navigateContactUs}>
             {intl("home.navbar.button.contact.us")}
           </Button>
           <LanguageSwitcher />
@@ -120,7 +127,7 @@ export const Navbar: React.FC = (): React.ReactElement => {
               <NavLink item={navItem} />
             ))}
           </StyledUnorderedListMobile>
-          <Button type="primary">
+          <Button type="primary" onClick={navigateContactUs}>
             {intl("home.navbar.button.contact.us")}
           </Button>
         </NavLinksWrapperMobile>
