@@ -1,15 +1,10 @@
 import ContactUs from 'components/ContactUs/ContactUs'
-import Footer from 'components/Footer/Footer'
 import Hero from 'components/Hero/Hero'
-import Navbar from 'components/Navbar/Navbar'
 import Container from 'ui/Container/Container'
 
 const Home = () => {
   return (
     <div>
-      <Container size="lg">
-        <Navbar />
-      </Container>
       <Container size="lg">
         <Hero />
         <section id="portafolio" style={{ height: '100vh' }}>
@@ -41,7 +36,6 @@ const Home = () => {
           <ContactUs />
         </section>
       </Container>
-      <Footer />
     </div>
   )
 }

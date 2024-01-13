@@ -8,6 +8,7 @@ import AboutUs from 'pages/AboutUs/AboutUs'
 import PageNotFound from 'pages/PageNotFound/PageNotFound'
 import PrivacyPolicy from 'pages/PrivacyPolicy/PrivacyPolicy'
 import TermsOfService from 'pages/TermsOfService/TermsOfService'
+import Layout from 'components/Layout/Layout'
 
 const App = () => {
   const { language } = useLanguageContext()
@@ -16,11 +17,13 @@ const App = () => {
       <GlobalStyle />
       <IntlProvider locale={language.locale} messages={language.messages}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-of-service" element={<TermsOfService />} />
-          <Route path="*" element={<PageNotFound />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Route>
         </Routes>
       </IntlProvider>
     </>
