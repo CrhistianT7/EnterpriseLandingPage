@@ -4,12 +4,13 @@
   "home.navbar.link.learn.with.us": "Learn with us",
   "home.navbar.link.services": "Services",
   "home.navbar.button.contact.us": "Contact us",
-
   "home.hero.slogan": "Something good",
   "home.hero.subslogan": "Something good",
-
   "home.services.title": "Services",
   "home.services.subtitle": "We provide you with blablabla",
+
+  "contact.us.hero.title": "Contact Us",
+  "contact.us.hero.description": "Were here for you. Reach out using the form belowa",
 
   "footer.all.rights.reserved": "All rights reserved",
   "footer.contact.us": "Contact us",

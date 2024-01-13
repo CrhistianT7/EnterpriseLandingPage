@@ -1,4 +1,3 @@
-import ContactUs from 'components/ContactUs/ContactUs'
 import Hero from 'components/Hero/Hero'
 import Container from 'ui/Container/Container'
 
@@ -31,9 +30,6 @@ const Home = () => {
           - servicio de restaurantes para pedir comida, gratis pocos servicios y y mas caracteristicas de paga
           - seguro/suscription para resolver problemas de nuestros servicios
           </div>
-        </section>
-        <section>
-          <ContactUs />
         </section>
       </Container>
     </div>
