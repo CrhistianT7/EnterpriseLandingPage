@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import useIntlMessages from '../../hooks/useIntlMessages'
 
 const StyledHero = styled.section`
-  height: 100vh;
+  height: calc(100vh - 72px);
+  height: calc(100svh - 72px);
   display: flex;
   align-items: center;
 `
@@ -18,7 +19,6 @@ const Hero: React.FC = (): React.ReactElement => {
         <p>texto pequeño</p>
       </div>
       <div>
-        {/** contact us */}
         <a href="#">Agendar cita</a>
         <button>Portafolio</button>
       </div>
