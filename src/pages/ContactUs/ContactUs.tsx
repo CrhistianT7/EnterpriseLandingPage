@@ -3,6 +3,7 @@ import { BsSend } from 'react-icons/bs'
 import useIntlMessages from 'hooks/useIntlMessages'
 import Button from 'ui/Button/Button'
 import Input from 'ui/input/Input'
+import Textarea from 'ui/Textarea/Textarea'
 import {
   ContactUsHero,
   HeroWrapper,
@@ -42,7 +43,7 @@ const ContactUs = () => {
             <Input id="1" value="some..." label="Company" />
             <Input id="1" value="some..." label="Email" />
             <Input id="1" value="some..." label="Number" />
-            <Input id="1" value="some..." label="Message" />
+            <Textarea label='Message' name='message' placeholder='Hi, i am interesred in' id='message' required/>
             <strong>Select a service</strong>
             <br />
             <input type="radio" id="opcion1" name="opcion" value="opcion1" />
