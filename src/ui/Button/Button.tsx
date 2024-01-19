@@ -1,9 +1,9 @@
+import { PropsWithChildren } from "react";
 import { StyledButton } from "./Button.styles";
 
-interface IButton {
+interface IButton extends PropsWithChildren {
   type: "primary" | "secondary";
   size?: "sm" | "md" | "lg";
-  children: React.ReactNode;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   onClick?: (() => void)| undefined
