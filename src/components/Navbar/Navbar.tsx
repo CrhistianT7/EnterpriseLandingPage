@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate()
 
   const navigateContactUs = () => {
-    navigate('contact-us')
+    navigate('/contact-us')
   }
 
   const intl = useIntlMessages()
