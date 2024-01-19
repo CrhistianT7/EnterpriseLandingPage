@@ -69,6 +69,9 @@ const Footer: React.FC = () => {
           <Link to={'/terms-of-service'} className="legal-item">
             {intl('footer.terms.of.service')}
           </Link>
+          <Link to={'/frequently-asked-question'} className="legal-item">
+            FAQ
+          </Link>
         </FooterLegal>
       </FooterWrapper>
     </StyledFooter>
