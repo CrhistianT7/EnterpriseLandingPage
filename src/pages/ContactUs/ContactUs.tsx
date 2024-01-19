@@ -1,5 +1,7 @@
 import { BsSend } from 'react-icons/bs'
+import { PopupButton } from 'react-calendly'
 
+import './calendly.css'
 import useIntlMessages from 'hooks/useIntlMessages'
 import Button from 'ui/Button/Button'
 import Input from 'ui/input/Input'
@@ -76,9 +78,12 @@ const ContactUs = () => {
           <div>Live chat</div>
           <div>
             <h3>Schedule a Meeting</h3>
-            <Button size="lg" type="secondary">
-              Go calendly
-            </Button>
+            <PopupButton
+              url="https://calendly.com/binland-contacto"
+              rootElement={document.getElementById('root')!}
+              text={intl('contact.us.calendly.button')}
+              className="popup-button-custom"
+            />
           </div>
         </ContactOptionsWrapper>
       </CommunicationWrapper>
