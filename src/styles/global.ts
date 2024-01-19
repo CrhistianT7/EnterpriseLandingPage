@@ -39,6 +39,10 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+  html {
+    font-size: 16px;
+  }
+  
   /* Set core root defaults */
   html:focus-within {
     scroll-behavior: smooth;
