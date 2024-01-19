@@ -7,6 +7,7 @@ import Home from 'pages/Home/Home'
 import PageNotFound from 'pages/PageNotFound/PageNotFound'
 import PrivacyPolicy from 'pages/PrivacyPolicy/PrivacyPolicy'
 import TermsOfService from 'pages/TermsOfService/TermsOfService'
+import FrequenltyAskedQuestion from 'pages/FrequentlyAskedQuestion/FrequentlyAskedQuestion'
 
 const AppRouter: React.FC = () => {
   return (
@@ -17,6 +18,10 @@ const AppRouter: React.FC = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route
+          path="/frequently-asked-question"
+          element={<FrequenltyAskedQuestion />}
+        />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
