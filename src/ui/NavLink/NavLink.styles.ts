@@ -8,7 +8,7 @@ export const StyledListItem = styled.li`
 `
 
 export const StyledAnchor = styled.a`
-  color: ${colors.primary.body};
+  color: ${colors.secondary.main};
   text-decoration: none;
   font-size: 14px;
   padding: 0.25rem 0.25rem;
@@ -21,11 +21,6 @@ export const StyledAnchor = styled.a`
     border-radius: 2px;
   }
 
-  /* &:hover::after {
-    content: "";
-    border-bottom: 1px solid #d20427;
-  } */
-
   &:active,
   &:focus {
     outline: 1px solid #d20427;
@@ -34,6 +29,5 @@ export const StyledAnchor = styled.a`
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     font-size: 16px;
-    //border-bottom: none;
   }
 `
