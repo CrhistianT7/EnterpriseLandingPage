@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import { breakpoints } from 'shared/breakpoints'
 import styled from 'styled-components'
 
@@ -7,7 +8,7 @@ export const StyledListItem = styled.li`
   list-style-type: none;
 `
 
-export const StyledAnchor = styled.a`
+export const StyledAnchor = styled(NavLink)`
   color: ${colors.primary.body};
   text-decoration: none;
   font-size: 14px;
