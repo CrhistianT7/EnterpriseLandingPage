@@ -1,72 +1,92 @@
-import { createContext } from "react";
-import useLocalStorage from "hooks/useLocalStorage";
-import en from "lang/en.json";
-import es from "lang/es.json";
+import { createContext, useEffect, useState } from 'react'
+import useLocalStorage from 'hooks/useLocalStorage'
+import en from 'lang/en.json'
+import es from 'lang/es.json'
 import fr from 'lang/fr.json'
 import pt from 'lang/pt.json'
-import { ENGLISH, ESPANOL, FRANCAIS, PORTUGUES } from "./constants";
+import {
+  ENGLISH,
+  ESPANOL,
+  FRANCAIS,
+  PORTUGUES,
+  LANGUAGE_LOCAL_STORAGE_KEY,
+} from './constants'
 
 interface LanguageDefinition {
-  locale: string;
-  messages: { [index: string]: string };
+  locale: string
+  messages: { [index: string]: string }
 }
 
 interface LangaugeContextProps {
-  language: LanguageDefinition;
-  handleLanguage: (value: string) => void;
+  language: LanguageDefinition
+  handleLanguage: (value: string) => void
 }
 
 interface LanguageProviderProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 const LanguageContext = createContext<LangaugeContextProps>(
   {} as LangaugeContextProps
-);
+)
 
 const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [language, setLanguage] = useLocalStorage<LanguageDefinition>("selectedLanguage", {
-    locale: "en",
-    messages: en,
-  });
+  const [storageLanguage, setStorageLanguage] = useLocalStorage<string>(
+    LANGUAGE_LOCAL_STORAGE_KEY,
+    'en'
+  )
 
+  const [language, setLanguage] = useState<LanguageDefinition>({
+    locale: 'en',
+    messages: en,
+  })
+
+  useEffect(() => {
+    if (storageLanguage) {
+      handleLanguage(storageLanguage)
+    }
+  }, [storageLanguage])
 
   const handleLanguage = (value: string) => {
     switch (value) {
       case ESPANOL:
+        setStorageLanguage('es')
         setLanguage({
-          locale: "es",
+          locale: 'es',
           messages: es,
-        });
-        break;
+        })
+        break
       case ENGLISH:
+        setStorageLanguage('en')
         setLanguage({
-          locale: "en",
+          locale: 'en',
           messages: en,
-        });
-        break;
+        })
+        break
       case PORTUGUES:
+        setStorageLanguage('pt')
         setLanguage({
-          locale: "pt",
+          locale: 'pt',
           messages: pt,
-        });
-        break;
+        })
+        break
       case FRANCAIS:
+        setStorageLanguage('fr')
         setLanguage({
-          locale: "fr",
+          locale: 'fr',
           messages: fr,
-        });
-        break;
+        })
+        break
       default:
-        break;
+        break
     }
-  };
+  }
 
   return (
     <LanguageContext.Provider value={{ language, handleLanguage }}>
       {children}
     </LanguageContext.Provider>
-  );
-};
+  )
+}
 
-export { LanguageContext, LanguageProvider };
+export { LanguageContext, LanguageProvider }
