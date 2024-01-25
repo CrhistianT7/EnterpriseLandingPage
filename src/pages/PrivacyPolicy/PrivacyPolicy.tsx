@@ -1,7 +1,9 @@
+import Container from "ui/Container/Container"
+
 const PrivacyPolicy: React.FC = () => {
-  return <div>
+  return <Container size="sm">
     Privacy Policy
-  </div>
+  </Container>
 }
 
 export default PrivacyPolicy
