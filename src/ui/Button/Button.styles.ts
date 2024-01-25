@@ -11,11 +11,11 @@ const typeStyles = (type: string) => {
   switch (type) {
     case "primary":
       return `
-        color: ${colors.white};
-        background-color: ${colors.primary.main};
+        color: ${colors.white.main};
+        background-color: ${colors.secondary.main};
 
         &:focus {
-          outline: 2px solid ${colors.primary.body};
+          outline: 2px solid ${colors.secondary.focus};
         }
 
         &:active {
@@ -24,13 +24,13 @@ const typeStyles = (type: string) => {
       `;
     case "secondary":
       return `
-        color: ${colors.primary.main};
-        background-color: ${colors.white};
-        outline: 1px solid ${colors.primary.main};
+        color: ${colors.secondary.main};
+        background-color: ${colors.white.main};
+        outline: 1px solid ${colors.secondary.main};
 
         &:focus {
           border: none;
-          outline: 2px solid ${colors.primary.body};
+          outline: 2px solid ${colors.secondary.focus};
         }
       `;
     default:
@@ -59,6 +59,7 @@ export const StyledButton = styled.button<IStyledButton>`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: ${colors.white.main};
   font-size: 16px;
   padding: 12px 16px;
   border: none;
@@ -72,8 +73,7 @@ export const StyledButton = styled.button<IStyledButton>`
   ${(props) => sizeStyles(props.size!)}
 
   &:hover {
-    color: ${colors.white};
-    background-color: ${colors.primary.body};
+    background-color: ${colors.secondary.hover};
     outline: none;
   }
 `;

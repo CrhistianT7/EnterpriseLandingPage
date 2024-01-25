@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "styles/colors";
 
 interface ISelectOption {
   selected: boolean;
@@ -9,13 +10,13 @@ export const StyledSelect = styled.div`
   flex-direction: column;
   position: relative;
   cursor: pointer;
-  background: #fff;
+  background: ${colors.white.main};
 
-  border: 1px solid #d20427;
+  border: 1px solid ${colors.secondary.main};
   border-radius: 6px;
   padding: 8px 12px;
   line-height: 100%;
-  color: #d20427;
+  color: ${colors.secondary.main};
   min-width: 150px;
 `;
 
@@ -37,8 +38,8 @@ export const StyledSelectOptions = styled.div`
     left: 0;
     width: 150px;
 
-    background: #fff;
-    border: 1px solid #d20427;
+    background: ${colors.white.main};
+    border: 1px solid ${colors.secondary.main};
     border-radius: 6px;
     padding: 6px 6px;
 `
@@ -50,9 +51,9 @@ export const StyledSelectOption = styled.li<ISelectOption>`
   border-radius: 6px;
 
   &:hover {
-    background: #f80a32;
+    background: ${colors.secondary.hover};
     color: white;
   }
 
-  ${(props) => (props.selected ? `background: #ffdee4;` : "")}
+  ${(props) => (props.selected ? `background: ${colors.secondary.selected};` : "")}
 `;
