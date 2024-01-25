@@ -22,6 +22,7 @@ export const HeaderWrapper = styled(Container)`
   justify-content: space-between;
   position: relative;
   padding: 16px 16px;
+  min-height: 72px;
 `
 
 export const HamburgerIcon = styled.div`
@@ -55,6 +56,7 @@ export const MobileNavigation = styled.nav`
   border-top: 2px solid red;
   width: 100%;
   padding: .75rem;
+  background: #ffdee4;
 
   transition: display 5s linear;
 

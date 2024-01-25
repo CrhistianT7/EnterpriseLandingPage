@@ -1,22 +1,26 @@
-import { StyledAnchor, StyledListItem } from "./NavLink.styles";
+import { StyledAnchor, StyledListItem } from './NavLink.styles'
 
 interface INavLink {
-  name: string;
-  href: string;
+  name: string
+  href: string
 }
 
 interface NavLinkProps {
-  item: INavLink;
+  item: INavLink
+  onClick?: (() => void)| undefined
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ item }): React.ReactElement => {
+const NavLink: React.FC<NavLinkProps> = ({
+  item,
+  onClick,
+}): React.ReactElement => {
   return (
     <StyledListItem>
-      <StyledAnchor role="navigation" href={item.href}>
+      <StyledAnchor role="navigation" to={item.href} onClick={onClick}>
         {item.name}
       </StyledAnchor>
     </StyledListItem>
-  );
-};
+  )
+}
 
-export default NavLink;
+export default NavLink
