@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   /* CSS Reset by Andy Bell (https://piccalil.li/blog/a-modern-css-reset/) */
@@ -55,6 +55,12 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
   }
 
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
   /* A elements that don't have a class get default styles */
   a:not([class]) {
     text-decoration-skip-ink: auto;
@@ -90,4 +96,4 @@ export const GlobalStyle = createGlobalStyle`
       scroll-behavior: auto !important;
     }
   }
-`;
+`
