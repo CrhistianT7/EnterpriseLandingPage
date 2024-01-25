@@ -1,4 +1,6 @@
-export const ENGLISH = "english";
-export const PORTUGUES = "portugues";
-export const FRANCAIS = "francais";
-export const ESPANOL = "espanol";
+export const ENGLISH = "en";
+export const PORTUGUES = "pt";
+export const FRANCAIS = "fr";
+export const ESPANOL = "es";
+
+export const LANGUAGE_LOCAL_STORAGE_KEY = "selectedLanguage"
