@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 interface IStyledContainer {
   size: 'sm' | 'md' | 'lg' | 'xl'
+  isFullWidth: boolean | undefined
 }
 
 const sizeStyles = (size: string) => {
@@ -34,6 +35,7 @@ export const StyledContainer = styled.div<IStyledContainer>`
   padding: 0 1rem;
   margin: auto;
   flex-direction: column;
+  width: ${({ isFullWidth }) => (isFullWidth ? "100%" : "")};
 
   ${(props) => sizeStyles(props.size)}
 `
