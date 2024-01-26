@@ -1,30 +1,28 @@
-import React from "react";
-import { InputWrapper, StyledInput, StyledLabel } from "./Input.styles";
-import { ChangeEvent } from "react";
+import { FocusEvent, ChangeEvent } from 'react'
 
-type Value = string | number | boolean | Date
+import { InputWrapper, StyledInput, StyledLabel } from './Input.styles'
 
 interface IStyledInput {
   id: string
-  type?: "text" | "number" | "email" | "password" 
+  type?: 'text' | 'number' | 'email' | 'password'
   name?: string
-  value: Value
-  onChange?: (event: ChangeEvent<HTMLInputElement>) => void
+  value: string | number 
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void
+  onBlur?: (event: FocusEvent<HTMLInputElement>) => void
   placeholder?: string
   label?: string
-  required?: boolean
 }
 
 const Input: React.FC<IStyledInput> = ({
   id,
-  type="text",
+  type = 'text',
   name,
   onChange,
+  onBlur,
   value,
-  placeholder,
+  placeholder = '',
   label,
-  required = false,
-  }) => {
+}) => {
   return (
     <InputWrapper>
       {label && <StyledLabel htmlFor={id || name}>{label}</StyledLabel>}
@@ -32,13 +30,13 @@ const Input: React.FC<IStyledInput> = ({
         id={id || name}
         type={type}
         name={name}
-        value={value as string}
+        value={value}
         onChange={onChange}
+        onBlur={onBlur}
         placeholder={placeholder}
-        required={required}
       />
     </InputWrapper>
-  );
+  )
 }
 
-export default Input;
+export default Input

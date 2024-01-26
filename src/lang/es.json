@@ -11,6 +11,25 @@
   "contact.us.hero.description": "Estamos aquí por tí. Comuníquese usando el siguiente formulario",
   "contact.us.calendly.button": "Agenda tu reunión",
 
+  "contact.us.form.input.firstname.validation": "Debe tener menos o igual a 30 caracteres",
+  "contact.us.form.input.lastname.validation": "Debe tener menos o igual a 30 caracteres",
+  "contact.us.form.input.email.validation": "El correo electrónico debe estar formateado correctamente",
+  "contact.us.form.input.company.validation": "Debe tener 30 caracteres o menos",
+  "contact.us.form.input.phone.validation": "Por favor, ingrese un número de teléfono válido (solo se permiten números, +, -, (, ), y espacios)",
+  "contact.us.form.input.message.validation": "Por favor, ingrese al menos 30 caracteres",
+
+  "contact.us.form.label.firstname": "Nombre",
+  "contact.us.form.label.lastname": "Apellido",
+  "contact.us.form.label.email": "Correo Electrónico",
+  "contact.us.form.label.company": "Empresa",
+  "contact.us.form.label.phone": "Teléfono",
+  "contact.us.form.label.message": "Mensaje",
+
+  "contact.us.form.input.message.placeholder":  "Escribe tu mensaje aquí...",
+
+  "contact.us.form.title": "Contáctanos",
+  "contact.us.form.button": "Enviar",
+
   "frequently.asked.questions.title": "Preguntas frecuentes",
   "frequently.asked.questions.still.have.questions": "¿Todavía tienes preguntas?",
   "frequently.asked.questions.still.have.questions.description": "¿No encuentras la respuesta que buscas? Por favor comunicate con nuestro equipo amigable",
@@ -20,5 +39,7 @@
   "footer.contact.us": "Contáctanos",
   "footer.follow.us": "Siguenos",
   "footer.privacy.policy": "Política de privacidad",
-  "footer.terms.of.service": "Términos de servicio"
+  "footer.terms.of.service": "Términos de servicio",
+
+  "validation.input.required.message": "Este campo es requerido"
 }
