@@ -9,7 +9,7 @@ const AboutUs = () => {
       name: 'Andrew Turpo',
       position: 'Founder & CEO',
       image: 'random image',
-      website: 'https://www.andrewturpo.com/',
+      website_url: 'https://www.andrewturpo.com/',
     },
     {
       name: 'Gustavo Ugarte',

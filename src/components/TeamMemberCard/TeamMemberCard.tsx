@@ -5,7 +5,7 @@ interface ITeamMemberCard {
   position: string
   quote?: string
   image: string
-  website?: string
+  website_url?: string
 }
 
 const StyledTeamMemberCard = styled.div`
@@ -17,7 +17,7 @@ const TeamMemberCard: React.FC<ITeamMemberCard> = ({
   position,
   quote,
   image,
-  website,
+  website_url,
 }) => {
   return (
     <StyledTeamMemberCard>
@@ -26,7 +26,7 @@ const TeamMemberCard: React.FC<ITeamMemberCard> = ({
       <p>{position
       }</p>
       <p>{quote}</p>
-      <div>link to: {website}</div>
+      <div>link to: {website_url}</div>
     </StyledTeamMemberCard>
   )
 }
