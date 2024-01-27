@@ -1,11 +1,11 @@
 import { useFormik } from 'formik'
 
-import { validationSchema } from './Form.yup'
+import { validationSchema } from './FormContactUs.yup'
 import useIntlMessages from 'hooks/useIntlMessages'
 import Input from 'ui/input/Input'
 import Textarea from 'ui/Textarea/Textarea'
 import Button from 'ui/Button/Button'
-import { TitleForm, Error, FormWrapper, ContainerForm } from './Form.styles'
+import { TitleForm, Error, FormWrapper, ContainerForm } from './FormContactUs.styles'
 
 interface IValues {
   firstName: string

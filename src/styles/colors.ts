@@ -1,22 +1,23 @@
 export const colors = {
   gray: {
     50: '#fff',
+    100: '#eceaea',
   },
   white: {
-    main: "#fff"
+    main: '#fff',
   },
   primary: {
     main: '#E74C3C',
-    disabled: "",
-    hover: "",
-    focus: "",
+    disabled: '',
+    hover: '',
+    focus: '',
   },
   secondary: {
     main: '#424242',
-    disabled: "",
-    selected: "#b0b0b0",
-    hover: "#5d5d5d",
-    focus: "#4f4f4f",
+    disabled: '',
+    selected: '#b0b0b0',
+    hover: '#5d5d5d',
+    focus: '#4f4f4f',
   },
   red: {
     50: '#FFF0F3',
