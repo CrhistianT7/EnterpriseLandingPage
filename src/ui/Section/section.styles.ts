@@ -25,6 +25,8 @@ export const StyledSection = styled.section<IStyledSection>`
   align-items: center;
   justify-content: center;
   max-width: 1280px;
+  flex-direction: column;
+  width: 100%;
 
   ${(props) =>
     props.type === "margin"

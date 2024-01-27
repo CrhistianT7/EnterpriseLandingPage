@@ -29,6 +29,8 @@ const Home = () => {
           - section de los desarrolladores, porque somos la unica prueba viviente por ahora
           - servicio de restaurantes para pedir comida, gratis pocos servicios y y mas caracteristicas de paga
           - seguro/suscription para resolver problemas de nuestros servicios
+          - Lo que nos pagas tmb se ve reflejado en la ciudad ambiente, ayuda a albergues de perritos o donaciones
+          - crear un firma de correo, al mandar correos
           </div>
         </section>
       </Container>
