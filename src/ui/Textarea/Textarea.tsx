@@ -1,4 +1,4 @@
-import { ChangeEvent } from 'react'
+import { ChangeEvent, FocusEvent } from 'react'
 
 import { StyledLabel, StyledTextarea, TextareaWrapper } from './Textarea.styles'
 
@@ -8,7 +8,7 @@ interface IStyledTextarea {
   placeholder: string
   id: string
   value?: string
-  required: boolean
+  onBlur?: (event: FocusEvent<HTMLTextAreaElement>) => void
   onChange?: (event: ChangeEvent<HTMLTextAreaElement>) => void
 }
 
@@ -19,7 +19,7 @@ const Textarea: React.FC<IStyledTextarea> = ({
   id,
   value,
   onChange,
-  required = true,
+  onBlur,
 }) => {
   return (
     <TextareaWrapper>
@@ -30,9 +30,7 @@ const Textarea: React.FC<IStyledTextarea> = ({
         id={id || name}
         value={value}
         onChange={onChange}
-        required={required}
-        rows={10}
-        cols={3}
+        onBlur={onBlur}
       />
     </TextareaWrapper>
   )

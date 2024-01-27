@@ -1,7 +1,7 @@
-import styled from "styled-components"
-import { breakpoints } from "shared/breakpoints"
+import styled from 'styled-components'
+import { breakpoints } from 'shared/breakpoints'
 import leafBackground from './../../assets/images/backgrounds/leaf-background.jpg'
-import Container from "ui/Container/Container"
+import Container from 'ui/Container/Container'
 
 export const ContactUsHero = styled.div`
   width: 100%;
@@ -13,7 +13,7 @@ export const ContactUsHero = styled.div`
   height: 300px;
   display: flex;
   align-items: center;
-  
+
   @media only screen and (max-width: ${breakpoints.sm}) {
     height: 350px;
   }
@@ -67,14 +67,4 @@ export const ContactOptionsWrapper = styled.div`
   width: 100%;
   background-image: url();
   border-radius: 1rem;
-`
-export const FormWrapper = styled.div`
-  padding: 10px;
-  background-color: #eceaea;
-  border-radius: 1rem;
-  width: 100%;
-`
-export const StyledTitleForm = styled.h1`
-  text-align: center;
-  margin: 20px 0px;
 `

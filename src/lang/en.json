@@ -13,6 +13,25 @@
   "contact.us.hero.description": "Were here for you. Reach out using the form belowa",
   "contact.us.calendly.button": "Schedule a meeting",
 
+  "contact.us.form.input.firstname.validation": "Must be less than or equal to 30 characters",
+  "contact.us.form.input.lastname.validation": "must be less than or equal to 30 characters",
+  "contact.us.form.input.email.validation": "Email must be formatted correctly",
+  "contact.us.form.input.company.validation": "Must be 30 characters or less",
+  "contact.us.form.input.phone.validation": "Please enter a valid phone number (only numbers, +, -, (, ), and spaces are allowed)",
+  "contact.us.form.input.message.validation": "Please enter at least 30 characters",
+
+  "contact.us.form.label.firstname": "First Name",
+  "contact.us.form.label.lastname": "Last Name",
+  "contact.us.form.label.email": "E-mail",
+  "contact.us.form.label.company": "Company",
+  "contact.us.form.label.phone": "Phone",
+  "contact.us.form.label.message": "Message",
+
+  "contact.us.form.input.message.placeholder":  "Write a message here...",
+
+  "contact.us.form.title": "Contact us",
+  "contact.us.form.button": "Send",
+
   "frequently.asked.questions.title": "Frequently asked questions",
   "frequently.asked.questions.still.have.questions": "Still have questions?",
   "frequently.asked.questions.still.have.questions.description": "Can't find the answer you're looking for? Please contact our friendly team",
@@ -24,5 +43,7 @@
   "footer.contact.us": "Contact us",
   "footer.follow.us": "Follow us",
   "footer.privacy.policy": "Privacy policy",
-  "footer.terms.of.service": "Terms of service"
+  "footer.terms.of.service": "Terms of service",
+  
+  "validation.input.required.message": "This field is required"
 }

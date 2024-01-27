@@ -4,7 +4,7 @@ import Input from './Input';
 
 describe('Input Component tests', () => {
   test('renders with the correct properties', () => {
-    render(<Input type='text' label='milabel' id="uno" name="uno" onChange={() => console.log()} value="something" placeholder='nombre' required/>)
+    render(<Input type='text' label='milabel' id="uno" name="uno" onChange={() => console.log()} value="something" placeholder='nombre'/>)
 
     const input = screen.getByRole("textbox")
 
@@ -23,7 +23,7 @@ describe('Input Component tests', () => {
   });
 
   test('renders without a placeholder', () => {
-    render(<Input type='text' label='something' id="uno" onChange={() => console.log()} name="uno" value="something" required />)
+    render(<Input type='text' label='something' id="uno" onChange={() => console.log()} name="uno" value="something"/>)
 
     const input = screen.getByRole("textbox")
 
@@ -52,7 +52,7 @@ describe('Input Component tests', () => {
   });
 
   test('renders without label', () => {
-    render(<Input type='text' label='something' id="tres" onChange={() => console.log()} name="tres" value="something" placeholder='email' required />)
+    render(<Input type='text' label='something' id="tres" onChange={() => console.log()} name="tres" value="something" placeholder='email' />)
 
     const input = screen.getByRole("textbox")
 
