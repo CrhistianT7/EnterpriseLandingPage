@@ -10,7 +10,7 @@ const App = () => {
     <>
       <GlobalStyle />
       <IntlProvider locale={language.locale} messages={language.messages}>
-        <AppRouter/>
+        <AppRouter />
       </IntlProvider>
     </>
   )
