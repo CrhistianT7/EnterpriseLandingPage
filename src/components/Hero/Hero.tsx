@@ -15,12 +15,11 @@ const Hero: React.FC = (): React.ReactElement => {
   return (
     <StyledHero id="hero">
       <div>
-        {intl('home.hero.slogan')}
-        <p>texto pequeño</p>
+        <p>{intl("home.hero.subslogan")}</p>
+        <p>{intl("home.hero.slogan")}</p>
       </div>
       <div>
-        <a href="#">Agendar cita</a>
-        <button>Portafolio</button>
+        <a href="#">{intl("home.hero.contact.us.button.title")}</a>
       </div>
     </StyledHero>
   )

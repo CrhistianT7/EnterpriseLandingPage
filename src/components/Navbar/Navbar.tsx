@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
     },
     {
       name: intl('home.navbar.link.learn.with.us'),
-      href: '/learn-with-us',
+      href: '/lets-learn',
     },
     {
       name: intl('home.navbar.link.services'),
