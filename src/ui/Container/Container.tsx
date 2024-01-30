@@ -4,20 +4,20 @@ import { StyledContainer } from './Container.styles'
 interface IContainer extends PropsWithChildren {
   size: 'sm' | 'md' | 'lg' | 'xl'
   className?: string
-  isFullWidth?: boolean | undefined
+  isfullwidth?: boolean | undefined
 }
 
 const Container: React.FC<IContainer> = ({
   size,
   children,
   className,
-  isFullWidth,
+  isfullwidth,
 }) => {
   return (
     <StyledContainer
       size={size}
       className={className}
-      isFullWidth={isFullWidth}
+      isfullwidth={isfullwidth}
     >
       {children}
     </StyledContainer>

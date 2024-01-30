@@ -139,6 +139,7 @@ const TitleOficce = styled.h2`
 const AboutUs = () => {
   const founderMembers = [
     {
+      id: 1,
       name: 'Andrew Turpo',
       position: 'Founder & CEO',
       image: 'src/assets/images/imgAboutUs/Founder.jpg',
@@ -147,6 +148,7 @@ const AboutUs = () => {
       website_url: 'https://www.andrewturpo.com/',
     },
     {
+      id: 2,
       name: 'Gustavo Ugarte',
       position: 'Founder & Frontend Developer',
       image: 'src/assets/images/imgAboutUs/Founder.jpg',
@@ -155,6 +157,7 @@ const AboutUs = () => {
       website_url: 'https://www.andrewturpo.com/',
     },
     {
+      id: 3,
       name: 'Jonatan Cervantes',
       position: 'Founder & UX/UI Designer',
       image: 'src/assets/images/imgAboutUs/Founder.jpg',
@@ -163,6 +166,7 @@ const AboutUs = () => {
       website_url: 'https://www.andrewturpo.com/',
     },
     {
+      id: 4,
       name: 'Ricardo Mamani',
       position: 'Founder & Frontend Develper',
       image: 'src/assets/images/imgAboutUs/Founder.jpg',
@@ -173,7 +177,7 @@ const AboutUs = () => {
   ]
 
   return (
-    <Container size="xl" isFullWidth>
+    <Container size="xl" isfullwidth>
       <OurSlogan>
         <OurSloganTitle>“ Desarrollamos sus sueños no humedos ”</OurSloganTitle>
       </OurSlogan>
@@ -223,7 +227,7 @@ const AboutUs = () => {
       <Section size="sm" type="padding">
         <MembersWrapper>
           {founderMembers.map((member) => {
-            return <TeamMemberCard {...member} />
+            return <TeamMemberCard key={member.id} {...member} />
           })}
         </MembersWrapper>
       </Section>
