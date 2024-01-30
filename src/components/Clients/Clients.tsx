@@ -2,20 +2,16 @@ import { TbExternalLink } from 'react-icons/tb'
 
 import useIntlMessages from 'hooks/useIntlMessages'
 import ButtonLink from 'ui/ButtonLink/ButtonLink'
-import Google from './../../assets/images/brandings/google.svg'
-import Github from './../../assets/images/brandings/github.svg'
-import Windows from './../../assets/images/brandings/windows.svg'
-import Amazon from './../../assets/images/brandings/amazon.svg'
-import Meta from './../../assets/images/brandings/meta.svg'
+import Brandings from './Brandings'
 import {
   StyledClientsSection,
   ClientsSectionWrapper,
   ClientsSectionContent,
   TitleAndButtonSection,
-  BrandingsWrapper,
-} from './ClientsSection.styles'
+} from './Clients.styles'
+import React from 'react'
 
-const Clients = () => {
+const Clients: React.FC = () => {
   const intl = useIntlMessages()
 
   return (
@@ -32,13 +28,7 @@ const Clients = () => {
               <TbExternalLink size={25} />
             </ButtonLink>
           </TitleAndButtonSection>
-          <BrandingsWrapper>
-            <img className="branding-img" src={Meta} />
-            <img className="branding-img" src={Amazon} />
-            <img className="branding-img" src={Github} />
-            <img className="branding-img" src={Google} />
-            <img className="branding-img" src={Windows} />
-          </BrandingsWrapper>
+          <Brandings />
         </ClientsSectionContent>
       </ClientsSectionWrapper>
     </StyledClientsSection>

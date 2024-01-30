@@ -9,23 +9,28 @@ export const StyledClientsSection = styled.section`
   background-color: ${colors.white.main};
   width: 100vw;
 `
+
 export const ClientsSectionWrapper = styled(Container)`
   padding: 4rem 1rem 3rem;
+
   @media only screen and (min-width: ${breakpoints.lg}) {
     padding: 7rem 1rem 6rem;
   }
 `
+
 export const ClientsSectionContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 2rem;
+
   @media only screen and (min-width: ${breakpoints.lg}) {
     flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
   }
 `
+
 export const TitleAndButtonSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -39,10 +44,12 @@ export const TitleAndButtonSection = styled.div`
     line-height: normal;
     color: ${colors.secondary};
     text-align: center;
+
     @media only screen and (min-width: ${breakpoints.lg}) {
       text-align: start;
     }
   }
+
   .span-point {
     color: ${colors.primary.main};
   }
@@ -53,17 +60,20 @@ export const TitleAndButtonSection = styled.div`
     align-items: normal;
   }
 `
+
 export const BrandingsWrapper = styled.div`
   display: flex;
   padding: 1rem;
   justify-content: space-evenly;
   gap: 2rem 3rem;
   flex-wrap: wrap;
+
   .branding-img {
     width: 6rem;
     height: auto;
     opacity: 0.5;
   }
+
   @media only screen and (min-width: ${breakpoints.lg}) {
     gap: 4.5rem 10rem;
     align-content: center;

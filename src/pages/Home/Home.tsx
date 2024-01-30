@@ -1,5 +1,5 @@
 import Hero from 'components/Hero/Hero'
-import Clients from 'components/ClientsSection/ClientsSection'
+import Clients from 'components/Clients/Clients'
 import Services from 'pages/Services/Services'
 import Container from 'ui/Container/Container'
 
