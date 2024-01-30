@@ -9,7 +9,6 @@ import {
   ClientsSectionContent,
   TitleAndButtonSection,
 } from './Clients.styles'
-import React from 'react'
 
 const Clients: React.FC = () => {
   const intl = useIntlMessages()
