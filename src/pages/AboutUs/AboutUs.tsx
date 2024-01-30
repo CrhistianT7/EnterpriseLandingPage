@@ -223,7 +223,7 @@ const AboutUs = () => {
       <Section size="sm" type="padding">
         <MembersWrapper>
           {founderMembers.map((member) => {
-            return <TeamMemberCard key={member.name} {...member} />
+            return <TeamMemberCard {...member} />
           })}
         </MembersWrapper>
       </Section>
