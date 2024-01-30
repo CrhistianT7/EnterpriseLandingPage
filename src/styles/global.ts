@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { colors } from './colors'
 
 export const GlobalStyle = createGlobalStyle`
   /* CSS Reset by Andy Bell (https://piccalil.li/blog/a-modern-css-reset/) */
@@ -53,6 +54,7 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    background-color: ${colors.body};
   }
 
   #root {

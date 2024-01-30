@@ -1,4 +1,5 @@
 import Hero from 'components/Hero/Hero'
+import ClientSection from 'components/ClientsSection/ClientSection'
 import Container from 'ui/Container/Container'
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
           <h3>Portafolio</h3>
           Portafolio / clients / parterns
         </section>
+        <ClientSection/>
         <section>
           <h3>Services</h3>
           <div>
