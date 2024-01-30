@@ -1,5 +1,5 @@
 import Hero from 'components/Hero/Hero'
-import ClientSection from 'components/ClientsSection/ClientSection'
+import Clients from 'components/ClientsSection/ClientsSection'
 import Services from 'pages/Services/Services'
 import Container from 'ui/Container/Container'
 
@@ -12,7 +12,7 @@ const Home = () => {
           <h3>Portafolio</h3>
           Portafolio / clients / parterns
         </section>
-        <ClientSection />
+        <Clients />
         <section>Our stack/ nuestras tecnologias?</section>
         <Services />
       </Container>
