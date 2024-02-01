@@ -55,9 +55,9 @@ const Navbar: React.FC = () => {
           <HamburgerIcon>
             <LanguageSwitcher />
             {isOpen ? (
-              <CgClose onClick={handleIsOpen} cursor={"pointer"} />
+              <CgClose onClick={handleIsOpen} cursor={'pointer'} />
             ) : (
-              <GiHamburgerMenu onClick={handleIsOpen} cursor={"pointer"}/>
+              <GiHamburgerMenu onClick={handleIsOpen} cursor={'pointer'} />
             )}
           </HamburgerIcon>
           <DesktopNavigation>
@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
                 <NavLink key={navItem.name} item={navItem} />
               ))}
             </DesktopUnorderedList>
-            <ButtonLink to="/contact-us" type="primary">
+            <ButtonLink to="/contact-us" type="secondary" size="lg">
               {intl('home.navbar.button.contact.us')}
             </ButtonLink>
             <LanguageSwitcher />
@@ -87,6 +87,7 @@ const Navbar: React.FC = () => {
             <ButtonLink
               to="/contact-us"
               type="primary"
+              size="lg"
               onClick={() => setIsOpen(false)}
             >
               {intl('home.navbar.button.contact.us')}
