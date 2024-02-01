@@ -1,59 +1,58 @@
-import { useEffect, useState } from "react";
-import { IoIosArrowUp } from "react-icons/io";
-import { IoIosArrowDown } from "react-icons/io";
-import useOutsideClick from "../../hooks/useClickOutside"
+import { useEffect, useState } from 'react'
+import { HiChevronUp, HiChevronDown } from 'react-icons/hi'
+import useOutsideClick from '../../hooks/useClickOutside'
 import {
   StyledSelect,
   StyledSelectedValue,
   StyledSelectOption,
   StyledSelectOptions,
-} from "./Select.styles";
+} from './Select.styles'
 
 interface RequiredProperties {
-  id: string;
-  name: string;
-  value: string;
+  id: string
+  name: string
+  value: string
 }
 
 interface ISelect {
-  options: Array<RequiredProperties>;
-  size?: "sm" | "md" | "lg";
-  icon?: React.ReactNode;
-  placeholder?: string;
-  selectedId?: string;
-  onChange: (value: string) => void;
+  options: Array<RequiredProperties>
+  size?: 'sm' | 'md' | 'lg'
+  icon?: React.ReactNode
+  placeholder?: string
+  selectedId?: string
+  onChange: (value: string) => void
 }
 
 const Select: React.FC<ISelect> = ({
   options,
   icon,
-  placeholder = "Select one option",
-  selectedId = "",
+  placeholder = 'Select one option',
+  selectedId = '',
   onChange,
 }) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false)
   const [selectedOption, setSelectedOption] = useState<RequiredProperties>(
     {} as RequiredProperties
-  );
+  )
 
-  const refOptions = useOutsideClick(() => setIsOpen(false));
+  const refOptions = useOutsideClick(() => setIsOpen(false))
 
   const showOptions = (): void => {
-    setIsOpen((prev) => !prev);
-  };
+    setIsOpen((prev) => !prev)
+  }
 
   const handleOnChange = (value: string) => {
-    onChange(value);
-    setSelectedOption(options.filter((language) => language.value == value)[0]);
-  };
+    onChange(value)
+    setSelectedOption(options.filter((language) => language.value == value)[0])
+  }
 
   useEffect(() => {
     if (selectedId) {
       setSelectedOption(
         options.filter((language) => language.id == selectedId)[0]
-      );
+      )
     }
-  }, [selectedId, options]);
+  }, [selectedId, options])
 
   return (
     <StyledSelect ref={refOptions} onClick={showOptions}>
@@ -61,9 +60,9 @@ const Select: React.FC<ISelect> = ({
         {icon}
         <div className="selected-value">
           {Object.keys(selectedOption).length
-            ? selectedOption.name
+            ? selectedOption.id.toUpperCase()
             : placeholder}
-          {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+          {isOpen ? <HiChevronUp size={18} /> : <HiChevronDown size={18} />}
         </div>
       </StyledSelectedValue>
       {isOpen && (
@@ -76,15 +75,16 @@ const Select: React.FC<ISelect> = ({
                   onClick={() => handleOnChange(language.value)}
                   selected={selectedOption.id === language.id}
                 >
-                  {language.name}
+                  {language.id.toUpperCase()} - {language.name}
+                  <div className="point-selected"></div>
                 </StyledSelectOption>
-              );
+              )
             })}
           </ul>
         </StyledSelectOptions>
       )}
     </StyledSelect>
-  );
-};
+  )
+}
 
-export default Select;
+export default Select

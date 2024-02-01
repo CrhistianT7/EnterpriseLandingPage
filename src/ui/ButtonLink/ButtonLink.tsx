@@ -5,13 +5,22 @@ import { CustonNavLink } from './ButtonLink.styles'
 interface IButtonLinkProps extends PropsWithChildren {
   to: string
   type: 'primary' | 'secondary'
-  onClick?: (() => void)| undefined
+  size?: 'sm' | 'md' | 'lg'
+  onClick?: (() => void) | undefined
 }
 
-const ButtonLink: React.FC<IButtonLinkProps> = ({ to, type, children, onClick }) => {
+const ButtonLink: React.FC<IButtonLinkProps> = ({
+  to,
+  type,
+  size,
+  children,
+  onClick,
+}) => {
   return (
     <CustonNavLink to={to}>
-      <Button type={type} onClick={onClick}>{children}</Button>
+      <Button type={type} onClick={onClick} size={size}>
+        {children}
+      </Button>
     </CustonNavLink>
   )
 }
