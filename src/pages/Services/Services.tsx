@@ -6,16 +6,6 @@ const Services: React.FC = () => {
       <h3>Services</h3>
       <div>
         <div>
-          <h3>Design</h3>
-          <ul>
-            <li>Development of graphic pieces</li>
-            <li>Branding</li>
-            <li>UX/UI Design</li>
-            <li>UX Writing</li>
-            <li>Iluratrations</li>
-          </ul>
-        </div>
-        <div>
           <h3>Web development</h3>
           <ul>
             <li>Full stack applications</li>
