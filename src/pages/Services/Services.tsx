@@ -33,31 +33,6 @@ const Services: React.FC = () => {
             <li>Digital Marketing</li>
           </ul>
         </div>
-        {/* <div>
-          <h3>Metaverso</h3>
-          <ul>
-            <li>Augmented reality</li>
-            <li>Virtual Reality</li>
-            <li>XR</li>
-          </ul>
-        </div> */}
-        {/* <div>
-          <h3>IA</h3>
-          <ul>
-            <li>Data Science</li>
-            <li>Machine Learning</li>
-          </ul>
-        </div> */}
-        {/* TODO: Think in an appropiate name for this page/section (best option so far: platform) */}
-        {/* <div>
-          <h3> Apps/Products/our services</h3>
-          <ul>
-            <li>Gustof</li>
-            <li>Aplicacion de alertas para municipalidades</li>
-            <li>Venta de entradas usando Blockchain</li>
-            <li>Aumento de equipo TI</li>
-          </ul>
-        </div> */}
       </div>
     </Container>
   )
