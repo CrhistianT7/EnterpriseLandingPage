@@ -6,37 +6,32 @@ interface ISelectOption {
 }
 
 export const StyledSelect = styled.div`
+  height: fit-content;
   display: flex;
   flex-direction: column;
   position: relative;
   cursor: pointer;
   background: ${colors.primary.main};
   border: none;
-  border-radius: 0.9rem;
-  padding: 0.75rem;
+  border-radius: 0.6rem;
+  padding: 0.5rem 0.75rem;
   color: ${colors.white.main};
 `
 
 export const StyledSelectedValue = styled.div`
   display: flex;
   align-items: center;
-
-  .selected-value {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
-    width: -webkit-fill-available;
-  }
 `
 
 export const StyledSelectOptions = styled.div`
   position: absolute;
   top: 3.75rem;
   right: 0;
-  width: 200px;
+  width: 12.5rem;
   border: none;
   color: ${colors.secondary.main};
+  border: 0.0625rem solid ${colors.body};
+  border-radius: 1rem;
 
   li:first-child {
     border-top-right-radius: 1rem;
@@ -44,6 +39,7 @@ export const StyledSelectOptions = styled.div`
   }
 
   li:last-child {
+    border: none;
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
   }
@@ -56,11 +52,11 @@ export const StyledSelectOption = styled.li<ISelectOption>`
   list-style-type: none;
   cursor: pointer;
   padding: 1.25rem 1.5rem;
-  margin-top: 1px;
   background-color: ${colors.white.main};
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
+  border-bottom: 0.125rem solid ${colors.body};
 
   &:hover {
     background: ${colors.secondary.hover};
@@ -76,7 +72,7 @@ export const StyledSelectOption = styled.li<ISelectOption>`
       props.selected &&
       `
         background: ${colors.primary.main};
-        border: 4px solid ${colors.gray[100]}
+        border: 0.25rem solid ${colors.gray[100]}
       `}
   }
 `
