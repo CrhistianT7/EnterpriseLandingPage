@@ -12,45 +12,44 @@ const Services: React.FC = () => {
             <li>Branding</li>
             <li>UX/UI Design</li>
             <li>UX Writing</li>
-            <li>Iluratrations</li>
           </ul>
         </div>
         <div>
           <h3>Web development</h3>
           <ul>
-            <li>Full stack applications</li>
+            <li>Full stack applications (revisar)</li>
+            <li>Multiplataforma applicaciones</li>
             <li>
-              Mobile Development <p>iOS, Android, Flutter</p>
+              Mobile Development -<span> iOS, Android, Flutter</span>
             </li>
             <li>E-commerce</li>
-            <li>SEO Optimization</li>
             <li>Cloud migrations and infraestructure</li>
           </ul>
         </div>
         <div>
           <h3>Digital staff</h3>
           <ul>
+            <li>SEO Optimization/ SEM</li>
             <li>Digital Marketing</li>
-            <li>Social media management</li>
           </ul>
         </div>
-        <div>
-          <h3>Web 3.0/el futuro baby</h3>
+        {/* <div>
+          <h3>Metaverso</h3>
           <ul>
             <li>Augmented reality</li>
             <li>Virtual Reality</li>
             <li>XR</li>
           </ul>
-        </div>
-        <div>
-          <h3>Courses</h3>
+        </div> */}
+        {/* <div>
+          <h3>IA</h3>
           <ul>
-            <li>How to avoid phising</li>
-            <li>Safe browsing over internet</li>
-            <li>Vlogs</li>
+            <li>Data Science</li>
+            <li>Machine Learning</li>
           </ul>
-        </div>
-        <div>
+        </div> */}
+        {/* TODO: Think in an appropiate name for this page/section (best option so far: platform) */}
+        {/* <div>
           <h3> Apps/Products/our services</h3>
           <ul>
             <li>Gustof</li>
@@ -58,7 +57,7 @@ const Services: React.FC = () => {
             <li>Venta de entradas usando Blockchain</li>
             <li>Aumento de equipo TI</li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </Container>
   )

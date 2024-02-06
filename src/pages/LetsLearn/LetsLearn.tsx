@@ -23,6 +23,17 @@ const LetsLearn: React.FC = () => {
         <p>Post informativos</p>
       </div>
     </section>
+    <section>
+    <div>
+          <h3>Courses/lear with us</h3>
+          <ul>
+            <li>How to avoid phising</li>
+            <li>Safe browsing over internet</li>
+            <li>How to search over internet correctly</li>
+       
+          </ul>
+        </div>
+    </section>
   </Container>
 }
 
