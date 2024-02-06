@@ -67,7 +67,7 @@ export const StyledSelectOption = styled.li<ISelectOption>`
     background-color: ${colors.gray[100]};
     height: 1rem;
     width: 1rem;
-    border-radius: 50%;
+    border-radius: 100%;
     ${(props) =>
       props.selected &&
       `
