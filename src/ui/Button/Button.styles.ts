@@ -7,30 +7,45 @@ interface IStyledButton {
   isfullwidth: boolean | undefined
 }
 
+// border-radius: 0.6rem;
+//     /* padding: 0.5rem 0.75rem;
+
 const typeStyles = (type: string) => {
   switch (type) {
     case 'primary':
       return `
         color: ${colors.white.main};
-        background-color: ${colors.secondary.main};
+        background-color: ${colors.primary.main};
 
         &:focus {
-          outline: 2px solid ${colors.secondary.focus};
+          ouline: 2px solid ${colors.secondary.focus};
         }
 
         &:active {
           outline: none;
+        }
+
+        &:hover {
+          background-color: ${colors.primary.hover};
         }
       `
     case 'secondary':
       return `
         color: ${colors.secondary.main};
         background-color: ${colors.white.main};
-        outline: 2px solid ${colors.secondary.main};
+        border: 2px solid ${colors.secondary.main};
+
+        &:active {
+          outline: none;
+        }
 
         &:focus {
-          border: none;
-          outline: 2px solid ${colors.secondary.focus};
+          outline: none;
+        }
+
+        &:hover {
+          background-color: ${colors.secondary.hover};
+          color: ${colors.white.main};
         }
       `
     default:
@@ -63,7 +78,7 @@ export const StyledButton = styled.button<IStyledButton>`
   font-size: 16px;
   padding: 12px 16px;
   border: none;
-  border-radius: 0.9rem;
+  border-radius: 0.6rem;
   line-height: 100%;
   cursor: pointer;
   height: fit-content;
@@ -74,7 +89,6 @@ export const StyledButton = styled.button<IStyledButton>`
   ${(props) => sizeStyles(props.size!)}
 
   &:hover {
-    background-color: ${colors.secondary.hover};
     outline: none;
   }
 `
