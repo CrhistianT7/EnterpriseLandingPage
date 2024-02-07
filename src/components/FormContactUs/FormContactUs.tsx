@@ -45,8 +45,6 @@ const FormContacUs: React.FC = () => {
     },
   })
 
-  console.log(process.env.REACT_APP_SERVICE_ID)
-
   return (
     <ContainerForm>
       <TitleForm>{intl('contact.us.form.title')}</TitleForm>
