@@ -58,12 +58,10 @@ const Select: React.FC<ISelect> = ({
     <StyledSelect ref={refOptions} onClick={showOptions}>
       <StyledSelectedValue>
         {icon}
-        <div className="selected-value">
-          {Object.keys(selectedOption).length
-            ? selectedOption.id.toUpperCase()
-            : placeholder}
-          {isOpen ? <HiChevronUp size={18} /> : <HiChevronDown size={18} />}
-        </div>
+        {Object.keys(selectedOption).length
+          ? selectedOption.id.toUpperCase()
+          : placeholder}
+        {isOpen ? <HiChevronUp size={18} /> : <HiChevronDown size={18} />}
       </StyledSelectedValue>
       {isOpen && (
         <StyledSelectOptions>
