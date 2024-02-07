@@ -7,9 +7,6 @@ interface IStyledButton {
   isfullwidth: boolean | undefined
 }
 
-// border-radius: 0.6rem;
-//     /* padding: 0.5rem 0.75rem;
-
 const typeStyles = (type: string) => {
   switch (type) {
     case 'primary':
@@ -18,7 +15,7 @@ const typeStyles = (type: string) => {
         background-color: ${colors.primary.main};
 
         &:focus {
-          ouline: 2px solid ${colors.secondary.focus};
+          outline: 0.125rem solid ${colors.secondary.focus};
         }
 
         &:active {
@@ -33,7 +30,7 @@ const typeStyles = (type: string) => {
       return `
         color: ${colors.secondary.main};
         background-color: ${colors.white.main};
-        border: 2px solid ${colors.secondary.main};
+        border: 0.125rem solid ${colors.secondary.main};
 
         &:active {
           outline: none;
@@ -57,13 +54,13 @@ const sizeStyles = (size: string) => {
   switch (size) {
     case 'sm':
       return `
-        padding: 8px 12px;
-        font-size: 14px;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
       `
     case 'lg':
       return `
-        padding: 8px 12px;
-        font-size: 18px;
+        padding: 0.5rem 0.75rem;
+        font-size: 1.125rem;
       `
     default:
       break
@@ -75,8 +72,8 @@ export const StyledButton = styled.button<IStyledButton>`
   justify-content: center;
   align-items: center;
   color: ${colors.white.main};
-  font-size: 16px;
-  padding: 12px 16px;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
   border: none;
   border-radius: 0.6rem;
   line-height: 100%;
