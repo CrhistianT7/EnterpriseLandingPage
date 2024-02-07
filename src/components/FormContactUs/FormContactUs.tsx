@@ -32,8 +32,6 @@ const FormContacUs: React.FC = () => {
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-      console.log(values)
-      console.log(values.firstName)
       console.log(JSON.stringify(values))
       sendEmail({
         fullName: values.firstName,

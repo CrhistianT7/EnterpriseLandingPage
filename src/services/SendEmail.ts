@@ -1,9 +1,5 @@
 import axios from 'axios'
 
-// const SERVICE_ID = 'service_30fre8b'
-// const TEMPLATE_ID = 'template_rr5zmij'
-// const PUBLIC_KEY = 'XKkupy_QmsZZ3I4Hk'
-
 interface IEmailData {
   fullName: string
   email: string
