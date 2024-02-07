@@ -6,6 +6,7 @@ import {
   SingleTab,
   TabsWrapper,
 } from './HorizontalTabs.styles'
+import useIntlMessages from 'hooks/useIntlMessages'
 
 interface ITabProperties {
   key: string
@@ -22,6 +23,8 @@ const HorizontalTabs: React.FC<ITabs> = ({ items }) => {
     () => items[0].key
   )
   const [currentContent, setCurrentContent] = useState<React.ReactNode>()
+
+  const intl = useIntlMessages()
 
   const handleToggle = (index: string) => {
     setCurrentItemIndex(index)
@@ -42,7 +45,7 @@ const HorizontalTabs: React.FC<ITabs> = ({ items }) => {
             onClick={() => handleToggle(item.key)}
             className={currentItemIndex == item.key ? 'selected' : ''}
           >
-            {item.label}
+            {intl(item.label)}
           </SingleTab>
         ))}
       </TabsWrapper>

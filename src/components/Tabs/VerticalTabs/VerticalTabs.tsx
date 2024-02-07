@@ -6,6 +6,7 @@ import {
   TabsWrapper,
   VerticalTabsWrapper,
 } from './VerticalTabs.styles'
+import useIntlMessages from 'hooks/useIntlMessages'
 
 interface IVerticalTabs {
   key: string
@@ -22,6 +23,8 @@ const VerticalTabs: React.FC<IVerticalTabsProps> = ({ items }) => {
     () => items[0].key
   )
   const [currentContent, setCurrentContent] = useState<React.ReactNode>()
+  
+  const intl = useIntlMessages()
 
   const handleToggle = (index: string) => {
     setCurrentItemIndex(index)
@@ -43,12 +46,13 @@ const VerticalTabs: React.FC<IVerticalTabsProps> = ({ items }) => {
               onClick={() => handleToggle(item.key)}
               className={currentItemIndex == item.key ? 'selected' : ''}
             >
-              {item.label}
+              {intl(item.label)}
             </SingleTab>
           )
         })}
       </TabsWrapper>
       <ContentWrapper
+        key={'asd'}
         className={currentItemIndex == items[0].key ? 'top-left-rounded' : ''}
       >
         {currentContent}
