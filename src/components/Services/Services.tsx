@@ -1,7 +1,15 @@
-import ContentLayout from "components/Tabs/ContentLayout/ContentLayout"
-import HorizontalTabs from "components/Tabs/HorizontalTabs/HorizontalTabs"
-import VerticalTabs from "components/Tabs/VerticalTabs/VerticalTabs"
-import Section from "ui/Section/Section"
+import { FormattedMessage } from 'react-intl'
+
+import ContentLayout from 'components/Tabs/ContentLayout/ContentLayout'
+import HorizontalTabs from 'components/Tabs/HorizontalTabs/HorizontalTabs'
+import VerticalTabs from 'components/Tabs/VerticalTabs/VerticalTabs'
+import useIntlMessages from 'hooks/useIntlMessages'
+import Container from 'ui/Container/Container'
+import {
+  ClientSection,
+  CustomSingleWord,
+  ServicesTitle,
+} from './Services.styles'
 
 interface ITabProperties {
   key: string
@@ -16,10 +24,12 @@ interface IVerticalTabs {
 }
 
 const Services: React.FC = () => {
+  const intl = useIntlMessages()
+
   const subitemsDesign: Array<IVerticalTabs> = [
     {
-      key: '1',
-      label: 'Development of graphic pieces',
+      key: 'asd',
+      label: 'home.services.design.development.of.graphic.pieces',
       children: (
         <ContentLayout>
           <div>Development of graphic pieces</div>
@@ -28,7 +38,7 @@ const Services: React.FC = () => {
     },
     {
       key: '2',
-      label: 'Branding',
+      label: 'home.services.design.branding',
       children: (
         <ContentLayout>
           <div>Branding</div>
@@ -37,69 +47,136 @@ const Services: React.FC = () => {
     },
     {
       key: '3',
-      label: 'UX/UI Design',
+      label: 'home.services.design.ux.ui.design',
       children: (
         <ContentLayout>
-          <div>UX/UI</div>
+          <div>UX/UI Design</div>
         </ContentLayout>
       ),
     },
     {
       key: '4',
-      label: 'Ilustrations',
+      label: 'home.services.design.ux.writing',
       children: (
         <ContentLayout>
-          <div>Ilustratioins</div>
+          <div>UX Writing</div>
         </ContentLayout>
       ),
     },
   ]
 
-  const subItemsWebDevelopment: Array<IVerticalTabs> = [
+  const subItemsSoftwareDevelopment: Array<IVerticalTabs> = [
     {
       key: '1',
-      label: 'Full Stack',
+      label: 'home.services.software.development.full.stack.applications',
       children: (
         <ContentLayout>
-          <div>Full Stack</div>
+          <div>Full stack applications (the name needs review)</div>
         </ContentLayout>
       ),
     },
     {
       key: '2',
-      label: 'Mobile Development',
+      label: 'home.services.software.development.cross.platform.applications',
       children: (
         <ContentLayout>
-          <div>Mobile Developmetn</div>
+          <div>Cross-platform applications</div>
         </ContentLayout>
       ),
-    },
-  ]
-  const items: Array<ITabProperties> = [
-    {
-      key: '1',
-      label: 'Design',
-      children: <VerticalTabs key={'1'} items={subitemsDesign} />,
-    },
-    {
-      key: '2',
-      label: 'Web Development',
-      children: <VerticalTabs key={'2'} items={subItemsWebDevelopment} />,
     },
     {
       key: '3',
-      label: 'Digital Stuff',
-      children: <div>Content 3</div>,
+      label: 'home.services.software.development.mobile.development',
+      children: (
+        <ContentLayout>
+          <div>Mobile Development - iOS, Android, Flutter</div>
+        </ContentLayout>
+      ),
     },
     {
       key: '4',
-      label: 'Web 3.0',
-      children: <div>Content 4</div>,
+      label: 'home.services.software.development.ecommerce',
+      children: (
+        <ContentLayout>
+          <div>E-commerce</div>
+        </ContentLayout>
+      ),
+    },
+    {
+      key: '5',
+      label: 'home.services.software.development.cloud.migrations',
+      children: (
+        <ContentLayout>
+          <div>Cloud migrations and infraestructure</div>
+        </ContentLayout>
+      ),
     },
   ]
-  return <Section size="lg" type="padding">
-  <HorizontalTabs items={items} />
-  </Section>
+
+  const subItemsDigitalManagement: Array<IVerticalTabs> = [
+    {
+      key: 'sidm1',
+      label: 'home.services.digital.management.seo.optimization',
+      children: (
+        <ContentLayout>
+          <div>SEO Optimization</div>
+        </ContentLayout>
+      ),
+    },
+    {
+      key: 'sidm2',
+      label: 'home.services.digital.management.digital.marketing',
+      children: (
+        <ContentLayout>
+          <div>Digital Marketing</div>
+        </ContentLayout>
+      ),
+    },
+  ]
+
+  const items: Array<ITabProperties> = [
+    {
+      key: '1',
+      label: 'home.services.design.title',
+      children: <VerticalTabs key={'design1'} items={subitemsDesign} />,
+    },
+    {
+      key: '2',
+      label: 'home.services.software.development.title',
+      children: (
+        <VerticalTabs
+          key={'softwaredev1'}
+          items={subItemsSoftwareDevelopment}
+        />
+      ),
+    },
+    {
+      key: '3',
+      label: 'home.services.digital.management.title',
+      children: (
+        <VerticalTabs key={'digitalmana1'} items={subItemsDigitalManagement} />
+      ),
+    },
+  ]
+
+  return (
+    <ClientSection size="lg" type="padding">
+      <Container size="sm">
+        <ServicesTitle>
+          <FormattedMessage
+            defaultMessage=""
+            id="home.services.title"
+            values={{
+              service: intl('home.services.title.only.services'),
+              b: (str) => <CustomSingleWord>{str}</CustomSingleWord>,
+            }}
+          />
+          <span className="span-point">.</span>
+        </ServicesTitle>
+      </Container>
+      <HorizontalTabs items={items} />
+    </ClientSection>
+  )
 }
 
 export default Services

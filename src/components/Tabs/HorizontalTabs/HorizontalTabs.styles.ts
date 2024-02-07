@@ -22,7 +22,7 @@ export const TabsWrapper = styled.ul`
 export const SingleTab = styled.li`
   list-style: none;
   cursor: pointer;
-  padding: 0.625rem 1rem;
+  padding: 1rem 2.5rem;
   background: ${colors.secondary.main};
   color: ${colors.white.main};
   font-weight: 600;

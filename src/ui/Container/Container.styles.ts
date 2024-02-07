@@ -35,7 +35,7 @@ export const StyledContainer = styled.div<IStyledContainer>`
   padding: 0 1rem;
   margin: auto;
   flex-direction: column;
-  width: ${({ isfullwidth }) => (isfullwidth ? "100%" : "")};
+  width: ${({ isfullwidth }) => (isfullwidth ? '100%' : '')};
 
   ${(props) => sizeStyles(props.size)}
 `

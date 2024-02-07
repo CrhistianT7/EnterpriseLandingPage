@@ -13,14 +13,16 @@ export const TabsWrapper = styled.ul`
 export const SingleTab = styled.li`
   list-style: none;
   color: ${colors.secondary.main};
+  opacity: 50%;
   font-weight: 500;
-  padding: 0.5rem 1.5rem;
+  padding: 1rem 2rem;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   cursor: pointer;
 
   &.selected {
     background: ${colors.body};
+    opacity: 1;
     color: ${colors.secondary.main};
   }
 `
