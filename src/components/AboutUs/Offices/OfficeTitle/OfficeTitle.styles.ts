@@ -52,6 +52,7 @@ export const Text = styled.div`
   line-height: normal;
   text-transform: uppercase;
   color: ${colors.secondary.main};
+  
   .founder-point {
     color: ${colors.primary.main};
   }

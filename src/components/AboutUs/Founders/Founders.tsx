@@ -1,5 +1,4 @@
 import TeamMemberCard from 'components/AboutUs/Founders/TeamMemberCard/TeamMemberCard'
-// import FoundersTitle from 'components/AboutUs/Founders/TitleFounders/TitileFounderSection'
 import { MembersWrapper } from 'pages/AboutUs/AboutUs.styles'
 import Section from 'ui/Section/Section'
 import { TitleFounders } from './TitleFounders/TitleFounders'
@@ -22,7 +21,6 @@ const founderMembers = [
     image: 'src/assets/images/imgAboutUs/gustavo.png',
     quote:
       '“Hola que tal? Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal”',
-    website_url: 'https://www.andrewturpo.com/',
     github_url: 'youtube.com',
   },
   {

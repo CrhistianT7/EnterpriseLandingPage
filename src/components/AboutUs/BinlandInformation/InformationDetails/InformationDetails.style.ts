@@ -6,7 +6,7 @@ export const ContainerDetails = styled.div`
   height: 20.4rem;
   display: grid;
   grid-template-areas:
-    ' clientes colaboradores colaboradores'
+    'clientes colaboradores colaboradores'
     'picture  picture servicios';
   grid-template-rows: auto;
   grid-template-columns: auto auto;

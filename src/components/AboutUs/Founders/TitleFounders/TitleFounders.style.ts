@@ -1,6 +1,6 @@
-// import { breakpoints } from 'shared/breakpoints'
-import { breakpoints } from 'shared/breakpoints'
 import styled from 'styled-components'
+
+import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 
 export const ContainerTitle = styled.div`
@@ -53,6 +53,7 @@ export const Text = styled.div`
   line-height: normal;
   text-transform: uppercase;
   color: ${colors.secondary.main};
+  
   .founder-point {
     color: ${colors.primary.main};
   }
