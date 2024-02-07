@@ -9,7 +9,6 @@ export const DescriptionAboutUs = styled.div`
     font-weight: 500;
     font-size: clamp(1.125rem, 4vw, 1.875rem);
     line-height: 3rem;
-    padding: 0 0.625rem;
     text-transform: uppercase;
     color: ${colors.red[1000]};
   }
@@ -18,9 +17,9 @@ export const DescriptionAboutUs = styled.div`
     font-weight: 700;
     font-size: clamp(1.75rem, 4vw, 2.6875rem);
     line-height: normal;
-    padding: 0 0.625rem;
     text-transform: uppercase;
     color: ${colors.secondary.main};
+    margin-bottom: 2.5rem;
 
     .description-point {
       color: ${colors.primary.main};
@@ -37,7 +36,6 @@ export const ContentDescriptionAboutUs = styled.p`
   font-size: clamp(0.5rem, 4vw, 1rem);
   line-height: 1.125rem;
   text-align: justify;
-  padding: 0 1.666rem;
   margin-bottom: 1.25rem;
   color: ${colors.secondary.main};
 `

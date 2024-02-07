@@ -56,7 +56,6 @@ export const CollageContainer = styled.div`
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 13.75%;
 
     .fachada-item {
       grid-column-start: span 3;

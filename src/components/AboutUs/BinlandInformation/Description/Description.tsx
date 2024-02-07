@@ -14,13 +14,15 @@ const Description = () => {
         {intl('about.us.binland.information.title')}
         <span className="description-point">.</span>
       </h3>
-      <ContentDescriptionAboutUs>
-        {intl('about.us.binland.information.description')}
-      </ContentDescriptionAboutUs>
-      <ContentDescriptionAboutUs>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aperiam
-        esse, ratione voluptas quas amet commodi modi rerum deserunt atque!
-      </ContentDescriptionAboutUs>
+      <div>
+        <ContentDescriptionAboutUs>
+          {intl('about.us.binland.information.description')}
+        </ContentDescriptionAboutUs>
+        <ContentDescriptionAboutUs>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aperiam
+          esse, ratione voluptas quas amet commodi modi rerum deserunt atque!
+        </ContentDescriptionAboutUs>
+      </div>
     </DescriptionAboutUs>
   )
 }

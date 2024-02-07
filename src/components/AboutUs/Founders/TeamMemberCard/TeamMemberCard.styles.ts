@@ -1,23 +1,24 @@
 import styled from 'styled-components'
+
 import { colors } from 'styles/colors'
 
 export const StyledTeamMemberCard = styled.div`
   flex: 1 0 18.75rem;
   max-width: 18.75rem;
-  margin: 0.625rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
 `
+
 export const ImgFounder = styled.img`
-  width: 9.66475rem;
-  height: 9.66475;
+  width: 9.625rem;
   margin: 0 auto;
   flex-shrink: 0;
   border-radius: 1rem;
 `
+
 export const NameFounder = styled.h4`
   font-size: clamp(1.125rem, 4vw, 1.375rem);
   font-style: normal;
@@ -26,6 +27,7 @@ export const NameFounder = styled.h4`
   padding: 0.3125rem;
   color: ${colors.secondary.main};
 `
+
 export const PositionFounder = styled.p`
   min-height: 5rem;
   display: flex;
@@ -38,6 +40,7 @@ export const PositionFounder = styled.p`
   padding: 0.3125rem;
   color: ${colors.red[1000]};
 `
+
 export const QuoteFounder = styled.p`
   font-size: clamp(0.75rem, 4vw, 1rem);
   font-style: normal;
@@ -45,7 +48,9 @@ export const QuoteFounder = styled.p`
   line-height: normal;
   padding: 0.3125rem;
   color: ${colors.secondary.main};
+  text-align: start;
 `
+
 export const LinkFounder = styled.div`
   display: flex;
   align-items: center;

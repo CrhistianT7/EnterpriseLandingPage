@@ -11,7 +11,7 @@ export const ContainerDetails = styled.div`
   grid-template-rows: auto;
   grid-template-columns: auto auto;
   row-gap: 1.25rem;
-  column-gap: 0.875;
+  column-gap: 0.875rem;
   padding: 0 0.625rem;
 `
 export const ItemDetails = styled.div`
@@ -27,7 +27,6 @@ export const ItemDetails = styled.div`
     background-image: url('src/assets/images/imgAboutUs/edificio.jpeg');
     background-size: cover;
     border-radius: 0.9375rem;
-    margin-right: 0.625rem;
   }
 
   &:nth-child(2) {
