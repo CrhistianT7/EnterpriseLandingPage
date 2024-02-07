@@ -1,22 +1,15 @@
-import Hero from 'components/Hero/Hero'
-import Clients from 'components/Clients/Clients'
 import Container from 'ui/Container/Container'
+import Hero from 'components/Hero/Hero'
 import Services from 'components/Services/Services'
+import Clients from 'components/Clients/Clients'
 
 const Home = () => {
   return (
-    <div>
-      <Container size="lg">
-        <Hero />
-        <section id="portafolio" style={{ height: '100vh' }}>
-          <h3>Portafolio</h3>
-          Portafolio / clients / parterns
-        </section>
-        <Services />
-        <Clients />
-        <section>Our stack/ nuestras tecnologias?</section>
-      </Container>
-    </div>
+    <Container size="xl">
+      <Hero />
+      <Services />
+      <Clients />
+    </Container>
   )
 }
 

@@ -1,24 +1,24 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 interface IStyledSection {
-  type: "margin" | "padding";
-  size: "sm" | "md" | "lg" | "xl";
+  type: 'margin' | 'padding'
+  size: 'sm' | 'md' | 'lg' | 'xl'
 }
 
 const sizeStyles = (size: string) => {
   switch (size) {
-    case "sm":
-      return `32px`;
-    case "md":
-      return `48px`;
-    case "lg":
-      return `96px`;
-    case "xl":
-      return `144px`;
+    case 'sm':
+      return `32px`
+    case 'md':
+      return `48px`
+    case 'lg':
+      return `96px`
+    case 'xl':
+      return `144px`
     default:
-      break;
+      break
   }
-};
+}
 
 export const StyledSection = styled.section<IStyledSection>`
   display: flex;
@@ -29,7 +29,7 @@ export const StyledSection = styled.section<IStyledSection>`
   width: 100%;
 
   ${(props) =>
-    props.type === "margin"
-      ? `margin: ${sizeStyles(props.size)}`
-      : `padding: ${sizeStyles(props.size)} 1rem`}
-`;
+    props.type === 'margin'
+      ? `margin: ${sizeStyles(props.size)} 0`
+      : `padding: ${sizeStyles(props.size)} 0`}
+`

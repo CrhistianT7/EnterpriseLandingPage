@@ -3,9 +3,11 @@ export const colors = {
   gray: {
     50: '#fff',
     100: '#eceaea',
+    150: '#ede9f6',
   },
   white: {
     main: '#fff',
+    disabled: '#ccc',
   },
   primary: {
     main: '#E74C3C',
@@ -32,5 +34,6 @@ export const colors = {
     800: '#AC0824',
     900: '#8E0E24',
     950: '#4E010E',
+    1000: '#f83d48',
   },
 }
