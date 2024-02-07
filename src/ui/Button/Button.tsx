@@ -1,17 +1,17 @@
-import { PropsWithChildren } from "react";
-import { StyledButton } from "./Button.styles";
+import { PropsWithChildren } from 'react'
+import { StyledButton } from './Button.styles'
 
 interface IButton extends PropsWithChildren {
-  type: "primary" | "secondary";
-  size?: "sm" | "md" | "lg";
-  leftIcon?: React.ReactNode;
-  rightIcon?: React.ReactNode;
-  onClick?: (() => void)| undefined
-  isFullWidth?: boolean;
+  type: 'primary' | 'secondary'
+  size?: 'sm' | 'md' | 'lg'
+  leftIcon?: React.ReactNode
+  rightIcon?: React.ReactNode
+  onClick?: (() => void) | undefined
+  isFullWidth?: boolean
 }
 
 const Button: React.FC<IButton> = ({
-  size = "md",
+  size = 'md',
   children,
   leftIcon,
   rightIcon,
@@ -24,7 +24,7 @@ const Button: React.FC<IButton> = ({
       {children}
       {rightIcon}
     </StyledButton>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button
