@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
     <>
       <HeaderEmptyBackground />
       <StyledHeader>
-        <HeaderWrapper size="lg">
+        <HeaderWrapper size="xl">
           <ReactRouterNavLink to={'/'}>
             <img src={logo} alt="Binland logo" />
           </ReactRouterNavLink>

@@ -12,7 +12,7 @@ export const colors = {
   primary: {
     main: '#E74C3C',
     disabled: '',
-    hover: '',
+    hover: '#942b20',
     focus: '',
   },
   secondary: {
