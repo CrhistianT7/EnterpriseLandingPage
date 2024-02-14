@@ -9,7 +9,7 @@ export const validationSchema = Yup.object({
     .required('validation.input.required.message'),
   email: Yup.string()
     .matches(
-      /^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+$/,
+      /^[a-zA-Z0-9_.]+@[a-zA-Z]+\.[a-zA-Z]+$/,
       'contact.us.form.input.email.validation'
     )
     .required('validation.input.required.message'),
