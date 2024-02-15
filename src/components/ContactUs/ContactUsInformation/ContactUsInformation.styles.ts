@@ -3,7 +3,7 @@ import { colors } from 'styles/colors'
 
 import { breakpoints } from 'shared/breakpoints'
 
-export const ContentContactUsInformation = styled.div`
+export const WrapperContactUsInformation = styled.div`
   display: flex;
   gap: 2rem;
   flex-direction: column;
