@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import { forwardRef } from 'react'
 import { InputSearchWrapper, StyledInputSearch } from './InputSearch.styles'
 
 interface ISearch {

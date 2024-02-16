@@ -76,13 +76,9 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
     onChange(filteredArray)
   }
 
-  const handleIsOpen = () => {
-    setIsOpen((prev) => !prev)
-  }
-
   return (
     <div ref={refOptions}>
-      <InputBox onClick={() => handleIsOpen()} isOpen={isOpen}>
+      <InputBox onClick={() => setIsOpen((prev) => !prev)} isOpen={isOpen}>
         <div className="input-box-wrapper">
           <span className="span-question">Qué sevicio requiere? *</span>
           {isOpen ? (

@@ -1,5 +1,6 @@
-import { FiSearch } from 'react-icons/fi'
 import styled from 'styled-components'
+
+import { FiSearch } from 'react-icons/fi'
 import { colors } from 'styles/colors'
 
 export const MirroredIcon = styled(FiSearch)`
