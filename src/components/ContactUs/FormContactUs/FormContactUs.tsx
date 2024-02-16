@@ -6,7 +6,6 @@ import Input from 'ui/input/Input'
 import Textarea from 'ui/Textarea/Textarea'
 import Button from 'ui/Button/Button'
 import { TitleForm, Error, FormWrapper, ContainerForm } from './FormContactUs.styles'
-import { sendEmail } from 'services/SendEmail'
 
 interface IValues {
   firstName: string
@@ -33,13 +32,6 @@ const FormContacUs: React.FC = () => {
     validationSchema,
     onSubmit: (values) => {
       console.log(JSON.stringify(values))
-      sendEmail({
-        fullName: values.firstName,
-        email: values.email,
-        country: 'Peru',
-        message: values.message,
-        services: ""
-      })
     },
   })
 

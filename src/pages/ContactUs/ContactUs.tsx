@@ -3,7 +3,7 @@ import { PopupButton } from 'react-calendly'
 import './calendly.css'
 import useIntlMessages from 'hooks/useIntlMessages'
 import Button from 'ui/Button/Button'
-import FormContacUs from 'components/FormContactUs/FormContactUs'
+import FormContacUs from 'components/ContactUs/FormContactUs/FormContactUs'
 import {
   ContactUsHero,
   HeroWrapper,

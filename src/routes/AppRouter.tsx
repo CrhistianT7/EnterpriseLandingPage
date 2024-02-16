@@ -28,7 +28,7 @@ const AppRouter: React.FC = () => {
           path="/frequently-asked-question"
           element={<FrequenltyAskedQuestion />}
         />
-        <Route path="*" element={<PageNotFound />} />
+        <Route path="/page-not-found" element={<PageNotFound />} />
       </Route>
     </Routes>
   )
