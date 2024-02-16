@@ -29,7 +29,7 @@ const typeStyles = (type: string) => {
     case 'secondary':
       return `
         color: ${colors.secondary.main};
-        background-color: ${colors.white.main};
+        background: none;
         border: 0.125rem solid ${colors.secondary.main};
 
         &:active {
