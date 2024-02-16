@@ -75,6 +75,11 @@
   "footer.follow.us": "Follow us",
   "footer.privacy.policy": "Privacy policy",
   "footer.terms.of.service": "Terms of service",
+  "footer.conditions.of.use": "Conditions of use",
+  "footer.enterprise": "Enterprise",
+  "footer.about.us": "About us",
+  "footer.projects": "Projects",
+  "footer.FAQ": "FAQ",
   
   "validation.input.required.message": "This field is required"
 }

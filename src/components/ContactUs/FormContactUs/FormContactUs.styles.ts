@@ -1,3 +1,4 @@
+import { breakpoints } from 'shared/breakpoints'
 import styled from 'styled-components'
 
 import { colors } from 'styles/colors'
@@ -22,4 +23,7 @@ export const ContainerForm = styled.div`
   background-color: ${colors.white.main};
   border-radius: 1rem;
   width: 100%;
+  @media only screen and (min-width: ${breakpoints.xl}) {
+    width: 60%;
+  }
 `

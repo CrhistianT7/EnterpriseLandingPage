@@ -12,12 +12,12 @@ export const colors = {
   primary: {
     main: '#E74C3C',
     disabled: '',
-    hover: '',
+    hover: '#942b20',
     focus: '',
   },
   secondary: {
-    main: '#424242',
-    disabled: '',
+    main: '#2d2d2d',
+    disabled: '#424242',
     selected: '#b0b0b0',
     hover: '#5d5d5d',
     focus: '#4f4f4f',
