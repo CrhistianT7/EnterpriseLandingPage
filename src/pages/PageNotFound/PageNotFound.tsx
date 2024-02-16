@@ -6,7 +6,7 @@ import ButtonLink from 'ui/ButtonLink/ButtonLink'
 
 const PageNotFound = () => {
   return (
-    <PageNotFoundWrapper>
+    <PageNotFoundWrapper size='lg'>
       <MessageWrapper>
         <h2 className="error-page-title">ups!</h2>
         <p className="error-page-sub-title">Creo que te extraviaste...</p>

@@ -2,18 +2,12 @@ import styled from 'styled-components'
 
 import { colors } from 'styles/colors'
 import { breakpoints } from 'shared/breakpoints'
+import Container from 'ui/Container/Container'
 
-export const PageNotFoundWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+export const PageNotFoundWrapper = styled(Container)`
+  flex-grow: 1;
   align-items: center;
   gap: 1.125rem;
-  padding: 3rem 1.5rem;
-  margin: 3rem 0 3rem 0;
-
-  @media only screen and (min-width: ${breakpoints.lg}) {
-    margin: 2rem 0 1rem 0;
-  }
 
   .not-found-img {
     margin-bottom: 2.5rem;
