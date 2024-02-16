@@ -5,7 +5,12 @@ import useIntlMessages from 'hooks/useIntlMessages'
 import Input from 'ui/input/Input'
 import Textarea from 'ui/Textarea/Textarea'
 import Button from 'ui/Button/Button'
-import { TitleForm, Error, FormWrapper, ContainerForm } from './FormContactUs.styles'
+import {
+  TitleForm,
+  Error,
+  FormWrapper,
+  ContainerForm,
+} from './FormContactUs.styles'
 
 interface IValues {
   firstName: string
@@ -44,7 +49,6 @@ const FormContacUs: React.FC = () => {
           type="text"
           id="firstName"
           name="firstName"
-          placeholder="John"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.firstName}
@@ -57,7 +61,6 @@ const FormContacUs: React.FC = () => {
           type="text"
           id="lastName"
           name="lastName"
-          placeholder="Doe"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.lastName}
@@ -70,7 +73,6 @@ const FormContacUs: React.FC = () => {
           type="email"
           id="email"
           name="email"
-          placeholder="JohnDoe@gmail.com"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.email}
@@ -106,7 +108,6 @@ const FormContacUs: React.FC = () => {
         <Textarea
           label={intl('contact.us.form.label.message')}
           name="message"
-          placeholder={intl('contact.us.form.input.message.placeholder')}
           id="message"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}

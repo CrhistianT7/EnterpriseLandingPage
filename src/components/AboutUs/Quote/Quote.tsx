@@ -1,6 +1,6 @@
 import useIntlMessages from 'hooks/useIntlMessages'
 import comilla1 from './../../../assets/images/Quote/Comilla1.svg'
-import comilla2 from './../../../assets/images/Quote/Comilla2.svg'
+import comilla2 from './../../../assets/images/Quote/comilla2.svg'
 import {
   AboutUsQuote,
   ComillaDerecha,

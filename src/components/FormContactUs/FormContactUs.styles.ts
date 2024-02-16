@@ -19,7 +19,7 @@ export const TitleForm = styled.h2`
 
 export const ContainerForm = styled.div`
   padding: 0.75rem;
-  background-color: ${colors.gray[100]};
+  background-color: ${colors.white.main};
   border-radius: 1rem;
   width: 100%;
 `
