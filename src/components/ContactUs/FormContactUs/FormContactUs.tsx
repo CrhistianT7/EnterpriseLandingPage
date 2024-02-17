@@ -1,11 +1,18 @@
 import { useFormik } from 'formik'
-
+import { useState } from 'react'
 import { validationSchema } from './FormContactUs.yup'
 import useIntlMessages from 'hooks/useIntlMessages'
 import Input from 'ui/input/Input'
 import Textarea from 'ui/Textarea/Textarea'
 import Button from 'ui/Button/Button'
-import { TitleForm, Error, FormWrapper, ContainerForm } from './FormContactUs.styles'
+import {
+  TitleForm,
+  Error,
+  FormWrapper,
+  ContainerForm,
+} from './FormContactUs.styles'
+import { sendEmail } from 'services/SendEmail'
+import MultiSelect from 'ui/MultiSelect/MultiSelect'
 
 interface IValues {
   firstName: string
@@ -25,13 +32,43 @@ const initialValues: IValues = {
   message: '',
 }
 
+interface IServiceOptions {
+  key: string
+  name: string
+}
+
+const servicesOptions: IServiceOptions[] = [
+  { key: '1', name: 'Development of graphic pieces' },
+  { key: '2', name: 'Branding' },
+  { key: '3', name: 'UX/UI Design' },
+  { key: '4', name: 'UX Writing' },
+  { key: '5', name: 'Web development' },
+  { key: '6', name: 'Full stack applications' },
+  { key: '7', name: 'Multiplatform applications' },
+  { key: '8', name: 'Mobile Development - iOS, Android, Flutter' },
+  { key: '9', name: 'E-commerce' },
+  { key: '10', name: 'Cloud migrations and infrastructure' },
+  { key: '11', name: 'Digital staff' },
+  { key: '12', name: 'SEO Optimization/ SEM' },
+  { key: '13', name: 'Digital Marketing' },
+]
+
 const FormContacUs: React.FC = () => {
+  const [selectedServices, setSelectedServices] = useState<IServiceOptions[]>(
+    []
+  )
   const intl = useIntlMessages()
   const formik = useFormik({
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-      console.log(JSON.stringify(values))
+      sendEmail({
+        fullName: values.firstName,
+        email: values.email,
+        country: 'Peru',
+        message: values.message,
+        services: selectedServices.map((service) => service.name).join(', '),
+      })
     },
   })
 
@@ -103,6 +140,11 @@ const FormContacUs: React.FC = () => {
         {formik.errors.phone && formik.touched.phone ? (
           <Error>{intl(formik.errors.phone)}</Error>
         ) : null}
+        <MultiSelect
+          options={servicesOptions}
+          onChange={setSelectedServices}
+          placeholder="Buscar servicios"
+        />
         <Textarea
           label={intl('contact.us.form.label.message')}
           name="message"
