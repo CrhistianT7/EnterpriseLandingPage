@@ -7,14 +7,14 @@ import { colors } from 'styles/colors'
 export const StyledClientsSection = styled.section`
   box-shadow: 0 0 1.25rem 0 rgba(30, 26, 26, 0.5);
   background-color: ${colors.white.main};
-  width: 100vw;
+  width: 100%;
 `
 
 export const ClientsSectionWrapper = styled(Container)`
   padding: 4rem 1rem 3rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
-    padding: 7rem 1rem 6rem;
+    padding: 7rem 2rem 6rem;
   }
 `
 
@@ -27,7 +27,7 @@ export const ClientsSectionContent = styled.div`
   @media only screen and (min-width: ${breakpoints.lg}) {
     flex-direction: row;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 5rem;
   }
 `
 

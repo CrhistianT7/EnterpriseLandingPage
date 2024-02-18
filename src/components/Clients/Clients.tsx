@@ -15,7 +15,7 @@ const Clients: React.FC = () => {
 
   return (
     <StyledClientsSection>
-      <ClientsSectionWrapper size="lg">
+      <ClientsSectionWrapper size="xl">
         <ClientsSectionContent>
           <TitleAndButtonSection>
             <h2 className="clients-title">
