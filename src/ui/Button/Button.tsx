@@ -19,7 +19,7 @@ const Button: React.FC<IButton> = ({
   ...props
 }) => {
   return (
-    <StyledButton {...props} size={size} isfullwidth={isFullWidth}>
+    <StyledButton {...props} size={size} $isfullwidth={isFullWidth}>
       {leftIcon}
       {children}
       {rightIcon}

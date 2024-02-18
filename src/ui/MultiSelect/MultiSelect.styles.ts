@@ -8,7 +8,7 @@ export const MirroredIcon = styled(FiSearch)`
 `
 
 interface InputBoxProps {
-  isOpen: boolean
+  $isOpen: boolean
 }
 
 export const InputBox = styled.div<InputBoxProps>`
@@ -17,8 +17,8 @@ export const InputBox = styled.div<InputBoxProps>`
   width: 100%;
   background-color: ${colors.body};
   padding: 1.5rem 1.75rem;
-  border-radius: ${({ isOpen }) =>
-    isOpen ? '0.375rem 0.375rem 0 0' : '0.375rem'};
+  border-radius: ${({ $isOpen }) =>
+    $isOpen ? '0.375rem 0.375rem 0 0' : '0.375rem'};
   gap: 0.6rem;
   cursor: pointer;
 
