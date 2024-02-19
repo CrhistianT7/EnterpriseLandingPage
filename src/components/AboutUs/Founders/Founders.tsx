@@ -1,58 +1,55 @@
+import { useEffect, useState } from 'react'
+import { useAllPrismicDocumentsByType } from '@prismicio/react'
+
 import TeamMemberCard from 'components/AboutUs/Founders/TeamMemberCard/TeamMemberCard'
 import { MembersWrapper } from 'pages/AboutUs/AboutUs.styles'
 import Section from 'ui/Section/Section'
 import { TitleFounders } from './TitleFounders/TitleFounders'
 
-const founderMembers = [
-  {
-    id: 1,
-    name: 'Andrew Turpo',
-    position: 'Founder & CEO',
-    image: 'src/assets/images/imgAboutUs/Cristian.png',
-    quote:
-      '“Hola que tal? Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal”',
-    website_url: 'https://www.andrewturpo.com/',
-    github_url: 'youtube.com',
-  },
-  {
-    id: 2,
-    name: 'Gustavo Ugarte',
-    position: 'Founder & Frontend Developer',
-    image: 'src/assets/images/imgAboutUs/gustavo.png',
-    quote:
-      '“Hola que tal? Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal”',
-    github_url: 'youtube.com',
-  },
-  {
-    id: 3,
-    name: 'Jonatan Cervantes',
-    position: 'Founder & UX/UI Designer',
-    image: 'src/assets/images/imgAboutUs/jhon.png',
-    quote:
-      '“Hola que tal? Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal”',
-    website_url: 'https://www.andrewturpo.com/',
-    github_url: 'youtube.com',
-  },
-  {
-    id: 4,
-    name: 'Ricardo Mamani',
-    position: 'Founder & Frontend Develper',
-    image: 'src/assets/images/imgAboutUs/ricardo.png',
-    quote:
-      '“Hola que tal? Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal Hola que tal”',
-    website_url: 'https://www.andrewturpo.com/',
-    github_url: 'youtube.com',
-  },
-]
+interface IFounder {
+  id: string
+  name: string
+  position: string
+  image: string
+  quote: string
+  website_url?: string
+  github_url?: string
+}
 
-export const Founders = () => {
+export const Founders: React.FC = () => {
+  const [founders, { state }] = useAllPrismicDocumentsByType('founders', {
+    lang: 'en-us',
+  })
+
+  const [founderMembers, setFounderMembers] = useState<Array<IFounder>>([])
+
+  console.log(founders)
+
+  useEffect(() => {
+    founders?.map((founder) => {
+      const newFounder: IFounder = {
+        id: founder.uid || '',
+        name: founder.data.founder[0]?.text,
+        position: founder.data.position[0]?.text,
+        image: founder.data.picture.url,
+        quote: founder.data.quote[0]?.text,
+        github_url: founder.data.github.url,
+      }
+      setFounderMembers((prev) => [...prev, newFounder])
+    })
+  }, [founders])
+
   return (
     <Section size="lg" type="margin">
       <TitleFounders />
       <MembersWrapper>
-        {founderMembers.map((member) => {
-          return <TeamMemberCard key={member.id} {...member} />
-        })}
+        {state === 'loading' ? (
+          <p>Loading...</p>
+        ) : (
+          founderMembers.map((member) => {
+            return <TeamMemberCard key={member.id} {...member} />
+          })
+        )}
       </MembersWrapper>
     </Section>
   )
