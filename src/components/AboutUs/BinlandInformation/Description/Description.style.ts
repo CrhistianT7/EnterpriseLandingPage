@@ -8,15 +8,15 @@ export const DescriptionAboutUs = styled.div`
   & > :first-child {
     font-weight: 500;
     font-size: clamp(1.125rem, 4vw, 1.875rem);
-    line-height: 3rem;
+    line-height: 1.687rem;
     text-transform: uppercase;
     color: ${colors.red[1000]};
   }
 
   & > :nth-child(2) {
     font-weight: 700;
-    font-size: clamp(1.75rem, 4vw, 2.6875rem);
-    line-height: normal;
+    font-size: clamp(2rem, 4vw, 2.6875rem);
+    line-height: 3rem;
     text-transform: uppercase;
     color: ${colors.secondary.main};
     margin-bottom: 2.5rem;
@@ -33,8 +33,8 @@ export const DescriptionAboutUs = styled.div`
 
 export const ContentDescriptionAboutUs = styled.p`
   font-weight: 400;
-  font-size: clamp(0.5rem, 4vw, 1rem);
-  line-height: 1.125rem;
+  font-size: clamp(0.875rem, 4vw, 1rem);
+  line-height: 1.312rem;
   text-align: justify;
   margin-bottom: 1.25rem;
   color: ${colors.secondary.main};

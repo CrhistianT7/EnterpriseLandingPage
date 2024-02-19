@@ -18,7 +18,7 @@ export const OurSlogan = styled.section`
   }
 `
 
-export const AboutUsQuote = styled.p`
+export const AboutUsQuote = styled.div`
   text-align: center;
   font-weight: 400;
   font-size: clamp(1rem, 4vw, 2.25rem);

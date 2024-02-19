@@ -1,3 +1,4 @@
+import { breakpoints } from 'shared/breakpoints'
 import styled from 'styled-components'
 
 import { colors } from 'styles/colors'
@@ -54,9 +55,13 @@ export const QuoteFounder = styled.p`
 export const LinkFounder = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 0.625rem;
   gap: 0.625rem;
+
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    justify-content: flex-start;
+  }
 
   a {
     color: #000;
