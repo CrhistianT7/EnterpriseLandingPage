@@ -17,7 +17,7 @@ const Container: React.FC<IContainer> = ({
     <StyledContainer
       size={size}
       className={className}
-      isfullwidth={isfullwidth}
+      $isfullwidth={isfullwidth}
     >
       {children}
     </StyledContainer>
