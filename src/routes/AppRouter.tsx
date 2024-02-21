@@ -11,6 +11,7 @@ import FrequenltyAskedQuestion from 'pages/FrequentlyAskedQuestion/FrequentlyAsk
 import Portafolio from 'pages/Portafolio/Portafolio'
 import LetsLearn from 'pages/LetsLearn/LetsLearn'
 import Services from 'pages/Services/Services'
+import Seo from 'pages/Services/Seo/Seo'
 
 const AppRouter: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const AppRouter: React.FC = () => {
         <Route path="/lets-learn" element={<LetsLearn />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/seo" element={<Seo />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/contact-us" element={<ContactUs />} />
@@ -28,7 +30,7 @@ const AppRouter: React.FC = () => {
           path="/frequently-asked-question"
           element={<FrequenltyAskedQuestion />}
         />
-        <Route path="/page-not-found" element={<PageNotFound />} />
+        <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
   )
