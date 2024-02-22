@@ -49,8 +49,6 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
       element.name.toLowerCase().includes(searchTerm.toLowerCase())
     )
 
-    console.log(searchTerm)
-    console.log(filteredOptions)
     setSuggestions(filteredOptions)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm])
@@ -80,7 +78,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
     <div ref={refOptions}>
       <InputBox onClick={() => setIsOpen((prev) => !prev)} $isOpen={isOpen}>
         <div className="input-box-wrapper">
-          <span className="span-question">Qué sevicio requiere? *</span>
+          <span className="span-question">¿Qué sevicio requiere? *</span>
           {isOpen ? (
             <CgChevronUp className="arrow-button" size={20} />
           ) : (
