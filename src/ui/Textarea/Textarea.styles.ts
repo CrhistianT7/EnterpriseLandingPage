@@ -1,11 +1,19 @@
 import styled from 'styled-components'
+
 import { colors } from '../../styles/colors'
+import { breakpoints } from 'shared/breakpoints'
 
 export const TextareaWrapper = styled.div`
   background-color: ${colors.gray[150]};
-  padding: 1.5rem 1.75rem;
+  padding: 1.5rem 1rem;
   border-radius: 0.375rem;
-  height: 9.375rem;
+  height: auto;
+  min-height: 9.375rem;
+  position: relative;
+
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    padding: 1.5rem 1.75rem;
+  }
 `
 
 export const TextareaLabel = styled.label`
@@ -23,6 +31,10 @@ export const TextareaLabel = styled.label`
     transition: transform 0.3s, color 0.3s;
     display: inline-block;
     color: ${colors.secondary.main};
+    padding-bottom: 0.25rem;
+    position: absolute;
+    top: 20px;
+    left: 1.75rem;
   }
 
   textarea {
@@ -33,6 +45,9 @@ export const TextareaLabel = styled.label`
     font: inherit;
     background: none;
     resize: none;
+    min-height: 60px;
+    overflow-y: hidden;
+    width: 100%;
   }
 
   textarea:focus + span,

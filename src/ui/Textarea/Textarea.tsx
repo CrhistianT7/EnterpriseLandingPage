@@ -1,4 +1,5 @@
-import { ChangeEvent, FocusEvent, useRef } from 'react'
+import { ChangeEvent, FocusEvent, useRef, useEffect } from 'react'
+
 import { TextareaLabel, TextareaWrapper } from './Textarea.styles'
 
 interface IStyledTextarea {
@@ -20,18 +21,27 @@ const Textarea: React.FC<IStyledTextarea> = ({
   onChange,
   onBlur,
 }) => {
-  const inputRef = useRef<HTMLTextAreaElement | null>(null)
+  const textAreaRef = useRef<HTMLTextAreaElement | null>(null)
   const handleWrapperClick = () => {
-    if (inputRef.current) {
-      inputRef.current.focus()
+    if (textAreaRef.current) {
+      textAreaRef.current.focus()
     }
   }
+
+  const resizeTextArea = () => {
+    if (textAreaRef.current) {
+      textAreaRef.current.style.height = 'auto'
+      textAreaRef.current.style.height = `${textAreaRef.current.scrollHeight}px`
+    }
+  }
+
+  useEffect(resizeTextArea, [value])
 
   return (
     <TextareaWrapper onClick={handleWrapperClick}>
       <TextareaLabel>
         <textarea
-          ref={inputRef}
+          ref={textAreaRef}
           id={id || name}
           name={name}
           value={value}
