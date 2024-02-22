@@ -1,5 +1,6 @@
-import { breakpoints } from 'shared/breakpoints'
 import styled from 'styled-components'
+
+import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 import calendlyIcon from '../../../../assets/images/imgContactUs/calendly-icon.svg'
 
@@ -7,7 +8,6 @@ export const ContentQuestions = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 22.812rem;
 `
 
 export const ContactUsQuestion = styled.p`
@@ -16,6 +16,7 @@ export const ContactUsQuestion = styled.p`
   font-size: 1rem;
   line-height: 1.5rem;
 `
+
 export const ContactUsResponse = styled.p`
   color: ${colors.gray[150]};
   font-weight: 400;
@@ -28,6 +29,7 @@ export const ContactUsInformationIcons = styled.div`
   flex-direction: column;
   gap: 1rem;
 `
+
 export const IconContactUs = styled.div`
   width: 100%;
   height: 3.125rem;
@@ -37,10 +39,11 @@ export const IconContactUs = styled.div`
   border-radius: 0.5rem;
   padding: 1rem;
   font-size: 0.75rem;
+  word-break: break-all;
   color: ${colors.gray[50]};
   gap: 1rem;
 
-  @media only screen and (min-width: ${breakpoints.lg}) {
+  @media only screen and (min-width: ${breakpoints.sm}) {
     align-items: center;
     width: fit-content;
   }

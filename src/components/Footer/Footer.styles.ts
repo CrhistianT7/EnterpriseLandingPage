@@ -91,5 +91,6 @@ export const FooterSocialMedia = styled.div`
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    word-break: break-all;
   }
 `
