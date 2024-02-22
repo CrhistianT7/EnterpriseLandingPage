@@ -9,23 +9,32 @@ export const StyledListItem = styled.li`
 `
 
 export const StyledAnchor = styled(NavLink)`
-  color: ${colors.secondary.main};
+  color: ${colors.primary.main};
   text-decoration: none;
   font-size: 14px;
   padding: 0.25rem 0.25rem;
   display: flex;
   flex-direction: column;
-  border-bottom: 2px solid transparent;
+
+  /** we use this to style the current selected navbar item */
+  &[aria-current='page'] {
+    color: blue;
+  }
+
+  &.is-active {
+    color: red;
+  }
 
   &:hover {
-    border-bottom: 2px solid #d20427;
+    color: ${colors.primary.hover};
     border-radius: 2px;
   }
 
   &:active,
   &:focus {
-    outline: 1px solid #d20427;
+    outline: 2px solid ${colors.primary.focus};
     border-radius: 6px;
+    color: ${colors.primary.focus};
   }
 
   @media only screen and (min-width: ${breakpoints.lg}) {
