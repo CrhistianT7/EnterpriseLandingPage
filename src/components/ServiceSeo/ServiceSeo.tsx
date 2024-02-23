@@ -1,12 +1,15 @@
 import Hero from './Hero/Hero'
 import { SectioHeroWrapper } from './ServiceSeo.styles'
+import ServicesSeo from './ServicesSeo/ServicesSeo'
 
 const ServiceSeo = () => {
   return (
-    <SectioHeroWrapper type="padding" size={'xl'}>
-      <Hero />
-      <div></div>
-    </SectioHeroWrapper>
+    <div>
+      <SectioHeroWrapper type="padding" size={'xl'}>
+        <Hero />
+      </SectioHeroWrapper>
+      <ServicesSeo />
+    </div>
   )
 }
 
