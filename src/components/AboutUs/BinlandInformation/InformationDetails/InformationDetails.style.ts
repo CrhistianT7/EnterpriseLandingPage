@@ -13,13 +13,12 @@ export const ContainerDetails = styled.div`
   @media only screen and (min-width: ${breakpoints.md}) {
     grid-template-columns: repeat(2, 1fr);
     height: 20.4rem;
-    gap: 40px;
+    gap: 2.5rem;
   }
 `
 export const ItemDetails = styled.div`
-  height: 4.312rem;
-  padding: 0.625rem;
-  border: 0.0625rem solid ${colors.white.disabled};
+  padding: 1.3rem;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,17 +29,17 @@ export const ItemDetails = styled.div`
   & span {
     opacity: 50%;
     font-weight: 400;
-    font-size: 0.875rem;
+    font-size: clamp(0.875rem, 4vw, 1.5rem);
     line-height: 1.312rem;
   }
 
-  @media only screen and (min-width: ${breakpoints.md}) {
+  @media only screen and (min-width: ${breakpoints.lg}) {
     height: 100%;
     width: 100%;
     text-align: center;
   }
 
-  @media only screen and (min-width: ${breakpoints.lg}) {
+  @media only screen and (min-width: ${breakpoints.xl}) {
     height: 100%;
     width: 100%;
     text-align: center;

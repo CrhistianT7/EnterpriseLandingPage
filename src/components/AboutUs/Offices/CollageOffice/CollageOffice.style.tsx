@@ -6,7 +6,6 @@ export const CollageContainer = styled.div`
   grid-template-columns: repeat(2, 2fr);
   width: 100%;
   height: 100%;
-  grid-auto-rows: 5.625rem;
   grid-gap: 1rem;
   padding: 1.25rem;
   object-fit: cover;
@@ -46,6 +45,11 @@ export const CollageContainer = styled.div`
 
   .team-item {
     grid-column-start: span 2;
+    height: 6.875rem;
+
+    @media only screen and (min-width: ${breakpoints.lg}) {
+      height: 100%;
+    }
   }
 
   @media only screen and (min-width: ${breakpoints.md}) {
@@ -53,7 +57,7 @@ export const CollageContainer = styled.div`
     grid-auto-rows: 12.5rem;
   }
 
-  @media only screen and (min-width: ${breakpoints.xl}) {
+  @media only screen and (min-width: ${breakpoints.lg}) {
     grid-template-columns: repeat(4, 1fr);
 
     .fachada-item {
