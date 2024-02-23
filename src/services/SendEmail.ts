@@ -19,9 +19,9 @@ export const sendEmail = async (data: IEmailData) => {
   }
 
   const emailServiceConfig = {
-    service_id: import.meta.env.VITE_REACT_APP_SERVICE_ID,
-    template_id: import.meta.env.VITE_REACT_APP_TEMPLATE_ID,
-    user_id: import.meta.env.VITE_REACT_APP_PUBLIC_KEY,
+    service_id: import.meta.env.VITE_REACT_EMAIL_JS_APP_SERVICE_ID,
+    template_id: import.meta.env.VITE_REACT_EMAIL_JS_APP_TEMPLATE_ID,
+    user_id: import.meta.env.VITE_REACT_EMAIL_JS_APP_PUBLIC_KEY,
     template_params: parsedData,
   }
 
