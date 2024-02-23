@@ -33,7 +33,7 @@ export const TextareaLabel = styled.label`
     color: ${colors.secondary.main};
     padding-bottom: 0.25rem;
     position: absolute;
-    top: 20px;
+    top: 1.25rem;
     left: 1.75rem;
   }
 
@@ -45,7 +45,7 @@ export const TextareaLabel = styled.label`
     font: inherit;
     background: none;
     resize: none;
-    min-height: 60px;
+    min-height: 3.75rem;
     overflow-y: hidden;
     width: 100%;
   }

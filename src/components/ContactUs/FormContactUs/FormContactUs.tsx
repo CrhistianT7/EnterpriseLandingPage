@@ -71,7 +71,7 @@ const FormContacUs: React.FC = () => {
         sendEmail({
           fullName: values.fullName,
           email: values.email,
-          country: 'Peru',
+          country: values.country,
           message: values.message,
           services: selectedServices.map((service) => service.name).join(', '),
         })
@@ -126,6 +126,7 @@ const FormContacUs: React.FC = () => {
           options={servicesOptions}
           onChange={setSelectedServices}
           placeholder="Buscar servicios"
+          label="¿Qué servicio se requiere?"
         />
         <Textarea
           label="Mensaje *"
