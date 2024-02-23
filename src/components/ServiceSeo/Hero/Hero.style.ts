@@ -17,7 +17,6 @@ export const BackgroundSeo = styled.div`
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     justify-content: start;
-    background-position: -0.625rem -6.5rem;
   }
 `
 
@@ -35,7 +34,6 @@ export const ContentHero = styled.div`
   backdrop-filter: blur(0.312rem);
   @media only screen and (min-width: ${breakpoints.lg}) {
     width: 44.437rem;
-    height: 25.937rem;
     margin-left: 3rem;
   }
 

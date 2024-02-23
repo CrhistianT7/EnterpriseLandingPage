@@ -48,7 +48,7 @@ const serviceSeo: IServiceSeo[] = [
 
 const ServicesSeo = () => {
   return (
-    <WrapperServiceSeo size="md" type="margin">
+    <WrapperServiceSeo size="lg" type="margin">
       <WrapperTitle>
         <h2 className="seo-title-question">¿Qué incluye?</h2>
         <p className="seo-title-response">

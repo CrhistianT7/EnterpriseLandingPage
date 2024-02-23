@@ -1,3 +1,5 @@
+import Container from 'ui/Container/Container'
+import { Question } from '../../components/ServiceSeo/Question/Question'
 import Hero from './Hero/Hero'
 import { SectioHeroWrapper } from './ServiceSeo.styles'
 import ServicesSeo from './ServicesSeo/ServicesSeo'
@@ -8,7 +10,10 @@ const ServiceSeo = () => {
       <SectioHeroWrapper type="padding" size={'xl'}>
         <Hero />
       </SectioHeroWrapper>
-      <ServicesSeo />
+      <Container size="xl">
+        <ServicesSeo />
+        <Question />
+      </Container>
     </div>
   )
 }
