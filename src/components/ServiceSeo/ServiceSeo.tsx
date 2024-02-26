@@ -4,6 +4,7 @@ import Hero from './Hero/Hero'
 import { SectioHeroWrapper } from './ServiceSeo.styles'
 import ServicesSeo from './ServicesSeo/ServicesSeo'
 import FinalProject from './FinalProject/FinalProject'
+import Technologies from './Technologies/Technologies'
 
 const ServiceSeo = () => {
   return (
@@ -16,6 +17,7 @@ const ServiceSeo = () => {
         <Question />
       </Container>
       <FinalProject />
+      <Technologies />
     </div>
   )
 }
