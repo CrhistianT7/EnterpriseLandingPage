@@ -70,6 +70,7 @@ export const StyledQuote = styled(Section)`
       }
     }
   }
+  
   @media only screen and (min-width: ${breakpoints.lg}) {
     padding: 4rem 9.5rem;
   }
