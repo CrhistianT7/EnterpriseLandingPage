@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { NavLink as ReactRouterNavLink, useLocation } from 'react-router-dom'
+import { NavLink as ReactRouterNavLink } from 'react-router-dom'
 import { CgClose } from 'react-icons/cg'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { motion, AnimatePresence } from 'framer-motion'
