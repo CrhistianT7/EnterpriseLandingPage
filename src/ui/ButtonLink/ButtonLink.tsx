@@ -6,6 +6,7 @@ interface IButtonLinkProps extends PropsWithChildren {
   to: string
   type: 'primary' | 'secondary'
   size?: 'sm' | 'md' | 'lg'
+  className?: string
   onClick?: (() => void) | undefined
 }
 
@@ -14,11 +15,12 @@ const ButtonLink: React.FC<IButtonLinkProps> = ({
   type,
   size,
   children,
+  className,
   onClick,
 }) => {
   return (
     <CustonNavLink to={to}>
-      <Button type={type} onClick={onClick} size={size}>
+      <Button type={type} onClick={onClick} size={size} className={className}>
         {children}
       </Button>
     </CustonNavLink>
