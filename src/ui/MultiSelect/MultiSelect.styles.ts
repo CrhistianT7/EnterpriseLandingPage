@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-
 import { FiSearch } from 'react-icons/fi'
+
 import { colors } from 'styles/colors'
 
 export const MirroredIcon = styled(FiSearch)`
@@ -26,8 +26,7 @@ export const InputBox = styled.div<InputBoxProps>`
     font-weight: 400;
     line-height: 1.5rem;
     font-size: 1rem;
-    color: ${colors.secondary.disabled};
-    opacity: 0.5;
+    color: ${colors.secondary.main};
   }
 
   .input-box-wrapper {

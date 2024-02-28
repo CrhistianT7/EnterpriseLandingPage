@@ -1,6 +1,24 @@
-import { breakpoints } from 'shared/breakpoints'
 import styled from 'styled-components'
-import { colors } from 'styles/colors'
+
+import { breakpoints } from 'shared/breakpoints'
+import Container from 'ui/Container/Container'
+import Section from 'ui/Section/Section'
+
+export const SectionContactUs = styled(Section)`
+  margin: auto;
+`
+
+export const ContactUsWrapper = styled(Container)`
+  width: 100%;
+
+  @media only screen and (min-width: ${breakpoints.sm}) {
+    max-width: 43.75rem;
+  }
+
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    max-width: 100%;
+  }
+`
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -8,13 +26,12 @@ export const ContentWrapper = styled.div`
   align-items: flex-start;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: ${colors.gray[50]};
-  gap: 0.75rem;
+  gap: 1.5rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     width: 100%;
     display: flex;
     flex-direction: row;
-    background: none;
+    justify-content: space-between;
   }
 `

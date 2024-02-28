@@ -1,28 +1,21 @@
 import useIntlMessages from 'hooks/useIntlMessages'
-import comilla1 from './../../../assets/images/Quote/Comilla1.svg'
-import comilla2 from './../../../assets/images/Quote/comilla2.svg'
-import {
-  AboutUsQuote,
-  ComillaDerecha,
-  ComillaIzquierda,
-  OurSlogan,
-} from './Quote.styles'
+import leftQuotationMark from './../../../assets/images/Quote/left-quotation-mark.svg'
+import rightQuotationMark from './../../../assets/images/Quote/right-quotation-mark.svg'
+import { StyledQuote } from './Quote.styles'
 
 export const Quote = () => {
   const intl = useIntlMessages()
 
   return (
-    <OurSlogan>
-      <AboutUsQuote>
-        <ComillaIzquierda>
-          <img src={comilla2} />
-        </ComillaIzquierda>
-        {intl('about.us.quote.description')}
-        <ComillaDerecha>
-          <img src={comilla1} />
-        </ComillaDerecha>
-      </AboutUsQuote>
-    </OurSlogan>
+    <StyledQuote size="lg" type="padding">
+      <div className="left-quotation-mark">
+        <img src={leftQuotationMark} alt="left quotation mark" />
+      </div>
+      <p className="quote">{intl('about.us.quote.description')}</p>
+      <div className="right-quotation-mark">
+        <img src={rightQuotationMark} alt="right quotation mark" />
+      </div>
+    </StyledQuote>
   )
 }
 

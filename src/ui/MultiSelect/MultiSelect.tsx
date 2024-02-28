@@ -22,12 +22,14 @@ interface MultiSelectProps {
   options: IServiceOptions[]
   onChange: (selectedServices: IServiceOptions[]) => void
   placeholder: string
+  label: string
 }
 
 const MultiSelect: React.FC<MultiSelectProps> = ({
   options,
   onChange,
   placeholder,
+  label,
 }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [searchTerm, setSearchTerm] = useState<string>('')
@@ -49,8 +51,6 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
       element.name.toLowerCase().includes(searchTerm.toLowerCase())
     )
 
-    console.log(searchTerm)
-    console.log(filteredOptions)
     setSuggestions(filteredOptions)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm])
@@ -80,7 +80,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
     <div ref={refOptions}>
       <InputBox onClick={() => setIsOpen((prev) => !prev)} $isOpen={isOpen}>
         <div className="input-box-wrapper">
-          <span className="span-question">Qué sevicio requiere? *</span>
+          <span className="span-question">{label}</span>
           {isOpen ? (
             <CgChevronUp className="arrow-button" size={20} />
           ) : (

@@ -10,10 +10,10 @@ export const colors = {
     disabled: '#ccc',
   },
   primary: {
-    main: '#E74C3C',
-    disabled: '',
-    hover: '#942b20',
-    focus: '',
+    main: '#f83d48',
+    disabled: '#FFC7CA',
+    hover: '#e61c28',
+    focus: '#C1141E',
   },
   secondary: {
     main: '#2d2d2d',
