@@ -48,7 +48,7 @@ export const DesktopNavigation = styled.nav`
     align-items: center;
     background: none;
     top: 0;
-    height: 4%.5rem;
+    height: 4.5rem;
 
     .nav-items {
       display: flex;

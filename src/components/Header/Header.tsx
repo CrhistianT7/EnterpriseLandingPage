@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { NavLink as ReactRouterNavLink, useLocation } from 'react-router-dom'
 import { CgClose } from 'react-icons/cg'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { motion, AnimatePresence } from 'framer-motion'
 
 import useIntlMessages from 'hooks/useIntlMessages'
 import {
@@ -15,11 +16,8 @@ import logo from '../../assets/images/logo/only-text.svg'
 import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher'
 import NavLink from 'ui/NavLink/NavLink'
 import ButtonLink from 'ui/ButtonLink/ButtonLink'
-import { motion, AnimatePresence } from 'framer-motion'
 
 const Header: React.FC = () => {
-  const location = useLocation()
-  console.log(location.pathname)
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const intl = useIntlMessages()
@@ -52,7 +50,6 @@ const Header: React.FC = () => {
   ]
 
   const handleIsOpen = () => {
-    console.log('here')
     setIsOpen((prev) => !prev)
 
     if (typeof window != 'undefined' && window.document && !isOpen) {

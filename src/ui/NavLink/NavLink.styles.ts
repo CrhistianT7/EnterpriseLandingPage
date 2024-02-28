@@ -11,7 +11,7 @@ export const StyledListItem = styled.li`
 export const StyledAnchor = styled(NavLink)`
   color: ${colors.primary.main};
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   padding: 0.25rem 0.25rem;
   display: flex;
   flex-direction: column;
@@ -27,17 +27,17 @@ export const StyledAnchor = styled(NavLink)`
 
   &:hover {
     color: ${colors.primary.hover};
-    border-radius: 2px;
+    border-radius: 0.125rem;
   }
 
   &:active,
   &:focus {
-    outline: 2px solid ${colors.primary.focus};
-    border-radius: 6px;
+    outline: 0.125rem solid ${colors.primary.focus};
+    border-radius:0.375rem;
     color: ${colors.primary.focus};
   }
 
   @media only screen and (min-width: ${breakpoints.lg}) {
-    font-size: 16px;
+    font-size: 1rem;
   }
 `
