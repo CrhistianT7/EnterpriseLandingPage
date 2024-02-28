@@ -1,0 +1,68 @@
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaYoutube,
+  FaTiktok,
+  FaTwitter,
+} from 'react-icons/fa'
+import { RiInstagramFill } from 'react-icons/ri'
+import { LinkIcon, WrapperIcon } from './SocialMediaBar.styles'
+import { SocialMediaBarWrapper } from './SocialMediaBar.styles'
+
+interface ISocialMediaBar {
+  type: 'primary' | 'secondary'
+  direction: 'row' | 'column'
+}
+
+interface ILinkIcon {
+  id: string
+  to: string
+  icon: React.ReactNode
+}
+
+const ICON_SIZE = 22
+
+const SocialLinksIconsBar: ILinkIcon[] = [
+  {
+    id: '1',
+    to: 'github.com/Binlandorg',
+    icon: <FaGithub size={ICON_SIZE} />,
+  },
+  {
+    id: '2',
+    to: 'www.instagram.com/binland.dev',
+    icon: <RiInstagramFill size={ICON_SIZE} />,
+  },
+  { id: '3', to: 'www.linkedin.com', icon: <FaLinkedinIn size={ICON_SIZE} /> },
+  {
+    id: '4',
+    to: 'www.youtube.com/@Binland-dev',
+    icon: <FaYoutube size={ICON_SIZE} />,
+  },
+  {
+    id: '5',
+    to: 'www.tiktok.com/@binland.dev',
+    icon: <FaTiktok size={ICON_SIZE} />,
+  },
+  {
+    id: '6',
+    to: 'twitter.com/binland_dev',
+    icon: <FaTwitter size={ICON_SIZE} />,
+  },
+]
+
+const SocialMediaBar: React.FC<ISocialMediaBar> = ({ type, direction }) => {
+  return (
+    <SocialMediaBarWrapper type={type} direction={direction}>
+      {SocialLinksIconsBar.map((element) => (
+        <WrapperIcon key={element.id}>
+          <LinkIcon to={`https://${element.to}`} target="_BLANK">
+            {element.icon}
+          </LinkIcon>
+        </WrapperIcon>
+      ))}
+    </SocialMediaBarWrapper>
+  )
+}
+
+export default SocialMediaBar

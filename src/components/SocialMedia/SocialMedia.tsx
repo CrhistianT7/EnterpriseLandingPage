@@ -17,7 +17,7 @@ interface SocialLinks {
 
 const ICON_SIZE = 24
 
-export const socialLinksIcons: SocialLinks[] = [
+const socialLinksIcons: SocialLinks[] = [
   { id: '1', to: 'github.com/Binlandorg', icon: <FaGithub size={ICON_SIZE} /> },
   {
     id: '2',
