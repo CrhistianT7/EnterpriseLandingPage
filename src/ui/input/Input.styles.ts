@@ -6,6 +6,7 @@ export const InputWrapper = styled.div`
   background-color: ${colors.gray[150]};
   padding: 1.5rem 1.75rem 1rem;
   border-radius: 0.375rem;
+  width: 100%;
 `
 
 export const InputLabel = styled.label`
@@ -27,6 +28,7 @@ export const InputLabel = styled.label`
   input {
     margin-top: 0.25rem;
     height: 100%;
+    width: 100%;
     border: none;
     outline: none;
     font: inherit;
