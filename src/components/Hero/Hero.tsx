@@ -1,27 +1,40 @@
-import React from 'react'
-import styled from 'styled-components'
-import useIntlMessages from '../../hooks/useIntlMessages'
+import { BsArrowRight } from 'react-icons/bs'
 
-const StyledHero = styled.section`
-  height: calc(100vh - 72px);
-  height: calc(100svh - 72px);
-  display: flex;
-  align-items: center;
-`
+import ButtonLink from 'ui/ButtonLink/ButtonLink'
+import { SectionHero } from './Hero.styles'
+import SocialMediaBar from './socialMediaBar/SocialMediaBar'
+import imgHero from './../../assets/images/imgHome/home-hero.svg'
 
-const Hero: React.FC = (): React.ReactElement => {
-  const intl = useIntlMessages()
-
+const Hero = () => {
   return (
-    <StyledHero id="hero">
-      <div>
-        <p>{intl("home.hero.subslogan")}</p>
-        <p>{intl("home.hero.slogan")}</p>
+    <SectionHero>
+      <div className="full-width-left-side">
+        <div className="hero-content">
+          <div>
+            <SocialMediaBar type="primary" direction="column" />
+          </div>
+          <img src={imgHero} />
+          <div>
+            <p className="small-message">Algo interesante!</p>
+            <h2 className="hero-message">
+              Algo mas <span className="span-black">interesante</span> que lo
+              anterior
+            </h2>
+            <ButtonLink
+              type="secondary"
+              to="/contact-us"
+              className="button-contact-us"
+            >
+              <BsArrowRight size={20} />
+              Contáctanos
+            </ButtonLink>
+          </div>
+        </div>
       </div>
-      <div>
-        <a href="#">{intl("home.hero.contact.us.button.title")}</a>
+      <div className="social-bar-horizontal">
+        <SocialMediaBar type="secondary" direction="row" />
       </div>
-    </StyledHero>
+    </SectionHero>
   )
 }
 

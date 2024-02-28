@@ -1,6 +1,6 @@
-import { breakpoints } from "shared/breakpoints";
-import styled from "styled-components";
-import Container from "ui/Container/Container";
+import { breakpoints } from 'shared/breakpoints'
+import styled from 'styled-components'
+import Container from 'ui/Container/Container'
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -11,7 +11,7 @@ export const StyledHeader = styled.header`
   max-height: 72px;
   background: #ffdee4;
 
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 10;
 `
@@ -47,7 +47,7 @@ export const DesktopNavigation = styled.nav`
 
 export const DesktopUnorderedList = styled.ul`
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
 `
 
 export const MobileNavigation = styled.nav`
@@ -55,7 +55,7 @@ export const MobileNavigation = styled.nav`
   flex-direction: column;
   border-top: 2px solid red;
   width: 100%;
-  padding: .75rem;
+  padding: 0.75rem;
   background: #ffdee4;
 
   transition: display 5s linear;
@@ -64,6 +64,6 @@ export const MobileNavigation = styled.nav`
     display: none;
   }
 `
-export const HeaderEmptyBackground = styled.div`
-  height: 72px;
-`
+// export const HeaderEmptyBackground = styled.div`
+//   height: 72px;
+// `
