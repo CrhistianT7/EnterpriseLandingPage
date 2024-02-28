@@ -1,3 +1,4 @@
+import { RiInstagramFill } from 'react-icons/ri'
 import {
   FaGithub,
   FaLinkedinIn,
@@ -5,9 +6,12 @@ import {
   FaTiktok,
   FaTwitter,
 } from 'react-icons/fa'
-import { RiInstagramFill } from 'react-icons/ri'
-import { LinkIcon, WrapperIcon } from './SocialMediaBar.styles'
-import { SocialMediaBarWrapper } from './SocialMediaBar.styles'
+
+import {
+  LinkIcon,
+  WrapperIcon,
+  SocialMediaBarWrapper,
+} from './SocialMediaBar.styles'
 
 interface ISocialMediaBar {
   type: 'primary' | 'secondary'

@@ -1,4 +1,5 @@
 import { BsArrowRight } from 'react-icons/bs'
+
 import ButtonLink from 'ui/ButtonLink/ButtonLink'
 import { SectionHero } from './Hero.styles'
 import SocialMediaBar from './socialMediaBar/SocialMediaBar'
@@ -36,4 +37,5 @@ const Hero = () => {
     </SectionHero>
   )
 }
+
 export default Hero

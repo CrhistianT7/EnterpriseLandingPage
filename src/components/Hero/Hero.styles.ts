@@ -1,5 +1,6 @@
-import { breakpoints } from 'shared/breakpoints'
 import styled from 'styled-components'
+
+import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 
 export const SectionHero = styled.section`
@@ -57,6 +58,8 @@ export const SectionHero = styled.section`
       grid-column: 1 / 2;
       display: grid;
       align-items: center;
+      position: relative;
+      z-index: 10;
     }
   }
 
@@ -68,6 +71,8 @@ export const SectionHero = styled.section`
       margin-top: auto;
       margin-bottom: -15%;
       display: flex;
+      position: relative;
+      z-index: 1;
     }
   }
 
