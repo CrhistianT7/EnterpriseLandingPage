@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react'
 
 import {
   ContentWrapper,
+  SelectService,
   SingleTab,
   TabsWrapper,
   VerticalTabsWrapper,
 } from './VerticalTabs.styles'
 import useIntlMessages from 'hooks/useIntlMessages'
+// import Select from 'ui/Select/Select'
 
 interface IVerticalTabs {
   key: string
@@ -51,6 +53,9 @@ const VerticalTabs: React.FC<IVerticalTabsProps> = ({ items }) => {
           )
         })}
       </TabsWrapper>
+      <SelectService>
+      ads 
+      </SelectService>
       <ContentWrapper
         key={'asd'}
         className={currentItemIndex == items[0].key ? 'top-left-rounded' : ''}

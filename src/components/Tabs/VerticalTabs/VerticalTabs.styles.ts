@@ -1,13 +1,33 @@
 import styled from "styled-components"
 
+import { breakpoints } from "shared/breakpoints"
 import { colors } from "styles/colors"
 
 export const VerticalTabsWrapper = styled.div`
   display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: ${breakpoints.md}) {
+    flex-direction: row;
+  }
 `
 
 export const TabsWrapper = styled.ul`
   min-width: fit-content;
+  display: none;
+
+  @media only screen and (min-width: ${breakpoints.md}) {
+    display: block;
+  }
+
+`
+
+export const SelectService = styled.div`
+  
+
+  @media only screen and (min-width: ${breakpoints.md}) {
+    display: none;
+  }
 `
 
 export const SingleTab = styled.li`

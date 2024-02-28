@@ -1,8 +1,15 @@
 import styled from "styled-components"
+
+import { breakpoints } from "shared/breakpoints"
 import { colors } from "styles/colors"
 
 export const HorizontalTabsWrapper = styled.div`
-  width: 100%;
+  display: none;
+
+  @media only screen and (min-width: ${breakpoints.md}) {
+    width: 100%;
+    display: block;
+  }
 `
 
 export const TabsWrapper = styled.ul`
@@ -26,6 +33,7 @@ export const SingleTab = styled.li`
   background: ${colors.secondary.main};
   color: ${colors.white.main};
   font-weight: 600;
+  text-align: center;
 
   &.selected {
     background: ${colors.white.main};

@@ -30,6 +30,6 @@ export const StyledSection = styled.section<IStyledSection>`
 
   ${(props) =>
     props.type === 'margin'
-      ? `margin: ${sizeStyles(props.size)} 0`
+      ? `margin: ${sizeStyles(props.size)} auto`
       : `padding: ${sizeStyles(props.size)} 0`}
 `

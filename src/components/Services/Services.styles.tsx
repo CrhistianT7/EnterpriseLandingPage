@@ -18,3 +18,11 @@ export const ServicesTitle = styled.h2`
 export const CustomSingleWord = styled.b`
   color: ${colors.primary.main};
 `
+
+export const MobileView = styled.div`
+  
+`
+
+export const DesktopView = styled.div`
+  
+`
