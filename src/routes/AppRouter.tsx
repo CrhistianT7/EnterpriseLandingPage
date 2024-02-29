@@ -18,6 +18,8 @@ const AppRouter: React.FC = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
+        <Route path="/clients" element={<>Clients</>} />
+        <Route path="/products" element={<>Products</>} />
         <Route path="/portafolio" element={<Portafolio />} />
         <Route path="/lets-learn" element={<LetsLearn />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -26,6 +28,7 @@ const AppRouter: React.FC = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/blog" element={<>blog</>} />
         <Route
           path="/frequently-asked-question"
           element={<FrequenltyAskedQuestion />}

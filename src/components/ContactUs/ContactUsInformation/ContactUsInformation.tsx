@@ -1,5 +1,4 @@
 import { WrapperContactUsInformation } from './ContactUsInformation.styles'
-
 import SocialMedia from 'components/SocialMedia/SocialMedia'
 import ContactUsContent from './ContactUsContent/ContactUsContent'
 
