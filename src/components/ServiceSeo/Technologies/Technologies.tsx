@@ -33,7 +33,7 @@ const Technologies = () => {
       <SectionTechnologies type="padding" size="lg">
         <WrapperTechnologiesTitle>
           <TechnologiesTitle>
-            <span className="text-red">Tecnologías</span> que manejamos{' '}
+            <span className="text-red">Tecnologías</span> que manejamos
             <span className="text-red">.</span>
           </TechnologiesTitle>
           <TechnologiesDescription>

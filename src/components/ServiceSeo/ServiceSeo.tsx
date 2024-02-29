@@ -5,6 +5,7 @@ import { SectioHeroWrapper } from './ServiceSeo.styles'
 import ServicesSeo from './ServicesSeo/ServicesSeo'
 import FinalProject from './FinalProject/FinalProject'
 import Technologies from './Technologies/Technologies'
+import NavSeo from './NavSeo/NavSeo'
 
 const ServiceSeo = () => {
   return (
@@ -16,6 +17,7 @@ const ServiceSeo = () => {
         <ServicesSeo />
         <Question />
       </Container>
+      <NavSeo />
       <FinalProject />
       <Technologies />
     </div>

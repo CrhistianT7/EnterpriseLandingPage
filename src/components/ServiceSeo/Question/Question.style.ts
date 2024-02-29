@@ -48,7 +48,7 @@ export const TitleQuestion = styled.p`
   color: ${colors.secondary.disabled};
 
   .title-question-seo {
-    color: Red;
+    color: ${colors.red[1000]};
     text-transform: uppercase;
     font-weight: 700;
   }

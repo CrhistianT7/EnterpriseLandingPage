@@ -22,7 +22,7 @@ export const WrapperTitle = styled.div`
   gap: 2rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
-    gap: 11px;
+    gap: 0.6875rem;
   }
 
   .seo-title-question {
@@ -57,7 +57,7 @@ export const WrapperDescription = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background: ${colors.gray[50]};
     border-radius: 1rem;
     padding: 2rem;
     gap: 2rem;
