@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import { IoEllipse } from 'react-icons/io5'
 
-import Container from 'ui/Container/Container'
 import {
+  ContainerProcess,
   ContainerUlTabs,
-  SectionProcess,
   TabsIcon,
   WrapperInfo,
   WrapperTabs,
   WrapperTitleProcess,
 } from './NavSeo.style'
+import Section from 'ui/Section/Section'
 
 interface TabInfo {
   id: number
@@ -48,8 +48,8 @@ const NavSeo: React.FC = () => {
   }
 
   return (
-    <Container size="lg">
-      <SectionProcess size="lg" type="padding">
+    <Section size="lg" type="padding">
+      <ContainerProcess size="xl">
         <WrapperTitleProcess>
           <p className="title-process">
             ¿Cuál es nuestro <span className="red-word">proceso</span> de
@@ -99,8 +99,8 @@ const NavSeo: React.FC = () => {
             ))}
           </div>
         </WrapperTabs>
-      </SectionProcess>
-    </Container>
+      </ContainerProcess>
+    </Section>
   )
 }
 export default NavSeo

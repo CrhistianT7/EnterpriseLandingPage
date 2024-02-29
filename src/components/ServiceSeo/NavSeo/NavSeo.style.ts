@@ -2,9 +2,10 @@ import styled from 'styled-components'
 
 import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
-import Section from 'ui/Section/Section'
+import Container from 'ui/Container/Container'
 
-export const SectionProcess = styled(Section)`
+export const ContainerProcess = styled(Container)`
+  margin: 0;
   gap: 3rem;
   padding: 3rem 1.5rem;
 

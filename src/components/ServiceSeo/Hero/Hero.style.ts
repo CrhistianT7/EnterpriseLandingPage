@@ -53,6 +53,14 @@ export const ContentHero = styled.div`
     max-width: 100%;
   }
 
+  .button-contact-us {
+    width: 100%;
+
+    @media only screen and (min-width: ${breakpoints.lg}) {
+      width: fit-content;
+    }
+  }
+
   .hero-sub-title {
     font-weight: 500;
     font-size: clamp(1.125rem, 4vw, 1.5rem);

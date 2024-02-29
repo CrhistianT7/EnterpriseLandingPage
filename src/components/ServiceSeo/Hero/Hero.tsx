@@ -25,7 +25,12 @@ const Hero: React.FC = () => {
               </span>
             </div>
             <div>
-              <ButtonLink type="primary" to="/contact-us" size="lg" isfullwidth>
+              <ButtonLink
+                type="primary"
+                to="/contact-us"
+                size="lg"
+                className="button-contact-us"
+              >
                 <span className="button-link-contact-us">Contactanos</span>
                 <TbSend size={20} />
               </ButtonLink>

@@ -29,8 +29,8 @@ const DevelopingTechnologies: ITechnologies[] = [
 
 const Technologies = () => {
   return (
-    <Container size="lg">
-      <SectionTechnologies type="padding" size="lg">
+    <SectionTechnologies type="padding" size="lg">
+      <Container size="lg">
         <WrapperTechnologiesTitle>
           <TechnologiesTitle>
             <span className="text-red">Tecnologías</span> que manejamos
@@ -48,8 +48,8 @@ const Technologies = () => {
             </Tech>
           ))}
         </WrapperTechnologies>
-      </SectionTechnologies>
-    </Container>
+      </Container>
+    </SectionTechnologies>
   )
 }
 
