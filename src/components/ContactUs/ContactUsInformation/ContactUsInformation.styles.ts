@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { colors } from 'styles/colors'
 
+import { colors } from 'styles/colors'
 import { breakpoints } from 'shared/breakpoints'
 
 export const WrapperContactUsInformation = styled.div`
@@ -10,10 +10,15 @@ export const WrapperContactUsInformation = styled.div`
   background-color: ${colors.secondary.main};
   border-radius: 1rem;
   justify-content: space-evenly;
-  padding: 1rem;
+  padding: 1.5rem;
+  width: 100%;
+
+  @media only screen and (min-width: ${breakpoints.sm}) {
+    padding: 2rem;
+  }
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     width: 40%;
-    padding: 4rem;
+    padding: 3rem;
   }
 `

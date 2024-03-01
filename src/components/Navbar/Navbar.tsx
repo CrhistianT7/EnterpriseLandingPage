@@ -9,7 +9,7 @@ import {
   DesktopNavigation,
   DesktopUnorderedList,
   HamburgerIcon,
-  HeaderEmptyBackground,
+  // HeaderEmptyBackground,
   HeaderWrapper,
   MobileNavigation,
   StyledHeader,
@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <HeaderEmptyBackground />
+      {/* <HeaderEmptyBackground /> */}
       <StyledHeader>
         <HeaderWrapper size="xl">
           <ReactRouterNavLink to={'/'}>

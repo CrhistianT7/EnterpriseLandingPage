@@ -8,6 +8,7 @@ interface IButton extends PropsWithChildren {
   rightIcon?: React.ReactNode
   onClick?: (() => void) | undefined
   isFullWidth?: boolean
+  className?: string
 }
 
 const Button: React.FC<IButton> = ({
@@ -16,10 +17,16 @@ const Button: React.FC<IButton> = ({
   leftIcon,
   rightIcon,
   isFullWidth,
+  className,
   ...props
 }) => {
   return (
-    <StyledButton {...props} size={size} isfullwidth={isFullWidth}>
+    <StyledButton
+      {...props}
+      size={size}
+      $isfullwidth={isFullWidth}
+      className={className}
+    >
       {leftIcon}
       {children}
       {rightIcon}

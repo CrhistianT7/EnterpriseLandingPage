@@ -1,76 +1,108 @@
 import { useFormik } from 'formik'
+import { useRef, useState } from 'react'
+import { TbSend } from 'react-icons/tb'
+import ReCAPTCHA from 'react-google-recaptcha'
 
+import { sendEmail } from 'services/SendEmail'
 import { validationSchema } from './FormContactUs.yup'
 import useIntlMessages from 'hooks/useIntlMessages'
 import Input from 'ui/input/Input'
 import Textarea from 'ui/Textarea/Textarea'
-import Button from 'ui/Button/Button'
-import { TitleForm, Error, FormWrapper, ContainerForm } from './FormContactUs.styles'
+import {
+  Error,
+  FormWrapper,
+  ContainerForm,
+  ButtonForm,
+} from './FormContactUs.styles'
+import MultiSelect from 'ui/MultiSelect/MultiSelect'
 
 interface IValues {
-  firstName: string
-  lastName: string
-  company: string
+  fullName: string
+  country: string
   email: string
-  phone: string
   message: string
 }
 
 const initialValues: IValues = {
-  firstName: '',
-  lastName: '',
-  company: '',
+  fullName: '',
+  country: '',
   email: '',
-  phone: '',
   message: '',
 }
 
+interface IServiceOptions {
+  key: string
+  name: string
+}
+
+const servicesOptions: IServiceOptions[] = [
+  { key: '1', name: 'Development of graphic pieces' },
+  { key: '2', name: 'Branding' },
+  { key: '3', name: 'UX/UI Design' },
+  { key: '4', name: 'UX Writing' },
+  { key: '5', name: 'Web development' },
+  { key: '6', name: 'Full stack applications' },
+  { key: '7', name: 'Multiplatform applications' },
+  { key: '8', name: 'Mobile Development - iOS, Android, Flutter' },
+  { key: '9', name: 'E-commerce' },
+  { key: '10', name: 'Cloud migrations and infrastructure' },
+  { key: '11', name: 'Digital staff' },
+  { key: '12', name: 'SEO Optimization/ SEM' },
+  { key: '13', name: 'Digital Marketing' },
+]
+
 const FormContacUs: React.FC = () => {
+  const [selectedServices, setSelectedServices] = useState<IServiceOptions[]>(
+    []
+  )
+  const [verified, setVerified] = useState<boolean | null>(null)
+  const [errorCaptcha, setErrorCaptcha] = useState<string>('')
+  const captcha = useRef(null)
+
   const intl = useIntlMessages()
   const formik = useFormik({
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-      console.log(JSON.stringify(values))
+      if (!verified) {
+        setErrorCaptcha('Por favor acepte el captcha')
+      } else {
+        setErrorCaptcha('')
+        sendEmail({
+          fullName: values.fullName,
+          email: values.email,
+          country: values.country,
+          message: values.message,
+          services: selectedServices.map((service) => service.name).join(', '),
+        })
+      }
     },
   })
 
+  const handleCaptchaChange = () => {
+    setVerified(true)
+  }
+
   return (
     <ContainerForm>
-      <TitleForm>{intl('contact.us.form.title')}</TitleForm>
       <FormWrapper onSubmit={formik.handleSubmit}>
         <Input
-          label={intl('contact.us.form.label.firstname')}
+          label="Nombre completo *"
           type="text"
-          id="firstName"
-          name="firstName"
-          placeholder="John"
+          id="fullName"
+          name="fullName"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          value={formik.values.firstName}
+          value={formik.values.fullName}
         />
-        {formik.errors.firstName && formik.touched.firstName ? (
-          <Error>{intl(formik.errors.firstName)}</Error>
+        {formik.errors.fullName && formik.touched.fullName ? (
+          <Error>{intl(formik.errors.fullName)}</Error>
         ) : null}
         <Input
-          label={intl('contact.us.form.label.lastname')}
-          type="text"
-          id="lastName"
-          name="lastName"
-          placeholder="Doe"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.lastName}
-        />
-        {formik.touched.lastName && formik.errors.lastName ? (
-          <Error>{intl(formik.errors.lastName)}</Error>
-        ) : null}
-        <Input
-          label={intl('contact.us.form.label.email')}
+          label="Email *"
           type="email"
           id="email"
           name="email"
-          placeholder="JohnDoe@gmail.com"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.email}
@@ -79,34 +111,26 @@ const FormContacUs: React.FC = () => {
           <Error>{intl(formik.errors.email)}</Error>
         ) : null}
         <Input
-          label={intl('contact.us.form.label.company')}
+          label="País"
           type="text"
-          id="company"
-          name="company"
+          id="country"
+          name="country"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          value={formik.values.company}
+          value={formik.values.country}
         />
-        {formik.errors.company && formik.touched.company ? (
-          <Error>{intl(formik.errors.company)}</Error>
+        {formik.errors.country && formik.touched.country ? (
+          <Error>{intl(formik.errors.country)}</Error>
         ) : null}
-
-        <Input
-          label={intl('contact.us.form.label.phone')}
-          type="text"
-          id="phone"
-          name="phone"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.phone}
+        <MultiSelect
+          options={servicesOptions}
+          onChange={setSelectedServices}
+          placeholder="Buscar servicios"
+          label="¿Qué servicio se requiere?"
         />
-        {formik.errors.phone && formik.touched.phone ? (
-          <Error>{intl(formik.errors.phone)}</Error>
-        ) : null}
         <Textarea
-          label={intl('contact.us.form.label.message')}
+          label="Mensaje *"
           name="message"
-          placeholder={intl('contact.us.form.input.message.placeholder')}
           id="message"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
@@ -115,7 +139,18 @@ const FormContacUs: React.FC = () => {
         {formik.errors.message && formik.touched.message ? (
           <Error>{intl(formik.errors.message)}</Error>
         ) : null}
-        <Button type="primary">{intl('contact.us.form.button')}</Button>
+        <div className="recaptcha-container">
+          <ReCAPTCHA
+            ref={captcha}
+            onChange={handleCaptchaChange}
+            sitekey={import.meta.env.VITE_REACT_APP_SITE_KEY}
+            className="g-recaptcha"
+          />
+          {errorCaptcha && <Error>Por favor, acepta el captcha.</Error>}
+        </div>
+        <ButtonForm type="primary" rightIcon={<TbSend />}>
+          {intl('contact.us.form.button')}
+        </ButtonForm>
       </FormWrapper>
     </ContainerForm>
   )

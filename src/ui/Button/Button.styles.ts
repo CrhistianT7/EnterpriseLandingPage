@@ -4,7 +4,7 @@ import { colors } from '../../styles/colors'
 interface IStyledButton {
   type: 'primary' | 'secondary'
   size?: 'sm' | 'md' | 'lg'
-  isfullwidth: boolean | undefined
+  $isfullwidth: boolean | undefined
 }
 
 const typeStyles = (type: string) => {
@@ -80,7 +80,7 @@ export const StyledButton = styled.button<IStyledButton>`
   cursor: pointer;
   height: fit-content;
   gap: 0.5rem;
-  width: ${({ isfullwidth }) => (isfullwidth ? '100%' : 'fit-content')};
+  width: ${({ $isfullwidth }) => ($isfullwidth ? '100%' : 'fit-content')};
 
   ${(props) => typeStyles(props.type)}
   ${(props) => sizeStyles(props.size!)}

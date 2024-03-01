@@ -1,16 +1,17 @@
 import { HiOutlineMail } from 'react-icons/hi'
-import logo from '../../assets/images/logo/Isologo[H-Primario].svg'
 import { Link } from 'react-router-dom'
+
+import logo from '../../assets/images/logo/Isologo[H-Primario].svg'
 import useIntlMessages from 'hooks/useIntlMessages'
 import {
   StyledFooter,
   FooterWrapper,
   FooterLogoWrapper,
   FooterSocialMedia,
-  SocialMediaWrapper,
   FooterLinks,
 } from './Footer.styles'
-import { enterpriseLinks, legalLinks, socialLinksIcons } from './Footer.data'
+import SocialMedia from 'components/SocialMedia/SocialMedia'
+import { enterpriseLinks, legalLinks } from './Footer.data'
 
 const Footer: React.FC = () => {
   const intl = useIntlMessages()
@@ -27,7 +28,7 @@ const Footer: React.FC = () => {
           <h4 className="title-links">Legal</h4>
           <div className="container-links">
             {legalLinks.map((element) => (
-              <Link to={element.to} className="link-item">
+              <Link key={element.id} to={element.to} className="link-item">
                 <span className="text-footer">{intl(element.name)}</span>
               </Link>
             ))}
@@ -37,7 +38,7 @@ const Footer: React.FC = () => {
           <h4 className="title-links">{intl('footer.enterprise')}</h4>
           <div className="container-links">
             {enterpriseLinks.map((element) => (
-              <Link to={element.to} className="link-item">
+              <Link key={element.id} to={element.to} className="link-item">
                 <span className="text-footer">{intl(element.name)}</span>
               </Link>
             ))}
@@ -45,18 +46,7 @@ const Footer: React.FC = () => {
         </FooterLinks>
         <FooterSocialMedia>
           <h4 className="title-social-media">{intl('footer.contact.us')}</h4>
-          <SocialMediaWrapper>
-            {socialLinksIcons.map((element) => (
-              <Link
-                to={`https://${element.to}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-media-link"
-              >
-                {element.icon}
-              </Link>
-            ))}
-          </SocialMediaWrapper>
+          <SocialMedia />
           <div className="container-email">
             <HiOutlineMail size={20} style={{ color: 'white' }} />
             <span className="text-footer">binland.contacto@gmail.com</span>

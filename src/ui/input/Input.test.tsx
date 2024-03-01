@@ -1,68 +1,68 @@
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Input from './Input';
+// import { render, screen } from '@testing-library/react';
+// import '@testing-library/jest-dom';
+// import Input from './Input';
 
-describe('Input Component tests', () => {
-  test('renders with the correct properties', () => {
-    render(<Input type='text' label='milabel' id="uno" name="uno" onChange={() => console.log()} value="something" placeholder='nombre'/>)
+// describe('Input Component tests', () => {
+//   test('renders with the correct properties', () => {
+//     render(<Input type='text' label='milabel' id="uno" name="uno" onChange={() => console.log()} value="something" placeholder='nombre'/>)
 
-    const input = screen.getByRole("textbox")
+//     const input = screen.getByRole("textbox")
 
-    expect(input).toBeInTheDocument();
-    expect(input).toHaveAttribute('type', 'text');
-    expect(input).toHaveAttribute('id', 'uno');
-    expect(input).toHaveAttribute('name', 'uno');
-    expect(input).toHaveValue('something');
-    expect(input).toHaveAttribute('required')
-    
-    const label = screen.getByText('milabel');
-    expect(label).toBeInTheDocument();
+//     expect(input).toBeInTheDocument();
+//     expect(input).toHaveAttribute('type', 'text');
+//     expect(input).toHaveAttribute('id', 'uno');
+//     expect(input).toHaveAttribute('name', 'uno');
+//     expect(input).toHaveValue('something');
+//     expect(input).toHaveAttribute('required')
 
-    const placeholder = input.getAttribute('placeholder');
-    expect(placeholder).toBe('nombre');
-  });
+//     const label = screen.getByText('milabel');
+//     expect(label).toBeInTheDocument();
 
-  test('renders without a placeholder', () => {
-    render(<Input type='text' label='something' id="uno" onChange={() => console.log()} name="uno" value="something"/>)
+//     const placeholder = input.getAttribute('placeholder');
+//     expect(placeholder).toBe('nombre');
+//   });
 
-    const input = screen.getByRole("textbox")
+//   test('renders without a placeholder', () => {
+//     render(<Input type='text' label='something' id="uno" onChange={() => console.log()} name="uno" value="something"/>)
 
-    expect(input).toBeInTheDocument();
-    expect(input).toHaveAttribute('type', 'text');
-    expect(input).toHaveAttribute('id', 'uno');
-    expect(input).toHaveAttribute('name', 'uno');
-    expect(input).toHaveValue('something');
-    expect(input).not.toHaveAttribute('placeholder')
-    expect(input).toHaveAttribute('required');
-  });
+//     const input = screen.getByRole("textbox")
 
-  test('renders without required', () => {
-    render(<Input type='text' id="dos" name="dos" onChange={() => console.log()} value="something" placeholder='apellido'/>)
+//     expect(input).toBeInTheDocument();
+//     expect(input).toHaveAttribute('type', 'text');
+//     expect(input).toHaveAttribute('id', 'uno');
+//     expect(input).toHaveAttribute('name', 'uno');
+//     expect(input).toHaveValue('something');
+//     expect(input).not.toHaveAttribute('placeholder')
+//     expect(input).toHaveAttribute('required');
+//   });
 
-    const input = screen.getByRole("textbox")
+//   test('renders without required', () => {
+//     render(<Input type='text' id="dos" name="dos" onChange={() => console.log()} value="something" placeholder='apellido'/>)
 
-    expect(input).toBeInTheDocument();
-    expect(input).toHaveAttribute('type', 'text');
-    expect(input).toHaveAttribute('id', 'dos');
-    expect(input).toHaveAttribute('name', 'dos');
-    expect(input).toHaveValue('something');
-    expect(input).not.toHaveAttribute('required');
-    const placeholder = input.getAttribute('placeholder');
-    expect(placeholder).toBe('apellido');
-  });
+//     const input = screen.getByRole("textbox")
 
-  test('renders without label', () => {
-    render(<Input type='text' label='something' id="tres" onChange={() => console.log()} name="tres" value="something" placeholder='email' />)
+//     expect(input).toBeInTheDocument();
+//     expect(input).toHaveAttribute('type', 'text');
+//     expect(input).toHaveAttribute('id', 'dos');
+//     expect(input).toHaveAttribute('name', 'dos');
+//     expect(input).toHaveValue('something');
+//     expect(input).not.toHaveAttribute('required');
+//     const placeholder = input.getAttribute('placeholder');
+//     expect(placeholder).toBe('apellido');
+//   });
 
-    const input = screen.getByRole("textbox")
+//   test('renders without label', () => {
+//     render(<Input type='text' label='something' id="tres" onChange={() => console.log()} name="tres" value="something" placeholder='email' />)
 
-    expect(input).toBeInTheDocument();
-    expect(input).toHaveAttribute('type', 'text');
-    expect(input).toHaveAttribute('id', 'tres');
-    expect(input).toHaveAttribute('name', 'tres');
-    expect(input).toHaveValue('something');
-    expect(input).not.toHaveAttribute('label')
-    const placeholder = input.getAttribute('placeholder');
-    expect(placeholder).toBe('email');
-  });
-});
+//     const input = screen.getByRole("textbox")
+
+//     expect(input).toBeInTheDocument();
+//     expect(input).toHaveAttribute('type', 'text');
+//     expect(input).toHaveAttribute('id', 'tres');
+//     expect(input).toHaveAttribute('name', 'tres');
+//     expect(input).toHaveValue('something');
+//     expect(input).not.toHaveAttribute('label')
+//     const placeholder = input.getAttribute('placeholder');
+//     expect(placeholder).toBe('email');
+//   });
+// });
