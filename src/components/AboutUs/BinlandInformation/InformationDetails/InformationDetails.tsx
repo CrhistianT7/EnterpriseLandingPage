@@ -10,7 +10,6 @@ const InformationDetails = () => {
 
   return (
     <ContainerDetails>
-      <ItemDetails></ItemDetails>
       <ItemDetails>
         <Statistics>15K</Statistics>
         <span>{intl('about.us.binland.information.details.clients')}</span>
@@ -21,6 +20,7 @@ const InformationDetails = () => {
           {intl('about.us.binland.information.details.collaborators')}
         </span>
       </ItemDetails>
+      <ItemDetails></ItemDetails>
       <ItemDetails>
         <Statistics>15K</Statistics>
         <span>{intl('about.us.binland.information.details.services')}</span>

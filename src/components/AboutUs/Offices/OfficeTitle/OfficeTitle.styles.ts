@@ -46,13 +46,13 @@ export const Line = styled.div`
 
 export const Text = styled.div`
   display: inline;
-  font-size: clamp(1.5rem, 4vw, 3.375rem);
+  font-size: clamp(2rem, 4vw, 3.375rem);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
   color: ${colors.secondary.main};
-  
+
   .founder-point {
     color: ${colors.primary.main};
   }
