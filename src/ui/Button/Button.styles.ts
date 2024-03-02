@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { colors } from '../../styles/colors'
-import { IStyledButton } from 'types/ui/Button/Button'
+import { IStyledButton } from 'types/ui/Button'
 
 const typeStyles = (type: string) => {
   switch (type) {

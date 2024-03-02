@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { IStyledContainer } from 'types/ui/Container/Container'
+import { IStyledContainer } from 'types/ui/Container'
 
 const sizeStyles = (size: string) => {
   switch (size) {

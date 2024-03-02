@@ -1,4 +1,5 @@
 import { PropsWithChildren } from "react"
+import { WithClassName } from "types/components/shared"
 
 export interface IStyledButton {
   type: 'primary' | 'secondary'
@@ -6,9 +7,8 @@ export interface IStyledButton {
   $isfullwidth?: boolean | undefined
 }
 
-export interface IButton extends PropsWithChildren, IStyledButton {
+export interface IButton extends PropsWithChildren, IStyledButton, WithClassName {
   leftIcon?: React.ReactNode
   rightIcon?: React.ReactNode
   onClick?: (() => void) | undefined
-  className?: string
 }

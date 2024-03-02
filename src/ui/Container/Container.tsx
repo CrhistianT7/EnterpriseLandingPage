@@ -1,5 +1,5 @@
 import { StyledContainer } from './Container.styles'
-import { IContainer } from 'types/ui/Container/Container'
+import { IContainer } from 'types/ui/Container'
 
 const Container: React.FC<IContainer> = ({
   size,
