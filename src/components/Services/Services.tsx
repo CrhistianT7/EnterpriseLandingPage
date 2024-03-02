@@ -9,8 +9,9 @@ import {
   ClientSection,
   CustomSingleWord,
   ServicesTitle,
+  ServicesWrapper,
 } from './Services.styles'
-import MobileServices from './Mobile/MobileServices'
+import MobileServices from './MobileServices/MobileServices'
 
 interface ITabProperties {
   key: string
@@ -162,7 +163,7 @@ const Services: React.FC = () => {
 
   return (
     <ClientSection size="lg" type="margin">
-      <Container size="xl" isfullwidth>
+      <ServicesWrapper size="xl" isfullwidth>
         <Container size="sm">
           <ServicesTitle>
             <FormattedMessage
@@ -178,7 +179,7 @@ const Services: React.FC = () => {
         </Container>
         <HorizontalTabs items={items} />
         <MobileServices items={items}/>
-      </Container>
+      </ServicesWrapper>
     </ClientSection>
   )
 }

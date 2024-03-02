@@ -5,29 +5,37 @@ interface ISelectOption {
   selected: boolean
 }
 
-export const StyledSelect = styled.div`
+interface IPosition {
+  $position: 'left' | 'right'
+}
+
+export const StyledSelect = styled.div<{ $type: string }>`
   height: fit-content;
   display: flex;
   flex-direction: column;
   position: relative;
   cursor: pointer;
-  background: ${colors.primary.main};
+  background: ${({ $type }) =>
+    $type == 'primary' ? `${colors.primary.main}` : `${colors.white.main}`};
   border: none;
   border-radius: 0.6rem;
   padding: 0.5rem 0.75rem;
-  color: ${colors.white.main};
+  color: ${({ $type }) =>
+    $type == 'primary' ? `${colors.white.main}` : `${colors.secondary.main}`};
 `
 
 export const StyledSelectedValue = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `
 
-export const StyledSelectOptions = styled.div`
+export const StyledSelectOptions = styled.div<IPosition>`
   position: absolute;
-  top: 3.75rem;
-  right: 0;
-  width: 12.5rem;
+  top: 3rem;
+  ${(props) => (props.$position == 'left' ? 'left: 0;' : 'right: 0;')}
+  min-width: 12.5rem;
+  max-width: 21.875rem;
   border: none;
   color: ${colors.secondary.main};
   border: 0.0625rem solid ${colors.body};
@@ -57,6 +65,7 @@ export const StyledSelectOption = styled.li<ISelectOption>`
   line-height: 1.5rem;
   font-weight: 400;
   border-bottom: 0.125rem solid ${colors.body};
+  gap: 1rem;
 
   &:hover {
     background: ${colors.secondary.hover};

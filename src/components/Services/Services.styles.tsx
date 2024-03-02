@@ -1,5 +1,8 @@
 import styled from "styled-components"
+
+import { breakpoints } from "shared/breakpoints"
 import { colors } from "styles/colors"
+import Container from "ui/Container/Container"
 import Section from "ui/Section/Section"
 
 export const ClientSection = styled(Section)`
@@ -19,10 +22,10 @@ export const CustomSingleWord = styled.b`
   color: ${colors.primary.main};
 `
 
-export const MobileView = styled.div`
-  
-`
+export const ServicesWrapper = styled(Container)`
+  gap: 1.5rem;
 
-export const DesktopView = styled.div`
-  
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    gap: 3rem;
+  }
 `

@@ -61,3 +61,14 @@ export const ContentWrapper = styled.div`
     border-top-left-radius: 1rem;
   }
 `
+
+export const MobileSelectService = styled.div`
+  padding: 0.625rem;
+  background: ${colors.gray[150]};
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  
+  @media only screen and (min-width: ${breakpoints.md}) {
+    display: none;
+  }
+`
