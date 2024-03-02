@@ -1,5 +1,5 @@
 import { StyledButton } from './Button.styles'
-import { IButton } from 'types/entities/Button/Button'
+import { IButton } from 'types/ui/Button/Button'
 
 const Button: React.FC<IButton> = ({
   size = 'md',
