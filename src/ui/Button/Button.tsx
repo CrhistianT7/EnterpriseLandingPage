@@ -1,22 +1,12 @@
-import { PropsWithChildren } from 'react'
 import { StyledButton } from './Button.styles'
-
-interface IButton extends PropsWithChildren {
-  type: 'primary' | 'secondary'
-  size?: 'sm' | 'md' | 'lg'
-  leftIcon?: React.ReactNode
-  rightIcon?: React.ReactNode
-  onClick?: (() => void) | undefined
-  isFullWidth?: boolean
-  className?: string
-}
+import { IButton } from 'types/ui/Button'
 
 const Button: React.FC<IButton> = ({
   size = 'md',
   children,
   leftIcon,
   rightIcon,
-  isFullWidth,
+  $isfullwidth,
   className,
   ...props
 }) => {
@@ -24,7 +14,7 @@ const Button: React.FC<IButton> = ({
     <StyledButton
       {...props}
       size={size}
-      $isfullwidth={isFullWidth}
+      $isfullwidth={$isfullwidth}
       className={className}
     >
       {leftIcon}

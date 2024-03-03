@@ -6,7 +6,7 @@ import Office from 'components/AboutUs/Offices/Office'
 
 const AboutUs = () => {
   return (
-    <Container size="xl" isfullwidth>
+    <Container size="xl" $isfullwidth>
       <Quote />
       <BinlandInformation />
       <Founders />

@@ -27,7 +27,7 @@ const ButtonLink: React.FC<IButtonLinkProps> = ({
         type={type}
         size={size}
         className={className}
-        isFullWidth={isfullwidth}
+        $isfullwidth={isfullwidth}
         onClick={onClick}
       >
         {children}

@@ -1,11 +1,7 @@
 import styled from 'styled-components'
-import { colors } from '../../styles/colors'
 
-interface IStyledButton {
-  type: 'primary' | 'secondary'
-  size?: 'sm' | 'md' | 'lg'
-  $isfullwidth: boolean | undefined
-}
+import { colors } from '../../styles/colors'
+import { IStyledButton } from 'types/ui/Button'
 
 const typeStyles = (type: string) => {
   switch (type) {
