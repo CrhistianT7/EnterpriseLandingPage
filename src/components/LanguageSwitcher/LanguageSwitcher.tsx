@@ -11,6 +11,7 @@ const LanguageSwitcher: React.FC = () => {
 
   return (
     <Select
+      position="right"
       options={languageOptions}
       selectedId={language.locale}
       onChange={handleLanguageSwith}

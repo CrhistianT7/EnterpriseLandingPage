@@ -8,6 +8,11 @@ import {
   StyledSelectOptions,
 } from './Select.styles'
 
+/**
+ * id: id of the option
+ * name: display value when options are visible
+ * value: value sent when option is clicked/selected
+ */
 interface RequiredProperties {
   id: string
   name: string
@@ -16,6 +21,8 @@ interface RequiredProperties {
 
 interface ISelect {
   options: Array<RequiredProperties>
+  position: 'left' | 'right'
+  type?: 'primary' | 'secondary'
   size?: 'sm' | 'md' | 'lg'
   icon?: React.ReactNode
   placeholder?: string
@@ -25,6 +32,8 @@ interface ISelect {
 
 const Select: React.FC<ISelect> = ({
   options,
+  position,
+  type = 'primary',
   icon,
   placeholder = 'Select one option',
   selectedId = '',
@@ -55,16 +64,16 @@ const Select: React.FC<ISelect> = ({
   }, [selectedId, options])
 
   return (
-    <StyledSelect ref={refOptions} onClick={showOptions}>
+    <StyledSelect ref={refOptions} onClick={showOptions} $type={type}>
       <StyledSelectedValue>
         {icon}
         {Object.keys(selectedOption).length
-          ? selectedOption.id.toUpperCase()
+          ? selectedOption.value
           : placeholder}
         {isOpen ? <HiChevronUp size={18} /> : <HiChevronDown size={18} />}
       </StyledSelectedValue>
       {isOpen && (
-        <StyledSelectOptions>
+        <StyledSelectOptions $position={position}>
           <ul>
             {options.map((language) => {
               return (
@@ -73,7 +82,7 @@ const Select: React.FC<ISelect> = ({
                   onClick={() => handleOnChange(language.value)}
                   selected={selectedOption.id === language.id}
                 >
-                  {language.id.toUpperCase()} - {language.name}
+                  {language.name}
                   <div className="point-selected"></div>
                 </StyledSelectOption>
               )
