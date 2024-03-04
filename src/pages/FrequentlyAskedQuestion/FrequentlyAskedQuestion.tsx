@@ -1,8 +1,13 @@
 import useIntlMessages from 'hooks/useIntlMessages'
+
 import FaqCard from 'components/FaqCard/FaqCard'
 import StillHaveQuestion from 'components/StillHaveQuestion/StillHaveQuestion'
-import Container from 'ui/Container/Container'
-import { FaqTitle, SectionFaq } from './FrequentlyAskedQuestion.style'
+import {
+  ContainerFaq,
+  FaqSectionWrapper,
+  FaqTitle,
+  SectionFaq,
+} from './FrequentlyAskedQuestion.style'
 
 const FrequenltyAskedQuestion = () => {
   const intl = useIntlMessages()
@@ -37,21 +42,23 @@ const FrequenltyAskedQuestion = () => {
   ]
 
   return (
-    <Container size="sm">
-      <FaqTitle>{intl('frequently.asked.questions.title')}</FaqTitle>
-      <SectionFaq>
-        {questions.map((question) => {
-          return (
-            <FaqCard
-              key={question.id}
-              question={question.question}
-              answer={question.answer}
-            />
-          )
-        })}
-      </SectionFaq>
-      <StillHaveQuestion />
-    </Container>
+    <FaqSectionWrapper type="padding" size="lg">
+      <ContainerFaq size="xl">
+        <FaqTitle>{intl('frequently.asked.questions.title')}</FaqTitle>
+        <SectionFaq size="sm">
+          {questions.map((question) => {
+            return (
+              <FaqCard
+                key={question.id}
+                question={question.question}
+                answer={question.answer}
+              />
+            )
+          })}
+          <StillHaveQuestion />
+        </SectionFaq>
+      </ContainerFaq>
+    </FaqSectionWrapper>
   )
 }
 
