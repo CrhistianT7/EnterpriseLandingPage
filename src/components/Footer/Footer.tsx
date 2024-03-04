@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
   const intl = useIntlMessages()
   return (
     <StyledFooter>
-      <FooterWrapper size="xl" $isfullwidth>
+      <FooterWrapper size="xl" isfullwidth>
         <FooterLogoWrapper>
           <Link to="/" rel="noopener noreferrer">
             <img className="footer-logo" src={logo} alt="Binland logo" />

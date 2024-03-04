@@ -5,7 +5,7 @@ import { colors } from "styles/colors"
 import Container from "ui/Container/Container"
 import Section from "ui/Section/Section"
 
-export const ClientSection = styled(Section)`
+export const ClientsSection = styled(Section)`
   gap: 5rem;
 `
 

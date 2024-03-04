@@ -104,7 +104,6 @@ const Header: React.FC = () => {
                 type="secondary"
                 size="lg"
                 isfullwidth={isOpen}
-                onClick={handleIsOpen}
               >
                 {intl('home.navbar.button.contact.us')}
               </ButtonLink>
