@@ -94,7 +94,6 @@ const Header: React.FC = () => {
                 <NavLink
                   key={navItem.name}
                   item={navItem}
-                  onClick={handleIsOpen}
                 />
               ))}
             </ul>
