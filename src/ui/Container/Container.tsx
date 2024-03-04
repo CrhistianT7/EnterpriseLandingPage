@@ -6,14 +6,14 @@ const Container: React.FC<IContainer> = ({
   id,
   children,
   className,
-  $isfullwidth,
+  isfullwidth,
 }) => {
   return (
     <StyledContainer
       id={id}
       size={size}
       className={className}
-      $isfullwidth={$isfullwidth}
+      $isfullwidth={isfullwidth}
     >
       {children}
     </StyledContainer>

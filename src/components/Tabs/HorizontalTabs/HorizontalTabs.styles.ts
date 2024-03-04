@@ -42,6 +42,14 @@ export const SingleTab = styled.li`
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
   }
+
+  &:has(+ .selected) {
+    border-top-right-radius: 1rem;
+  }
+  
+  &.selected + li {
+    border-top-left-radius: 1rem;
+  }
 `
 
 export const ContentWrapper = styled.div`
