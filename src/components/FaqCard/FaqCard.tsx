@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { IoIosArrowDown } from 'react-icons/io'
-import { IoIosArrowUp } from 'react-icons/io'
+import { IoMdAdd } from 'react-icons/io'
+import { IoIosRemove } from 'react-icons/io'
+
 import {
   AnswerFAQ,
   Question,
@@ -18,11 +19,14 @@ const FaqCard: React.FC<IFaqCardProps> = ({ question, answer }) => {
 
   return (
     <QuestionWrapper>
-      <Question onClick={() => setShowAnswer(!showAnswer)}>
+      <Question
+        onClick={() => setShowAnswer(!showAnswer)}
+        className={showAnswer ? 'selected' : ''}
+      >
         <span>{question}</span>
         <div>
-          {!showAnswer && <IoIosArrowDown size={20} />}
-          {showAnswer && <IoIosArrowUp size={20} />}
+          {!showAnswer && <IoMdAdd size={22} />}
+          {showAnswer && <IoIosRemove size={22} />}
         </div>
       </Question>
       {showAnswer && (
