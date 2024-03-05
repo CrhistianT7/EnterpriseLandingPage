@@ -1,31 +1,31 @@
 import styled from 'styled-components'
 
+import { breakpoints } from 'shared/breakpoints'
+import { colors } from 'styles/colors'
+
 export const ContainerHaveQuestion = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 32px;
-  gap: 32px;
-  border-radius: 16px;
-  margin: 30px 0px;
+  gap: 2rem;
+  border-radius: 1rem;
+  margin: 1.875rem 0rem;
+
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    padding: 2rem;
+  }
 `
 export const HaveQuestion = styled.div`
   text-align: center;
   display: grid;
-  gap: 8px;
+  gap: 0.5rem;
 `
-export const TitleHaveQuestion = styled.p`
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 500;
-  color: #101828;
-  margin-bottom: 0px;
-`
+
 export const SupportChat = styled.p`
-  font-size: 18px;
-  line-height: 28px;
+  font-size: clamp(0.875rem, 4vw, 1rem);
+  line-height: 1.5rem;
   font-weight: 400;
-  color: #667085;
+  color: ${colors.secondary.main};
 `
