@@ -8,7 +8,8 @@ export interface IStyledContainer {
 
 export interface IContainer
   extends PropsWithChildren,
-    IStyledContainer,
-    WithClassName {
+    WithClassName,
+    IStyledContainer {
   id?: string
+  isfullwidth?: boolean | undefined
 }
