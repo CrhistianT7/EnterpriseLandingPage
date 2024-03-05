@@ -11,6 +11,7 @@ import FrequenltyAskedQuestion from 'pages/FrequentlyAskedQuestion/FrequentlyAsk
 import Portafolio from 'pages/Portafolio/Portafolio'
 import LetsLearn from 'pages/LetsLearn/LetsLearn'
 import Services from 'pages/Services/Services'
+import Clients from 'pages/Clients/Clients'
 import Seo from 'pages/Services/Seo/Seo'
 
 const AppRouter: React.FC = () => {
@@ -18,7 +19,7 @@ const AppRouter: React.FC = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="/clients" element={<>Clients</>} />
+        <Route path="/clients" element={<Clients />} />
         <Route path="/products" element={<>Products</>} />
         <Route path="/portafolio" element={<Portafolio />} />
         <Route path="/lets-learn" element={<LetsLearn />} />
