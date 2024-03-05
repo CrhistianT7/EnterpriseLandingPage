@@ -1,12 +1,5 @@
-import { PropsWithChildren } from 'react'
 import { StyledContainer } from './Container.styles'
-
-interface IContainer extends PropsWithChildren {
-  id?: string
-  size: 'sm' | 'md' | 'lg' | 'xl'
-  className?: string
-  isfullwidth?: boolean | undefined
-}
+import { IContainer } from 'types/ui/Container'
 
 const Container: React.FC<IContainer> = ({
   size,

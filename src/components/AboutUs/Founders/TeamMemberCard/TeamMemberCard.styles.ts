@@ -1,15 +1,19 @@
+import { breakpoints } from 'shared/breakpoints'
 import styled from 'styled-components'
 
 import { colors } from 'styles/colors'
 
 export const StyledTeamMemberCard = styled.div`
   flex: 1 0 18.75rem;
-  max-width: 18.75rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+
+  @media only screen and (min-width: ${breakpoints.xl}) {
+    max-width: 18.75rem;
+  }
 `
 
 export const ImgFounder = styled.img`
@@ -17,6 +21,7 @@ export const ImgFounder = styled.img`
   margin: 0 auto;
   flex-shrink: 0;
   border-radius: 1rem;
+  border: 0.375rem solid ${colors.gray[50]};
 `
 
 export const NameFounder = styled.h4`
@@ -48,15 +53,22 @@ export const QuoteFounder = styled.p`
   line-height: normal;
   padding: 0.3125rem;
   color: ${colors.secondary.main};
-  text-align: start;
+
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    text-align: start;
+  }
 `
 
 export const LinkFounder = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 0.625rem;
   gap: 0.625rem;
+
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    justify-content: flex-start;
+  }
 
   a {
     color: #000;

@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 
-interface IStyledContainer {
-  size: 'sm' | 'md' | 'lg' | 'xl'
-  $isfullwidth: boolean | undefined
-}
+import { IStyledContainer } from 'types/ui/Container'
 
 const sizeStyles = (size: string) => {
   switch (size) {

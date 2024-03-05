@@ -23,8 +23,6 @@ export const Founders: React.FC = () => {
 
   const [founderMembers, setFounderMembers] = useState<Array<IFounder>>([])
 
-  console.log(founders)
-
   useEffect(() => {
     founders?.map((founder) => {
       const newFounder: IFounder = {

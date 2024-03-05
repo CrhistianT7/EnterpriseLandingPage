@@ -14,12 +14,12 @@ export const languageOptions: ILanguagaConfiguration[] = [
   {
     id: 'en',
     value: ENGLISH,
-    name: 'English',
+    name: 'EN - English',
   },
   {
     id: 'es',
     value: ESPANOL,
-    name: 'Español',
+    name: 'ES - Español',
   },
   // {
   //   id: 'pt',

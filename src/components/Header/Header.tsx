@@ -94,7 +94,6 @@ const Header: React.FC = () => {
                 <NavLink
                   key={navItem.name}
                   item={navItem}
-                  onClick={handleIsOpen}
                 />
               ))}
             </ul>
@@ -104,7 +103,6 @@ const Header: React.FC = () => {
                 type="secondary"
                 size="lg"
                 isfullwidth={isOpen}
-                onClick={handleIsOpen}
               >
                 {intl('home.navbar.button.contact.us')}
               </ButtonLink>

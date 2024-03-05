@@ -16,7 +16,7 @@ export const ContainerSubTitleOffice = styled.div`
 
   & > :nth-child(2) {
     font-weight: 700;
-    font-size: clamp(1.25rem, 4vw, 2.1875rem);
+    font-size: clamp(2rem, 4vw, 2.1875rem);
     line-height: 3.125rem;
     padding: 0 0.625rem;
     text-transform: uppercase;
