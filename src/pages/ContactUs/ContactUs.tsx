@@ -1,5 +1,4 @@
-import Section from 'ui/Section/Section'
-import { ContactUsHero, Title } from './ContactUs.styles'
+import { ContactUsHero, SectionTitleHero, Title } from './ContactUs.styles'
 import {
   ContactUsWrapper,
   ContentWrapper,
@@ -10,11 +9,11 @@ import FormContacUs from 'components/ContactUs/FormContactUs/FormContactUs'
 
 const ContactUs: React.FC = () => {
   return (
-    <div>
+    <>
       <ContactUsHero>
-        <Section type="padding" size="lg">
+        <SectionTitleHero type="padding" size="lg">
           <Title text="Contáctanos" />
-        </Section>
+        </SectionTitleHero>
       </ContactUsHero>
       <SectionContactUs size="md" type="padding">
         <ContactUsWrapper size="xl">
@@ -24,7 +23,7 @@ const ContactUs: React.FC = () => {
           </ContentWrapper>
         </ContactUsWrapper>
       </SectionContactUs>
-    </div>
+    </>
   )
 }
 
