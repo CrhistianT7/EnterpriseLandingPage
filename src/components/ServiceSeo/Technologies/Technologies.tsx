@@ -29,7 +29,7 @@ const DevelopingTechnologies: ITechnologies[] = [
 
 const Technologies = () => {
   return (
-    <SectionTechnologies type="padding" size="lg">
+    <SectionTechnologies type="margin" size="lg">
       <Container size="lg">
         <WrapperTechnologiesTitle>
           <TechnologiesTitle>
