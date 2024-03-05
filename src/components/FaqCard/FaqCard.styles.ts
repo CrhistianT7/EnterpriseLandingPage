@@ -30,7 +30,7 @@ export const QuestionWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  border-radius: 0.375rem;
+  border-radius: 0.5rem;
   background-color: ${colors.gray[50]};
 
   .selected {
@@ -39,7 +39,8 @@ export const QuestionWrapper = styled.div`
     font-weight: 700;
     font-size: clamp(0.8rem, 4vw, 1.125rem);
     line-height: 1.687rem;
-    border-radius: initial;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 `
 

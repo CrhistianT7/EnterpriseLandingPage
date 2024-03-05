@@ -1,13 +1,12 @@
 import useIntlMessages from 'hooks/useIntlMessages'
-
 import FaqCard from 'components/FaqCard/FaqCard'
 import StillHaveQuestion from 'components/StillHaveQuestion/StillHaveQuestion'
 import {
   ContainerFaq,
-  FaqSectionWrapper,
+  FaqQuestionsWrapper,
   FaqTitle,
-  SectionFaq,
 } from './FrequentlyAskedQuestion.style'
+import Section from 'ui/Section/Section'
 
 const FrequenltyAskedQuestion = () => {
   const intl = useIntlMessages()
@@ -42,10 +41,10 @@ const FrequenltyAskedQuestion = () => {
   ]
 
   return (
-    <FaqSectionWrapper type="padding" size="lg">
+    <Section id="frequently-asked-questions" size="lg" type="margin">
       <ContainerFaq size="xl">
         <FaqTitle>{intl('frequently.asked.questions.title')}</FaqTitle>
-        <SectionFaq size="sm">
+        <FaqQuestionsWrapper size="sm">
           {questions.map((question) => {
             return (
               <FaqCard
@@ -56,9 +55,9 @@ const FrequenltyAskedQuestion = () => {
             )
           })}
           <StillHaveQuestion />
-        </SectionFaq>
+        </FaqQuestionsWrapper>
       </ContainerFaq>
-    </FaqSectionWrapper>
+    </Section>
   )
 }
 

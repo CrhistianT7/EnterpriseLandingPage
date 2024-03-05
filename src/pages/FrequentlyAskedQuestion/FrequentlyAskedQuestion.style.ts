@@ -1,14 +1,11 @@
 import styled from 'styled-components'
+
 import { colors } from 'styles/colors'
 import Container from 'ui/Container/Container'
-import Section from 'ui/Section/Section'
 
 export const ContainerFaq = styled(Container)`
   width: 100%;
   gap: 3rem;
-`
-export const FaqSectionWrapper = styled(Section)`
-  margin: auto;
 `
 
 export const FaqTitle = styled.h1`
@@ -16,8 +13,8 @@ export const FaqTitle = styled.h1`
   justify-content: center;
   align-items: center;
   color: ${colors.gray[50]};
-  font-size: clamp(1.5rem, 5vw, 3rem);
-  margin: 3.125rem 0rem 1.5rem;
+  font-size: clamp(2rem, 1.667rem + 1.481vw, 3rem);
+  text-align: center;
   background: ${colors.secondary.main};
   width: 100%;
   height: 12.125rem;
@@ -27,7 +24,8 @@ export const FaqTitle = styled.h1`
   line-height: 4.5rem;
   padding: 0.625rem;
 `
-export const SectionFaq = styled(Container)`
+export const FaqQuestionsWrapper = styled(Container)`
   width: 100%;
   gap: 1rem;
+  padding: 0;
 `

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import { breakpoints } from 'shared/breakpoints'
 import { colors } from 'styles/colors'
 
 export const ContainerHaveQuestion = styled.div`
@@ -8,10 +9,13 @@ export const ContainerHaveQuestion = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem;
   gap: 2rem;
   border-radius: 1rem;
   margin: 1.875rem 0rem;
+
+  @media only screen and (min-width: ${breakpoints.lg}) {
+    padding: 2rem;
+  }
 `
 export const HaveQuestion = styled.div`
   text-align: center;
