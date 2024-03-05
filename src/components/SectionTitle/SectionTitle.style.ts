@@ -30,7 +30,7 @@ const TitleSizeStyles = (size: string) => {
   }
 }
 
-export const Title = styled.h2<ISectionTitle>`
+export const Title = styled.h1<ISectionTitle>`
   display: inline;
   font-style: normal;
   font-size: 3rem;
