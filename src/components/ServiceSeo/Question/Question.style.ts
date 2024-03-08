@@ -15,7 +15,7 @@ export const WrapperQuestion = styled(Section)`
     gap: 5rem;
   }
 
-  .img-question-seo {
+  .img-question-service {
     border-radius: 1rem;
 
     @media only screen and (min-width: ${breakpoints.lg}) {
@@ -25,7 +25,7 @@ export const WrapperQuestion = styled(Section)`
   }
 `
 
-export const WrapperQuestionSeo = styled.div`
+export const WrapperQuestionService = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,7 +47,7 @@ export const TitleQuestion = styled.p`
   line-height: 3rem;
   color: ${colors.secondary.disabled};
 
-  .title-question-seo {
+  .title-question-service {
     color: ${colors.red[1000]};
     text-transform: uppercase;
     font-weight: 700;

@@ -1,30 +1,29 @@
-import freenlance from '../../../assets/images/imgSeo/freenlance.svg'
+import { IQuestionProps } from 'types/components/services'
+import freenlance from '../../../assets/images/imgService/freenlance.svg'
 import {
   TitleQuestion,
   TitleResponse,
   WrapperQuestion,
-  WrapperQuestionSeo,
+  WrapperQuestionService,
 } from './Question.style'
 
-export const Question = () => {
+export const Question: React.FC<IQuestionProps> = ({
+  questionService,
+  responseService,
+}) => {
   return (
     <WrapperQuestion type="padding" size="sm">
-      <WrapperQuestionSeo>
+      <WrapperQuestionService>
         <TitleQuestion>
-          ¿Por qué <span className="title-question-seo">seo</span>?
+          ¿Por qué{' '}
+          <span className="title-question-service">{questionService}</span>?
         </TitleQuestion>
-        <TitleResponse>
-          Pueblo lengua mar franca con bronce tienes una. La sala al el mano
-          eran sr unos. Juzgado picante te aureola lo dificil oh holgada. La
-          tentandole la excelentes mamarracho confidente. Tierno ahi piedra
-          formas molino tan pan tio. Aun clasicismo habilitado sin hoy tan
-          pretension despertado.
-        </TitleResponse>
-      </WrapperQuestionSeo>
+        <TitleResponse>{responseService}</TitleResponse>
+      </WrapperQuestionService>
       <img
         src={freenlance}
         alt="person-freelance"
-        className="img-question-seo"
+        className="img-question-service"
       />
     </WrapperQuestion>
   )

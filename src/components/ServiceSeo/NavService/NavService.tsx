@@ -8,39 +8,26 @@ import {
   WrapperInfo,
   WrapperTabs,
   WrapperTitleProcess,
-} from './NavSeo.style'
+} from './NavService.style'
 import Section from 'ui/Section/Section'
 
-interface TabInfo {
-  id: number
-  label: string
-  info: string
+interface ItabInfo {
+  id: string
+  title: string
+  description: string
 }
 
-const tabsData: TabInfo[] = [
-  {
-    id: 0,
-    label: 'Diseño de wireframes 1',
-    info: 'awdadawadwad van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron.',
-  },
-  {
-    id: 1,
-    label: 'Diseño de wireframes 2',
-    info: 'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron.',
-  },
-  {
-    id: 2,
-    label: 'Diseño de wireframes 3',
-    info: 'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron.',
-  },
-  {
-    id: 3,
-    label: 'Diseño de wireframes 4',
-    info: 'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron.',
-  },
-]
+interface IDevelopmentProcess {
+  titleProcess: string
+  descriptionProcess: string
+  tabs: ItabInfo[]
+}
 
-const NavSeo: React.FC = () => {
+const NavService: React.FC<IDevelopmentProcess> = ({
+  titleProcess,
+  descriptionProcess,
+  tabs,
+}) => {
   const [activeTab, setActiveTab] = useState(0)
 
   const selection = (index: any) => {
@@ -52,13 +39,10 @@ const NavSeo: React.FC = () => {
       <ContainerProcess size="xl">
         <WrapperTitleProcess>
           <p className="title-process">
-            ¿Cuál es nuestro <span className="red-word">proceso</span> de
-            desarrollo?
+            {titleProcess}
+            <span className="red-word">proceso</span>
           </p>
-          <p className="description-process">
-            Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni
-            caridad ya ceguera.
-          </p>
+          <p className="description-process">{descriptionProcess}</p>
         </WrapperTitleProcess>
         <WrapperTabs>
           <ContainerUlTabs>
@@ -88,13 +72,13 @@ const NavSeo: React.FC = () => {
             </TabsIcon>
           </ContainerUlTabs>
           <div className="tab-content">
-            {tabsData.map((tab) => (
+            {tabs.map((tab, index) => (
               <WrapperInfo
-                key={tab.id}
-                style={{ display: activeTab === tab.id ? '' : 'none' }}
+                key={index}
+                style={{ display: activeTab === index ? '' : 'none' }}
               >
-                <p className="wrapper-info-title">{tab.label}</p>
-                <p className="wrapper-info-description"> {tab.info}</p>
+                <p className="wrapper-info-title">{tab.title}</p>
+                <p className="wrapper-info-description"> {tab.description}</p>
               </WrapperInfo>
             ))}
           </div>
@@ -103,4 +87,4 @@ const NavSeo: React.FC = () => {
     </Section>
   )
 }
-export default NavSeo
+export default NavService

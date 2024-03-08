@@ -4,7 +4,7 @@ import { breakpoints } from 'shared/breakpoints'
 import Section from 'ui/Section/Section'
 import { colors } from 'styles/colors'
 
-export const WrapperServiceSeo = styled(Section)`
+export const WrapperService = styled(Section)`
   gap: 3rem;
   padding: 3rem 1.5rem;
 
@@ -25,7 +25,7 @@ export const WrapperTitle = styled.div`
     gap: 0.6875rem;
   }
 
-  .seo-title-question {
+  .service-title-question {
     font-weight: 600;
     font-size: clamp(2rem, 4vw, 3rem);
     line-height: 1.875rem;
@@ -35,7 +35,7 @@ export const WrapperTitle = styled.div`
     }
   }
 
-  .seo-title-response {
+  .service-title-response {
     text-align: center;
     font-size: 1rem;
   }

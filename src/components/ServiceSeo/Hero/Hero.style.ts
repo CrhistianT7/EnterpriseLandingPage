@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
-import imgSeo from '../../../assets/images/imgSeo/img-seo.svg'
+import imgService from '../../../assets/images/imgService/img-service.svg'
 import { breakpoints } from 'shared/breakpoints'
 import Section from 'ui/Section/Section'
 import Container from 'ui/Container/Container'
 import { colors } from 'styles/colors'
 
-export const BackgroundSeo = styled.div`
+export const BackgroundService = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  background-image: url(${imgSeo});
+  background-image: url(${imgService});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

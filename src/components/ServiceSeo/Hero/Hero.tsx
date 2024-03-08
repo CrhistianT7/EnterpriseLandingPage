@@ -1,28 +1,30 @@
 import { TbSend } from 'react-icons/tb'
 
 import {
-  BackgroundSeo,
+  BackgroundService,
   ContentHero,
   TitleHero,
   SectionHero,
   WrapperHero,
 } from './Hero.style'
 import ButtonLink from 'ui/ButtonLink/ButtonLink'
+import { IHeroPropsTitle } from 'types/components/services'
 
-const Hero: React.FC = () => {
+const Hero: React.FC<IHeroPropsTitle> = ({
+  id,
+  serviceName,
+  serviceSubTitle,
+  serviceDescription,
+}) => {
   return (
-    <BackgroundSeo>
+    <BackgroundService id={id}>
       <SectionHero type="margin" size="xl">
         <WrapperHero size="xl">
           <ContentHero>
             <div>
-              <p className="hero-sub-title">El posicionamiento es importante</p>
-              <TitleHero>seo</TitleHero>
-              <span className="hero-description">
-                Un texto bien cool para describir el servicio de manera clara y
-                corta para que el cliente entienda, quizás 2 lineas o 3 son
-                duficientes.
-              </span>
+              <p className="hero-sub-title">{serviceSubTitle} </p>
+              <TitleHero>{serviceName}</TitleHero>
+              <span className="hero-description">{serviceDescription}</span>
             </div>
             <div>
               <ButtonLink
@@ -38,7 +40,7 @@ const Hero: React.FC = () => {
           </ContentHero>
         </WrapperHero>
       </SectionHero>
-    </BackgroundSeo>
+    </BackgroundService>
   )
 }
 
