@@ -15,8 +15,7 @@ export const Question: React.FC<IQuestionProps> = ({
     <WrapperQuestion type="padding" size="sm">
       <WrapperQuestionService>
         <TitleQuestion>
-          ¿Por qué{' '}
-          <span className="title-question-service">{questionService}</span>?
+          <span className="title-question-service">{questionService}</span>
         </TitleQuestion>
         <TitleResponse>{responseService}</TitleResponse>
       </WrapperQuestionService>

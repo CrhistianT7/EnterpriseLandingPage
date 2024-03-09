@@ -4,14 +4,14 @@ import {
   WrapperTitle,
 } from './ServicesBenefit.styles'
 
-interface IService {
+export interface IService {
   key: string
   name: string
   icon: React.ReactNode
   description?: string
 }
 
-interface ICardIncludes {
+export interface ICardIncludes {
   titleBenefit: string
   description: string
   card: IService[]

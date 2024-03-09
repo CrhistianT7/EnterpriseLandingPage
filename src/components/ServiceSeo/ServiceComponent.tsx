@@ -2,11 +2,22 @@ import Container from 'ui/Container/Container'
 import { Question } from './Question/Question'
 import Hero from './Hero/Hero'
 import ServicesBenefit from './ServicesBenefit/ServicesBenefit'
-import FinalProject from './FinalProject/FinalProject'
-import Technologies from './Technologies/Technologies'
+import FinalProject, { IDeliverables } from './FinalProject/FinalProject'
+import Technologies, { ITechnologiesProps } from './Technologies/Technologies'
 import NavService from './NavService/NavService'
 
-interface IServicesData {
+interface ICard {
+  key: string
+  name: string
+  icon: React.ReactNode
+  description: string
+}
+
+export interface IProcess {
+  titleProcess: string
+  descriptionProcess: string
+}
+export interface IServicesData {
   id: string
   name: string
   subTitle: string
@@ -15,14 +26,7 @@ interface IServicesData {
     {
       title: string
       description: string
-      card: [
-        {
-          key: string
-          name: string
-          icon: React.ReactNode
-          description: string
-        }
-      ]
+      card: Array<ICard>
     }
   ]
   questionService: string
@@ -31,26 +35,14 @@ interface IServicesData {
     {
       title: string
       description: string
-      process: []
+      process: Array<IProcess>
     }
   ]
-  finalDeliverables: [
-    {
-      title: string
-      description: string
-      deliverables: []
-    }
-  ]
-  technologies: [
-    {
-      techTitle: string
-      techDescription: string
-      img: []
-    }
-  ]
+  finalDeliverables: Array<IDeliverables>
+  technologies: Array<ITechnologiesProps>
 }
 
-const ServiceComponent: React.FC<IServicesData> = (serviceData) => {
+const ServiceComponent: React.FC<{ serviceData: IServicesData }> = (props) => {
   const {
     id,
     name,
@@ -62,7 +54,7 @@ const ServiceComponent: React.FC<IServicesData> = (serviceData) => {
     developmentProcess,
     finalDeliverables,
     technologies,
-  } = serviceData
+  } = props.serviceData
 
   return (
     <>
@@ -97,15 +89,17 @@ const ServiceComponent: React.FC<IServicesData> = (serviceData) => {
       {finalDeliverables.map((deliverable, index) => (
         <FinalProject
           key={index}
-          title={deliverable.title}
-          description={deliverable.description}
-          deliverable={deliverable.deliverables}
+          titleFinalDeliverables={deliverable.titleFinalDeliverables}
+          descriptionFinalDeliverables={
+            deliverable.descriptionFinalDeliverables
+          }
+          deliverables={deliverable.deliverables}
         />
       ))}
       <Technologies
-        techTitle={technologies[0].techTitle}
-        techDescription={technologies[0].techDescription}
-        img={technologies[0].img}
+        titleTechnologies={technologies[0].titleTechnologies}
+        descriptionTechnologies={technologies[0].descriptionTechnologies}
+        tech={technologies[0].tech}
       />
     </>
   )

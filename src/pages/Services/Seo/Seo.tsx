@@ -1,11 +1,23 @@
 import ServiceComponent from 'components/ServiceSeo/ServiceComponent'
+// import { ICardIncludes } from 'components/ServiceSeo/ServicesBenefit/ServicesBenefit'
+import { IDeliverables } from 'components/ServiceSeo/FinalProject/FinalProject'
+import { IProcess } from 'components/ServiceSeo/ServiceComponent'
+import { ITechnologiesProps } from 'components/ServiceSeo/Technologies/Technologies'
 import { servicesInfo } from 'data/services'
 import { useState, useEffect } from 'react'
+
+interface ICard {
+  key: string
+  name: string
+  icon: React.ReactNode
+  description: string
+}
+
 interface IServiceRouter {
   serviceId: string
 }
 
-interface IServicesData {
+export interface IServicesData {
   id: string
   name: string
   subTitle: string
@@ -14,14 +26,7 @@ interface IServicesData {
     {
       title: string
       description: string
-      card: [
-        {
-          key: string
-          name: string
-          icon: React.ReactNode
-          description: string
-        }
-      ]
+      card: Array<ICard>
     }
   ]
   questionService: string
@@ -30,38 +35,26 @@ interface IServicesData {
     {
       title: string
       description: string
-      process: []
+      process: Array<IProcess>
     }
   ]
-  finalDeliverables: [
-    {
-      title: string
-      description: string
-      deliverables: []
-    }
-  ]
-  technologies: [
-    {
-      techTitle: string
-      techDescription: string
-      img: []
-    }
-  ]
+  finalDeliverables: Array<IDeliverables>
+  technologies: Array<ITechnologiesProps>
 }
 
 const ServiceTemplate: React.FC<IServiceRouter> = ({ serviceId }) => {
-  const [serviceData, setServiceData] = useState<IServicesData>()
+  const [serviceData, setServiceData] = useState<IServicesData | null>(null)
 
   useEffect(() => {
     const data = servicesInfo.filter((service) => service.id === serviceId)[0]
-    console.log('holaa ', data)
-    setServiceData(data)
+    if (data) {
+      setServiceData(data)
+    } else {
+      console.error(`No se encontraron datos para serviceId: ${serviceId}`)
+    }
   }, [])
 
-  console.log(serviceData)
-  console.log(serviceId)
-  // return <ServiceComponent serviceData={serviceData} />
-  return <>hola</>
+  return serviceData ? <ServiceComponent serviceData={serviceData} /> : null
 }
 
 export default ServiceTemplate

@@ -17,7 +17,6 @@ export interface TabInfo {
 }
 
 export interface ITechnologies {
-  name: string
-  image: any
-  service: string
+  key: string
+  image: string
 }

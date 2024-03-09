@@ -8,41 +8,43 @@ import {
   WrapperTechnologiesTitle,
 } from './Technologies.style'
 
-interface ITech {
+export interface ITech {
   image: any
 }
 
-interface ITechnologiesProps {
-  techTitle: string
-  techDescription: string
-  img: ITech[]
+export interface ITechnologiesProps {
+  titleTechnologies: string
+  descriptionTechnologies: string
+  tech: ITech[]
 }
 
 const Technologies: React.FC<ITechnologiesProps> = ({
-  techTitle,
-  techDescription,
-  img,
+  titleTechnologies,
+  descriptionTechnologies,
+  tech,
 }) => {
   return (
-    <SectionTechnologies type="margin" size="lg">
-      <Container size="lg">
+    <Container size="lg">
+      <SectionTechnologies type="margin" size="lg">
         <WrapperTechnologiesTitle>
           <TechnologiesTitle>
-            {techTitle}
-            <span className="text-red">Tecnologías</span> que manejamos
-            <span className="text-red">.</span>
+            {titleTechnologies}
+            {/* <span className="text-red">Tecnologías</span> que manejamos */}
+            {/* <span className="text-red">.</span> */}
           </TechnologiesTitle>
-          <TechnologiesDescription>{techDescription}</TechnologiesDescription>
+          <TechnologiesDescription>
+            {descriptionTechnologies}
+          </TechnologiesDescription>
         </WrapperTechnologiesTitle>
         <WrapperTechnologies>
-          {img.map((technology, index) => (
+          {tech.map((technology, index) => (
             <Tech key={index}>
               <img src={technology.image} />
             </Tech>
           ))}
         </WrapperTechnologies>
-      </Container>
-    </SectionTechnologies>
+      </SectionTechnologies>
+    </Container>
   )
 }
 

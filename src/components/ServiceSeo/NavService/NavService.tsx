@@ -10,17 +10,12 @@ import {
   WrapperTitleProcess,
 } from './NavService.style'
 import Section from 'ui/Section/Section'
-
-interface ItabInfo {
-  id: string
-  title: string
-  description: string
-}
+import { IProcess } from '../ServiceComponent'
 
 interface IDevelopmentProcess {
   titleProcess: string
   descriptionProcess: string
-  tabs: ItabInfo[]
+  tabs: IProcess[]
 }
 
 const NavService: React.FC<IDevelopmentProcess> = ({
@@ -77,8 +72,11 @@ const NavService: React.FC<IDevelopmentProcess> = ({
                 key={index}
                 style={{ display: activeTab === index ? '' : 'none' }}
               >
-                <p className="wrapper-info-title">{tab.title}</p>
-                <p className="wrapper-info-description"> {tab.description}</p>
+                <p className="wrapper-info-title">{tab.titleProcess}</p>
+                <p className="wrapper-info-description">
+                  {' '}
+                  {tab.descriptionProcess}
+                </p>
               </WrapperInfo>
             ))}
           </div>
