@@ -15,7 +15,7 @@ export const InputBox = styled.div<InputBoxProps>`
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: ${colors.body};
+  background-color: ${colors.gray[150]};
   padding: 1.5rem 1.75rem;
   border-radius: ${({ $isOpen }) =>
     $isOpen ? '0.375rem 0.375rem 0 0' : '0.375rem'};
