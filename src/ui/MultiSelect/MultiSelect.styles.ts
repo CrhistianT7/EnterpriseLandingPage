@@ -94,10 +94,11 @@ export const OptionsWrapper = styled.div`
 
 export const StyledOption = styled.span`
   padding: 1.25rem 1.5rem;
-  background-color: ${colors.body};
+  background-color: ${colors.gray[150]};
   border-bottom: 0.0625rem solid ${colors.secondary.selected};
   color: ${colors.secondary.disabled};
   cursor: pointer;
+
   &:last-child {
     border-bottom: none;
   }
