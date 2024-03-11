@@ -15,7 +15,7 @@ export const InputBox = styled.div<InputBoxProps>`
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: ${colors.body};
+  background-color: ${colors.gray[150]};
   padding: 1.5rem 1.75rem;
   border-radius: ${({ $isOpen }) =>
     $isOpen ? '0.375rem 0.375rem 0 0' : '0.375rem'};
@@ -94,10 +94,11 @@ export const OptionsWrapper = styled.div`
 
 export const StyledOption = styled.span`
   padding: 1.25rem 1.5rem;
-  background-color: ${colors.body};
+  background-color: ${colors.gray[150]};
   border-bottom: 0.0625rem solid ${colors.secondary.selected};
   color: ${colors.secondary.disabled};
   cursor: pointer;
+
   &:last-child {
     border-bottom: none;
   }

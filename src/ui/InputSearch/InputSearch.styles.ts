@@ -5,7 +5,7 @@ import { colors } from 'styles/colors'
 export const InputSearchWrapper = styled.div`
   display: flex;
   align-items: center;
-  background-color: ${colors.body};
+  background-color: ${colors.gray[150]};
   padding: 0.5rem 1rem;
   border-top: 0.125rem solid ${colors.secondary.selected};
   border-bottom: 0.125rem solid ${colors.secondary.selected};
