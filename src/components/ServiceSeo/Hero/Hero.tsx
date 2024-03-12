@@ -8,7 +8,7 @@ import {
   WrapperHero,
 } from './Hero.style'
 import ButtonLink from 'ui/ButtonLink/ButtonLink'
-import { IHeroPropsTitle } from 'types/components/services'
+import { IHeroPropsTitle } from 'types/components/service'
 
 const Hero: React.FC<IHeroPropsTitle> = ({
   id,

@@ -1,4 +1,4 @@
-import { IQuestionProps } from 'types/components/services'
+import { IQuestionProps } from 'types/components/service'
 import freenlance from '../../../assets/images/imgService/freenlance.svg'
 import {
   TitleQuestion,
