@@ -6,43 +6,38 @@ import {
   ContentDescription,
   ContentTitle,
   ProyectDeliverables,
-  QuestionWrapperSeo,
+  QuestionWrapperService,
   SectionProjectDeliverables,
   WrapperProjectDeliverables,
 } from './FinalProject.style'
 
-interface IFinalProyect {
-  id: number
-  name: string
+export interface IDeliverables {
+  titleFinalDeliverables: string
+  descriptionFinalDeliverables: string
+  deliverables: Array<{ id: string; name: string }>
 }
 
-const ServiceDelivered: IFinalProyect[] = [
-  { id: 1, name: 'App web' },
-  { id: 2, name: 'Codigo' },
-  { id: 3, name: 'App web' },
-  { id: 4, name: 'Base de datos' },
-  { id: 5, name: 'Material Grafico' },
-  { id: 6, name: 'Base de Datos' },
-]
-
-const FinalProject = () => {
+const FinalProject: React.FC<IDeliverables> = ({
+  titleFinalDeliverables,
+  descriptionFinalDeliverables,
+  deliverables,
+}) => {
   return (
     <ContainerProjectFinal>
       <Container size="xl">
         <SectionProjectDeliverables type="margin" size="sm">
-          <QuestionWrapperSeo>
+          <QuestionWrapperService>
             <ContentTitle>
-              ¿Los <span className="red-letter">entregables</span> a final del
-              proyecto?
+              {titleFinalDeliverables}
+              {/* <span className="red-letter">entregables</span> */}
             </ContentTitle>
             <ContentDescription>
-              Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni
-              caridad ya ceguera.
+              {descriptionFinalDeliverables}
             </ContentDescription>
-          </QuestionWrapperSeo>
+          </QuestionWrapperService>
           <WrapperProjectDeliverables>
-            {ServiceDelivered.map((element) => (
-              <ProyectDeliverables key={element.id}>
+            {deliverables.map((element, index) => (
+              <ProyectDeliverables key={index}>
                 <BsCheck className="icon-check" size={20} strokeWidth="1px" />
                 <p>{element.name} </p>
               </ProyectDeliverables>

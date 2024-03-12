@@ -20,7 +20,7 @@ export const SectionProjectDeliverables = styled(Section)`
   }
 `
 
-export const QuestionWrapperSeo = styled.div`
+export const QuestionWrapperService = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

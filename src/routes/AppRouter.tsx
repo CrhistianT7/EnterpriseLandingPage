@@ -12,7 +12,7 @@ import Portafolio from 'pages/Portafolio/Portafolio'
 import LetsLearn from 'pages/LetsLearn/LetsLearn'
 import Services from 'pages/Services/Services'
 import Clients from 'pages/Clients/Clients'
-import Seo from 'pages/Services/Seo/Seo'
+import ServiceTemplate from 'components/ServiceTemplate/ServiceTempalte'
 
 const AppRouter: React.FC = () => {
   return (
@@ -25,7 +25,7 @@ const AppRouter: React.FC = () => {
         <Route path="/lets-learn" element={<LetsLearn />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/services/seo" element={<Seo />} />
+        <Route path="/services/:serviceId" element={<ServiceTemplate />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/contact-us" element={<ContactUs />} />
