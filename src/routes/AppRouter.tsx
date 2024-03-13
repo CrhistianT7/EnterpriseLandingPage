@@ -12,6 +12,7 @@ import Portafolio from 'pages/Portafolio/Portafolio'
 import LetsLearn from 'pages/LetsLearn/LetsLearn'
 import Services from 'pages/Services/Services'
 import Clients from 'pages/Clients/Clients'
+import Blog from 'pages/Blog/Blog'
 import Seo from 'pages/Services/Seo/Seo'
 
 const AppRouter: React.FC = () => {
@@ -29,7 +30,7 @@ const AppRouter: React.FC = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/blog" element={<>blog</>} />
+        <Route path="/blog" element={<Blog />} />
         <Route
           path="/frequently-asked-question"
           element={<FrequenltyAskedQuestion />}
