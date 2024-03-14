@@ -15,7 +15,7 @@ export const WrapperQuestion = styled(Section)`
     gap: 5rem;
   }
 
-  .img-question-service {
+  .img-service {
     border-radius: 1rem;
 
     @media only screen and (min-width: ${breakpoints.lg}) {

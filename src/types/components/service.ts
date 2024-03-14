@@ -46,10 +46,15 @@ export interface IDevelopmentProcess {
   steps: Array<IServiceDevelopmentStep>
 }
 
+export interface IDeliverableItem {
+  id: string
+  name: string
+}
+
 export interface IDeliverable {
   question: string
   description: string
-  items: Array<string>
+  items: Array<IDeliverableItem>
 }
 
 export interface ITechStack {
@@ -58,11 +63,17 @@ export interface ITechStack {
   image: string
 }
 
-export interface IService {
+export interface IServiceHero {
   id: string
   name: string
   description: string
   phraseQuote: string
+}
+export interface IService extends IServiceHero {
+  // id: string
+  // name: string
+  // description: string
+  // phraseQuote: string
   features: Array<IServiceFeature>
   whyService: IWhyService
   developmentProcess: IDevelopmentProcess

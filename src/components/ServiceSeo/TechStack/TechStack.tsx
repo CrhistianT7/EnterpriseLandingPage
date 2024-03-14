@@ -6,46 +6,44 @@ import {
   TechnologiesTitle,
   WrapperTechnologies,
   WrapperTechnologiesTitle,
-} from './Technologies.style'
+} from './TechStack.style'
+import { ITechStack } from 'types/components/service'
 
-export interface ITech {
-  image: any
-}
+// export interface ITech {
+//   image: any
+// }
 
-export interface ITechnologiesProps {
-  titleTechnologies: string
-  descriptionTechnologies: string
-  tech: ITech[]
-}
+// export interface ITechnologiesProps {
+//   titleTechnologies: string
+//   descriptionTechnologies: string
+//   tech: ITech[]
+// }
 
-const Technologies: React.FC<ITechnologiesProps> = ({
-  titleTechnologies,
-  descriptionTechnologies,
-  tech,
-}) => {
+const TechStack: React.FC<ITechStack> = ({ title, description, image }) => {
   return (
     <Container size="lg">
       <SectionTechnologies type="margin" size="lg">
         <WrapperTechnologiesTitle>
           <TechnologiesTitle>
-            {titleTechnologies}
+            {title}
             {/* <span className="text-red">Tecnologías</span> que manejamos */}
             {/* <span className="text-red">.</span> */}
           </TechnologiesTitle>
-          <TechnologiesDescription>
-            {descriptionTechnologies}
-          </TechnologiesDescription>
+          <TechnologiesDescription>{description}</TechnologiesDescription>
         </WrapperTechnologiesTitle>
         <WrapperTechnologies>
-          {tech.map((technology, index) => (
+          {/* {tech.map((technology, index) => (
             <Tech key={index}>
               <img src={technology.image} />
             </Tech>
-          ))}
+          ))} */}
+          <Tech>
+            <img src={image} />
+          </Tech>
         </WrapperTechnologies>
       </SectionTechnologies>
     </Container>
   )
 }
 
-export default Technologies
+export default TechStack

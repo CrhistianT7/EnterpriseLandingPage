@@ -9,18 +9,19 @@ import {
   QuestionWrapperService,
   SectionProjectDeliverables,
   WrapperProjectDeliverables,
-} from './FinalProject.style'
+} from './Deliverables.style'
+import { IDeliverable } from 'types/components/service'
 
-export interface IDeliverables {
-  titleFinalDeliverables: string
-  descriptionFinalDeliverables: string
-  deliverables: Array<{ id: string; name: string }>
-}
+// export interface IDeliverables {
+//   titleFinalDeliverables: string
+//   descriptionFinalDeliverables: string
+//   deliverables: Array<{ id: string; name: string }>
+// }
 
-const FinalProject: React.FC<IDeliverables> = ({
-  titleFinalDeliverables,
-  descriptionFinalDeliverables,
-  deliverables,
+const Deliverables: React.FC<IDeliverable> = ({
+  question,
+  description,
+  items,
 }) => {
   return (
     <ContainerProjectFinal>
@@ -28,15 +29,13 @@ const FinalProject: React.FC<IDeliverables> = ({
         <SectionProjectDeliverables type="margin" size="sm">
           <QuestionWrapperService>
             <ContentTitle>
-              {titleFinalDeliverables}
+              {question}
               {/* <span className="red-letter">entregables</span> */}
             </ContentTitle>
-            <ContentDescription>
-              {descriptionFinalDeliverables}
-            </ContentDescription>
+            <ContentDescription>{description}</ContentDescription>
           </QuestionWrapperService>
           <WrapperProjectDeliverables>
-            {deliverables.map((element, index) => (
+            {items.map((element, index) => (
               <ProyectDeliverables key={index}>
                 <BsCheck className="icon-check" size={20} strokeWidth="1px" />
                 <p>{element.name} </p>
@@ -49,4 +48,4 @@ const FinalProject: React.FC<IDeliverables> = ({
   )
 }
 
-export default FinalProject
+export default Deliverables

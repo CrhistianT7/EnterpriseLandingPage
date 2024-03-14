@@ -6,15 +6,15 @@ import {
   TitleHero,
   SectionHero,
   WrapperHero,
-} from './Hero.style'
+} from './ServiceHero.style'
 import ButtonLink from 'ui/ButtonLink/ButtonLink'
-import { IHeroPropsTitle } from 'types/components/service'
+import { IServiceHero } from 'types/components/service'
 
-const Hero: React.FC<IHeroPropsTitle> = ({
+const ServiceHero: React.FC<IServiceHero> = ({
   id,
-  serviceName,
-  serviceSubTitle,
-  serviceDescription,
+  name,
+  description,
+  phraseQuote,
 }) => {
   return (
     <BackgroundService id={id}>
@@ -22,9 +22,9 @@ const Hero: React.FC<IHeroPropsTitle> = ({
         <WrapperHero size="xl">
           <ContentHero>
             <div>
-              <p className="hero-sub-title">{serviceSubTitle} </p>
-              <TitleHero>{serviceName}</TitleHero>
-              <span className="hero-description">{serviceDescription}</span>
+              <p className="hero-sub-title">{phraseQuote} </p>
+              <TitleHero>{name}</TitleHero>
+              <span className="hero-description">{description}</span>
             </div>
             <div>
               <ButtonLink
@@ -44,4 +44,4 @@ const Hero: React.FC<IHeroPropsTitle> = ({
   )
 }
 
-export default Hero
+export default ServiceHero

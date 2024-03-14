@@ -12,7 +12,8 @@ import Portafolio from 'pages/Portafolio/Portafolio'
 import LetsLearn from 'pages/LetsLearn/LetsLearn'
 import Services from 'pages/Services/Services'
 import Clients from 'pages/Clients/Clients'
-import ServiceTemplate from 'components/ServiceTemplate/ServiceTempalte'
+import ServiceTemplate from 'components/ServiceTemplate/ServiceTemplate'
+// import { servicesInfo } from 'data/services'
 
 const AppRouter: React.FC = () => {
   return (
