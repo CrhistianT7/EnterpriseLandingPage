@@ -1,11 +1,14 @@
-import Container from 'ui/Container/Container'
+import Section from 'ui/Section/Section'
+import { BlogHero, BlogWrapper } from './Blog.styles'
 
 const Blog: React.FC = () => {
   return (
-    <Container size="xl">
-      <div>
-        <h1>BLOG</h1>
-      </div>
+    <BlogWrapper size="xl" isfullwidth>
+      <Section size="sm" type="margin">
+        <BlogHero>
+          <h1 className="hero__title">blog</h1>
+        </BlogHero>
+      </Section>
       <div>
         <input type="search" />
         {/*questionable if the search will be performed within the component pagination */}
@@ -22,7 +25,7 @@ const Blog: React.FC = () => {
         </div>
         <div>img suscríbete</div>
       </div>
-    </Container>
+    </BlogWrapper>
   )
 }
 
