@@ -25,7 +25,6 @@ export const WrapperTechnologiesTitle = styled.div`
     gap: 3rem;
   }
 `
-
 export const WrapperTechnologies = styled.div`
   display: flex;
   justify-content: space-evenly;

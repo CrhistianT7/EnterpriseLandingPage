@@ -89,7 +89,7 @@ export const servicesInfo: Array<IService> = [
       },
     ],
     whyService: {
-      question: '¿Por qué ?',
+      question: '¿Por qué?',
       answer:
         'Pueblo lengua mar franca con bronce tienes una. La sala al el mano eran sr unos. Juzgado picante te aureola lo dificil oh holgada. La tentandole la excelentes mamarracho confidente. Tierno ahi piedra formas molino tan pan tio. Aun clasicismo habilitado sin hoy tan pretension despertado.',
       image: freelance,
@@ -105,7 +105,22 @@ export const servicesInfo: Array<IService> = [
             'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',
         },
         {
+          title: 'Diseño de wireframes2',
+          description:
+            'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',
+        },
+        {
+          title: 'Diseño de wireframes3',
+          description:
+            'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',
+        },
+        {
           title: 'Diseño de wireframes',
+          description:
+            'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',
+        },
+        {
+          title: 'Diseño de wireframes2',
           description:
             'Mal voz cigarrillo van triunfante sacamuelas. Mi el mascaba ni caridad ya ceguera. Crespo tio muchas luz iba cabeza ton. Talentazo sebastian ofenderla ni tu brillaron. ',
         },

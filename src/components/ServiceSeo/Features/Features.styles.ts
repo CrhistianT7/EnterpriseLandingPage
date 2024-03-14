@@ -41,18 +41,21 @@ export const WrapperTitle = styled.div`
   }
 `
 export const WrapperDescription = styled.div`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  place-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  flex-wrap: wrap;
   gap: 2rem;
   color: ${colors.secondary.disabled};
 
   @media only screen and (min-width: ${breakpoints.lg}) {
-    grid-template-columns: repeat(4, 1fr);
+    flex-direction: row;
     gap: 3.125rem;
   }
 
   .wrapper-description-info {
+    width: 17.687rem;
+    height: 24.312rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
