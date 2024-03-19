@@ -19,7 +19,7 @@ export const colors = {
     main: '#2d2d2d',
     disabled: '#424242',
     selected: '#b0b0b0',
-    hover: '#5d5d5d',
+    hover: '#E6E1F3',
     focus: '#4f4f4f',
   },
   red: {
