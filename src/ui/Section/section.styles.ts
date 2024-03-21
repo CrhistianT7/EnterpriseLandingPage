@@ -10,13 +10,13 @@ interface IStyledSection {
 const sizeStyles = (size: string) => {
   switch (size) {
     case 'sm':
-      return `32px`
+      return `2rem`
     case 'md':
-      return `48px`
+      return `3rem`
     case 'lg':
-      return `96px`
+      return `6rem`
     case 'xl':
-      return `144px`
+      return `9rem`
     default:
       break
   }
@@ -26,7 +26,7 @@ export const StyledSection = styled.section<IStyledSection>`
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1280px;
+  max-width: 80rem;
   flex-direction: column;
   width: 100%;
 

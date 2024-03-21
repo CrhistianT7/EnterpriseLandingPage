@@ -6,19 +6,19 @@ const sizeStyles = (size: string) => {
   switch (size) {
     case 'sm':
       return `
-        max-width: 640px;
+        max-width: 40rem;
       `
     case 'md':
       return `
-          max-width: 768px;
+          max-width: 48rem;
         `
     case 'lg':
       return `
-        max-width: 1024px;
+        max-width: 64rem;
       `
     case 'xl':
       return `
-        max-width: 1280px;
+        max-width: 80rem;
       `
     default:
       break

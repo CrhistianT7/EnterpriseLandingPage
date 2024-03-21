@@ -39,7 +39,7 @@ export const StyledSelectOptions = styled.div<IPosition>`
   color: ${colors.secondary.main};
   border: 0.0625rem solid ${colors.body};
   border-radius: 1rem;
-  box-shadow: 10px 10px 20px 0px #00000026;
+  box-shadow: 0.625rem 0.625rem 1.25rem 0rem #00000026;
 
   li:first-child {
     border-top-right-radius: 1rem;
