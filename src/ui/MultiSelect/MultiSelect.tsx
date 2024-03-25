@@ -115,7 +115,6 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
         <DisplayOptions $isOpen={isOpen}>
           <InputSearch
             ref={inputRef}
-            type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder={placeholder}
