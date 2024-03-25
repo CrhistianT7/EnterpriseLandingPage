@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { colors } from 'styles/colors'
 
+import { colors } from 'styles/colors'
 import Container from 'ui/Container/Container'
 
 export const ContainerItems = styled(Container)`
