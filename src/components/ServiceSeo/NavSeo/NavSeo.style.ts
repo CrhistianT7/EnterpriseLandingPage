@@ -28,7 +28,7 @@ export const WrapperTitleProcess = styled.div`
   .title-process {
     font-weight: 600;
     font-size: clamp(2rem, 4vw, 3rem);
-    line-height: clamp(48px, calc(1.5 * 1rem), 72px);
+    line-height: clamp(3rem, calc(1.5 * 1rem), 4.5rem);
   }
 
   .description-process {

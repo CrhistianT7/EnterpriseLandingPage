@@ -7,8 +7,8 @@ export const StyledHeader = styled.header`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 72px;
-  max-height: 72px;
+  height: 4.5rem;
+  max-height: 4.5rem;
   background: #ffdee4;
 
   position: sticky;
@@ -21,14 +21,14 @@ export const HeaderWrapper = styled(Container)`
   width: 100%;
   justify-content: space-between;
   position: relative;
-  padding: 16px 16px;
-  min-height: 72px;
+  padding: 1rem 1rem;
+  min-height: 4.5rem;
 `
 
 export const HamburgerIcon = styled.div`
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     display: none;
@@ -40,7 +40,7 @@ export const DesktopNavigation = styled.nav`
 
   @media only screen and (min-width: ${breakpoints.lg}) {
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
     align-items: center;
   }
 `
@@ -53,7 +53,7 @@ export const DesktopUnorderedList = styled.ul`
 export const MobileNavigation = styled.nav`
   display: flex;
   flex-direction: column;
-  border-top: 2px solid red;
+  border-top: 0.125rem solid red;
   width: 100%;
   padding: 0.75rem;
   background: #ffdee4;
@@ -65,5 +65,5 @@ export const MobileNavigation = styled.nav`
   }
 `
 // export const HeaderEmptyBackground = styled.div`
-//   height: 72px;
+//   height: 72rem;
 // `

@@ -36,10 +36,10 @@ export const StyledSelectOptions = styled.div<IPosition>`
   ${(props) => (props.$position == 'left' ? 'left: 0;' : 'right: 0;')}
   min-width: 12.5rem;
   max-width: 21.875rem;
-  border: none;
   color: ${colors.secondary.main};
   border: 0.0625rem solid ${colors.body};
   border-radius: 1rem;
+  box-shadow: 0.625rem 0.625rem 1.25rem 0rem #00000026;
 
   li:first-child {
     border-top-right-radius: 1rem;
@@ -69,7 +69,7 @@ export const StyledSelectOption = styled.li<ISelectOption>`
 
   &:hover {
     background: ${colors.secondary.hover};
-    color: ${colors.white.main};
+    color: ${colors.secondary.main};
   }
 
   .point-selected {
