@@ -1,15 +1,14 @@
+import { useState } from 'react'
+
 import Button from 'ui/Button/Button'
 import Section from 'ui/Section/Section'
 import Input from 'ui/input/Input'
 import { SubscribeWrapper } from './Subscribe.styles'
 import subscribeImg from './../../../assets/images/imgBlog/subscribe.svg'
 
-interface ISubscribe {
-  text: string
-  setText: (e: string) => void
-}
+const Subscribe: React.FC = () => {
+  const [email, setEmail] = useState('')
 
-const Subscribe: React.FC<ISubscribe> = ({ text, setText }) => {
   return (
     <Section type="margin" size="sm">
       <SubscribeWrapper size="lg" isfullwidth>
@@ -24,8 +23,8 @@ const Subscribe: React.FC<ISubscribe> = ({ text, setText }) => {
             <Input
               type="email"
               id="email"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Tu e-mail"
               className="subscribe-input"
             />
@@ -33,7 +32,7 @@ const Subscribe: React.FC<ISubscribe> = ({ text, setText }) => {
               type="primary"
               size="lg"
               className="subscribe-button"
-              onClick={() => console.log(text)}
+              onClick={() => console.log(email)}
             >
               Suscríbete
             </Button>

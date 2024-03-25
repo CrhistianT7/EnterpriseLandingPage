@@ -1,10 +1,8 @@
 import Section from 'ui/Section/Section'
 import { BlogHero, BlogWrapper } from './Blog.styles'
 import Subscribe from './Subscribe/Subscribe'
-import { useState } from 'react'
 
 const Blog: React.FC = () => {
-  const [text, setText] = useState('')
   return (
     <BlogWrapper size="xl" isfullwidth>
       <Section size="sm" type="margin">
@@ -17,7 +15,7 @@ const Blog: React.FC = () => {
         {/*questionable if the search will be performed within the component pagination */}
       </div>
       <div>Pagination component</div>
-      <Subscribe text={text} setText={setText} />
+      <Subscribe />
     </BlogWrapper>
   )
 }
