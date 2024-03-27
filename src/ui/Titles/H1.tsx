@@ -1,3 +1,4 @@
+import { PropsWithChildren } from "react"
 import styled from "styled-components"
 
 const StyledH1 = styled.h1`
@@ -6,8 +7,8 @@ const StyledH1 = styled.h1`
   line-height: 1.5;
 `
 
-const H1: React.FC = () => {
-  return <StyledH1 />
+const H1: React.FC<PropsWithChildren> = ({children}) => {
+  return <StyledH1>{children}</StyledH1>
 }
 
 export default H1
