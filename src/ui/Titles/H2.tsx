@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import { PropsWithChildren } from 'react'
+import styled from 'styled-components'
 
 const StyledH2 = styled.h2`
   font-weight: bold;
@@ -6,8 +7,8 @@ const StyledH2 = styled.h2`
   line-height: 1.5;
 `
 
-const H2: React.FC = () => {
-  return <StyledH2 />
+const H2: React.FC<PropsWithChildren> = ({children}) => {
+  return <StyledH2>{children}</StyledH2>
 }
 
 export default H2

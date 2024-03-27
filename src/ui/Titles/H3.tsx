@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import { IH3Props } from "types/ui/Titles"
+import { IH3Props } from 'types/ui/Titles'
 
 const StyledH3 = styled.h3<IH3Props>`
   font-weight: ${(props) => props.weight};
@@ -9,7 +9,7 @@ const StyledH3 = styled.h3<IH3Props>`
 `
 
 const H3: React.FC<IH3Props> = (props) => {
-  return <StyledH3 {...props} />
+  return <StyledH3 {...props}/>
 }
 
 export default H3
